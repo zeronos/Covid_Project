@@ -1,0 +1,543 @@
+{
+    "lastupdate": "19/04/2020",
+
+    "bangkok" : {
+        "infect":1425,
+        "dead":19,
+        "healing":112,
+        "cure":1309
+    },
+
+    "phuket" : {
+        "infect":192,
+        "dead":1,
+        "healing":64,
+        "cure":127
+    },
+
+    "nonthaburi": {
+        "infect":150,
+        "dead":1,
+        "healing":0,
+        "cure":0
+    },
+
+    "samutprakan": {
+        "infect":108,
+        "dead":5,
+        "healing":0,
+        "cure":0
+    },
+
+    "yala": {
+        "infect":101,
+        "dead":2,
+        "healing":52,
+        "cure":47
+    },
+
+    "chiangrai": {
+        "infect":9,
+        "dead":0,
+        "healing":0,
+        "cure":9
+    },
+
+    "chiangmai": {
+        "infect":40,
+        "dead":1,
+        "healing":15,
+        "cure":24
+    },
+
+    "maehongson": {
+        "infect":5,
+        "dead":0,
+        "healing":0,
+        "cure":5
+    },
+
+    "phayao": {
+        "infect":3,
+        "dead":0,
+        "healing":3,
+        "cure":0
+    },
+    
+    "nan": {
+        "infect":0,
+        "dead":0,
+        "healing":0,
+        "cure":0
+    },
+    
+    "phrae": {
+        "infect":1,
+        "dead":0,
+        "healing":0,
+        "cure":1
+    },
+
+    "lampang": {
+        "infect":4,
+        "dead":0,
+        "healing":4,
+        "cure":0
+    },
+
+    "lamphun": {
+        "infect":4,
+        "dead":0,
+        "healing":0,
+        "cure":4
+    },
+
+    "tak": {
+        "infect":3,
+        "dead":0,
+        "healing":1,
+        "cure":2
+    },
+
+    "uttaradit": {
+        "infect":3,
+        "dead":0,
+        "healing":0,
+        "cure":3
+    },
+
+    "sukhothai": {
+        "infect":3,
+        "dead":0,
+        "healing":0,
+        "cure":3
+    },
+
+    "phitsanulok": {
+        "infect":6,
+        "dead":0,
+        "healing":4,
+        "cure":2
+    },
+
+    "kamphaengphet": {
+        "infect":0,
+        "dead":0,
+        "healing":0,
+        "cure":0
+    },
+
+    "kanchanaburi": {
+        "infect":9,
+        "dead":0,
+        "healing":0,
+        "cure":9
+    },
+
+    "ratchaburi": {
+        "infect":8,
+        "dead":1,
+        "healing":1,
+        "cure":6
+    },
+
+    "phetchaburi": {
+        "infect":1,
+        "dead":0,
+        "healing":0,
+        "cure":1
+    },
+
+    "samutsongkhram": {
+        "infect":1,
+        "dead":0,
+        "healing":0,
+        "cure":1
+    },
+
+    "phichit": {
+        "infect":0,
+        "dead":0,
+        "healing":0,
+        "cure":0
+    },
+
+    "nakhonsawan": {
+        "infect":9,
+        "dead":0,
+        "healing":5,
+        "cure":4
+    },
+
+    "uthaithani": {
+        "infect":1,
+        "dead":0,
+        "healing":0,
+        "cure":1
+    },
+
+    "chainat": {
+        "infect":0,
+        "dead":0,
+        "healing":0,
+        "cure":0
+    },
+
+    "suphanburi": {
+        "infect":5,
+        "dead":0,
+        "healing":3,
+        "cure":2
+    },
+    
+    "nakhonpathom": {
+        "infect":20,
+        "dead":0,
+        "healing":13,
+        "cure":7
+    },
+
+    "samutsakhon": {
+        "infect":18,
+        "dead":0,
+        "healing":6,
+        "cure":12
+    },
+
+    "loei": {
+        "infect":5,
+        "dead":0,
+        "healing":3,
+        "cure":2
+    },
+
+    "phetchabun": {
+        "infect":3,
+        "dead":0,
+        "healing":0,
+        "cure":3
+    },
+
+    "lopburi": {
+        "infect":3,
+        "dead":0,
+        "healing":0,
+        "cure":3
+    },
+
+    "saraburi": {
+        "infect":5,
+        "dead":0,
+        "healing":1,
+        "cure":4
+    },
+
+    "singburi": {
+        "infect":0,
+        "dead":0,
+        "healing":0,
+        "cure":0
+    },
+
+    "angthong": {
+        "infect":0,
+        "dead":0,
+        "healing":0,
+        "cure":0
+    },
+
+    "phranakhonsiayutthaya": {
+        "infect":6,
+        "dead":1,
+        "healing":1,
+        "cure":4
+    },
+
+    "pathumthani": {
+        "infect":41,
+        "dead":2,
+        "healing":8,
+        "cure":31
+    },
+
+    "nakhonnayok": {
+        "infect":2,
+        "dead":0,
+        "healing":1,
+        "cure":1
+    },
+
+    "chachoengsao": {
+        "infect":21,
+        "dead":1,
+        "healing":1,
+        "cure":19
+    },
+
+    "chonburi": {
+        "infect":86,
+        "dead":2,
+        "healing":23,
+        "cure":61
+    },
+
+    "rayong": {
+        "infect":6,
+        "dead":0,
+        "healing":1,
+        "cure":5
+    },
+
+    "chanthaburi": {
+        "infect":3,
+        "dead":0,
+        "healing":0,
+        "cure":3
+    },
+
+    "trat": {
+        "infect":0,
+        "dead":0,
+        "healing":0,
+        "cure":0
+    },
+
+    "prachinburi": {
+        "infect":8,
+        "dead":1,
+        "healing":4,
+        "cure":3
+    },
+
+    "sakaeo": {
+        "infect":10,
+        "dead":0,
+        "healing":0,
+        "cure":10
+    },
+
+    "nakhonratchasima": {
+        "infect":18,
+        "dead":0,
+        "healing":9,
+        "cure":9
+    },
+
+    "buriram": {
+        "infect":13,
+        "dead":1,
+        "healing":6,
+        "cure":6
+    },
+
+    "surin": {
+        "infect":9,
+        "dead":1,
+        "healing":0,
+        "cure":8
+    },
+
+    "sisaket": {
+        "infect":8,
+        "dead":0,
+        "healing":0,
+        "cure":8
+    },
+
+    "ubonratchathani": {
+        "infect":15,
+        "dead":0,
+        "healing":7,
+        "cure":8
+    },
+
+    "chaiyaphum": {
+        "infect":3,
+        "dead":0,
+        "healing":0,
+        "cure":3
+    },
+
+    "khonkaen": {
+        "infect":6,
+        "dead":0,
+        "healing":2,
+        "cure":4
+    },
+
+    "mahasarakham": {
+        "infect":1,
+        "dead":0,
+        "healing":0,
+        "cure":1
+    },
+
+    "roiet": {
+        "infect":3,
+        "dead":0,
+        "healing":0,
+        "cure":3
+    },
+
+    "yasothon": {
+        "infect":1,
+        "dead":0,
+        "healing":0,
+        "cure":1
+    },
+
+    "amnatcharoen": {
+        "infect":2,
+        "dead":0,
+        "healing":0,
+        "cure":2
+    },
+
+    "nongbualamphu": {
+        "infect":4,
+        "dead":0,
+        "healing":0,
+        "cure":4
+    },
+
+    "udonthani": {
+        "infect":8,
+        "dead":0,
+        "healing":2,
+        "cure":6
+    },
+
+    "kalasin": {
+        "infect":3,
+        "dead":0,
+        "healing":0,
+        "cure":3
+    },
+
+    "mukdahan": {
+        "infect":4,
+        "dead":0,
+        "healing":0,
+        "cure":4
+    },
+
+    "nongkhai": {
+        "infect":3,
+        "dead":0,
+        "healing":0,
+        "cure":3
+    },
+
+    "sakonnakhon": {
+        "infect":1,
+        "dead":0,
+        "healing":1,
+        "cure":0
+    },
+
+    "nakhonphanom": {
+        "infect":2,
+        "dead":0,
+        "healing":2,
+        "cure":0
+    },
+
+    "buengkan": {
+        "infect":0,
+        "dead":0,
+        "healing":0,
+        "cure":0
+    },
+
+    "prachuapkhirikhan": {
+        "infect":17,
+        "dead":2,
+        "healing":4,
+        "cure":11
+    },
+
+    "chumphon": {
+        "infect":10,
+        "dead":2,
+        "healing":7,
+        "cure":1
+    },
+
+    "ranong": {
+        "infect":0,
+        "dead":0,
+        "healing":0,
+        "cure":0
+    },
+
+    "suratthani": {
+        "infect":18,
+        "dead":0,
+        "healing":6,
+        "cure":12
+    },
+
+    "phangnga": {
+        "infect":2,
+        "dead":0,
+        "healing":2,
+        "cure":0
+    },
+
+    "krabi": {
+        "infect":18,
+        "dead":0,
+        "healing":8,
+        "cure":10
+    },
+
+    "nakhonsithammarat": {
+        "infect":12,
+        "dead":1,
+        "healing":7,
+        "cure":4
+    },
+
+    "trang": {
+        "infect":7,
+        "dead":0,
+        "healing":1,
+        "cure":6
+    },
+
+    "phatthalung": {
+        "infect":14,
+        "dead":0,
+        "healing":7,
+        "cure":7
+    },
+
+    "songkhla": {
+        "infect":56,
+        "dead":0,
+        "healing":11,
+        "cure":45
+    },
+
+    "satun": {
+        "infect":18,
+        "dead":0,
+        "healing":18,
+        "cure":0
+    },
+
+    "pattani": {
+        "infect":90,
+        "dead":1,
+        "healing":59,
+        "cure":30
+    },
+
+    "narathiwat": {
+        "infect":33,
+        "dead":1,
+        "healing":16,
+        "cure":16
+    }
+
+}

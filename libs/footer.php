@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h3 class="text-white">About Workout</h3>
+        <h3 class="text-white">About Us</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam facere optio eligendi.</p>
       </div>
 
@@ -20,8 +20,9 @@
 
 
       <div class="col-md-4">
-        <h3 class="text-white">Subscribe</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, odio beatae accusantium.
+        <h3 class="text-white">Contact Us</h3>
+        <p><img src="https://img.icons8.com/color/96/000000/facebook-circled.png" />
+          <img src="https://img.icons8.com/color/96/000000/gmail.png" />
         </p>
       </div>
 

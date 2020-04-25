@@ -90,7 +90,6 @@
             </div>
             <div class="grid-container2">
                 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-                <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
                 <script src="https://code.highcharts.com/mapdata/countries/th/th-all.js"></script>
 
                 <div id="grid8" style="height: 700px;"></div>

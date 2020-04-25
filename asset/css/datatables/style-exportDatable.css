@@ -1,0 +1,16 @@
+/* Custom .CSS  18/02/2020 */
+
+.DT-export-button {
+    background: white;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.DT-margin-top {
+    margin-top: 5px;
+}
+
+.DT-font {
+    font-family: 'Kanit';
+    font-weight: normal;
+}

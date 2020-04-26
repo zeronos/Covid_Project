@@ -1,4 +1,6 @@
 <?php include("libs/head.php"); ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="site-wrap">
@@ -91,9 +93,8 @@
             <div class="grid-container2">
                 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
                 <script src="https://code.highcharts.com/mapdata/countries/th/th-all.js"></script>
-
                 <div id="grid8" style="height: 700px;"></div>
-                <table id="table" class="table table-bordered table-striped table-hover table-data" style="margin-top: 72px;">
+                <table id="th-table" class="table table-bordered table-striped table-hover table-data" style="margin-top: 72px;">
                     <thead>
                         <tr>
                             <th>จังหวัด</th>
@@ -102,92 +103,6 @@
                             <th>ตาย</th>
                         </tr>
                     </thead>
-                    <tbody id="fetchDataTable">
-                        <tr>
-                            <td>กทม</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>100</td>
-                        </tr>
-                        <tr>
-                            <td>นครปฐม</td>
-                            <td>122</td>
-                            <td>1222</td>
-                            <td>1222</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                        <tr>
-                            <td>เชียงใหม่</td>
-                            <td>333</td>
-                            <td>333</td>
-                            <td>333</td>
-                        </tr>
-                    </tbody>
 
                 </table>
             </div>
@@ -329,7 +244,22 @@
 </body>
 
 </html>
-
+<script>
+    $(document).ready(function(){
+        $.getJSON( "DATA/phase3/province.json", function( data ){
+            var items = '';
+            $.each(data, function(key, value){
+                items += '<tr>';
+                items += '<td>' +key+'</td>';
+                items += '<td>' +value.dead+'</td>';
+                items += '<td>' +value.healing+'</td>';
+                items += '<td>' +value.cure+'</td>';
+                items += '</tr>';
+            });
+            $('#th-table').append(items);
+        });
+    });
+</script>
 <script>
     document.getElementById("grid8").addEventListener("load", createMap());
 
@@ -1358,87 +1288,89 @@
         // Prepare demo data
         // Data is joined to map using value of 'hc-key' property by default.
         // See API docs for 'joinBy' for more info on linking data and map.
-        var data = [
-            ['th-ct', 0],
+        var myObj = [];
+        var items = [];
+        $.getJSON( "DATA/phase3/province.json", function( data ) {
+        items = [
+            ['th-ct', data.chanthaburi["infect"]],
             ['th-4255', 1],
-            ['th-pg', 2],
-            ['th-st', 3],
-            ['th-kr', 4],
-            ['th-sa', 5],
-            ['th-tg', 6],
-            ['th-tt', 7],
-            ['th-pl', 8],
-            ['th-ps', 9],
-            ['th-kp', 10],
-            ['th-pc', 11],
-            ['th-sh', 12],
-            ['th-at', 13],
-            ['th-lb', 14],
-            ['th-pa', 15],
-            ['th-np', 16],
-            ['th-sb', 17],
-            ['th-cn', 18],
-            ['th-bm', 19],
-            ['th-pt', 20],
-            ['th-no', 21],
-            ['th-sp', 22],
-            ['th-ss', 23],
-            ['th-sm', 24],
-            ['th-pe', 25],
-            ['th-cc', 26],
-            ['th-nn', 27],
-            ['th-cb', 28],
-            ['th-br', 29],
-            ['th-kk', 30],
-            ['th-ph', 31],
-            ['th-kl', 32],
-            ['th-sr', 33],
-            ['th-nr', 34],
-            ['th-si', 35],
-            ['th-re', 36],
-            ['th-le', 37],
-            ['th-nk', 38],
-            ['th-ac', 39],
-            ['th-md', 40],
-            ['th-sn', 41],
-            ['th-nw', 42],
-            ['th-pi', 43],
-            ['th-rn', 44],
-            ['th-nt', 45],
-            ['th-sg', 46],
-            ['th-pr', 47],
-            ['th-py', 48],
-            ['th-so', 49],
-            ['th-ud', 50],
-            ['th-kn', 51],
-            ['th-tk', 52],
-            ['th-ut', 53],
-            ['th-ns', 54],
-            ['th-pk', 55],
-            ['th-ur', 56],
-            ['th-sk', 57],
-            ['th-ry', 58],
-            ['th-cy', 59],
-            ['th-su', 60],
-            ['th-nf', 61],
-            ['th-bk', 62],
-            ['th-mh', 63],
-            ['th-pu', 64],
-            ['th-cp', 65],
-            ['th-yl', 66],
-            ['th-cr', 67],
-            ['th-cm', 68],
-            ['th-ln', 69],
-            ['th-na', 70],
-            ['th-lg', 71],
-            ['th-pb', 72],
-            ['th-rt', 73],
-            ['th-ys', 74],
-            ['th-ms', 75],
-            ['th-un', 76],
-            ['th-nb', 77]
+            ['th-pg', data.phangnga["infect"]],
+            ['th-st', data.suratthani["infect"]],
+            ['th-kr', data.krabi["infect"]],
+            ['th-sa', data.satun["infect"]],
+            ['th-tg', data.trang["infect"]],
+            ['th-tt', data.trat["infect"]],
+            ['th-pl', data.phatthalung["infect"]],
+            ['th-ps', data.phitsanulok["infect"]],
+            ['th-kp', data.kamphaengphet["infect"]],
+            ['th-pc', data.phichit["infect"]],
+            ['th-sh', data.suphanburi["infect"]],
+            ['th-at', data.angthong["infect"]],
+            ['th-lb', data.lopburi["infect"]],
+            ['th-pa', data.phranakhonsiayutthaya["infect"]],
+            ['th-np', data.nakhonpathom["infect"]],
+            ['th-sb', data.singburi["infect"]],
+            ['th-cn', data.chainat["infect"]],
+            ['th-bm', data.bangkok["infect"]],
+            ['th-pt', data.pathumthani["infect"]],
+            ['th-no', data.nonthaburi["infect"]],
+            ['th-sp', data.samutprakan["infect"]],
+            ['th-ss', data.samutsakhon["infect"]],
+            ['th-sm', data.samutsongkhram["infect"]],
+            ['th-pe', data.phetchaburi["infect"]],
+            ['th-cc', data.chachoengsao["infect"]],
+            ['th-nn', data.nakhonnayok["infect"]],
+            ['th-cb', data.chonburi["infect"]],
+            ['th-br', data.buriram["infect"]],
+            ['th-kk', data.khonkaen["infect"]],
+            ['th-ph', data.phetchabun["infect"]],
+            ['th-kl', data.kalasin["infect"]],
+            ['th-sr', data.saraburi["infect"]],
+            ['th-nr', data.nakhonratchasima["infect"]],
+            ['th-si', data.sisaket["infect"]],
+            ['th-re', data.roiet["infect"]],
+            ['th-le', data.loei["infect"]],
+            ['th-nk', data.nongkhai["infect"]],
+            ['th-ac', data.amnatcharoen["infect"]],
+            ['th-md', data.mukdahan["infect"]],
+            ['th-sn', data.sakonnakhon["infect"]],
+            ['th-nw', data.narathiwat["infect"]],
+            ['th-pi', data.pattani["infect"]],
+            ['th-rn', data.ranong["infect"]],
+            ['th-nt', data.nakhonsithammarat["infect"]],
+            ['th-sg', data.songkhla["infect"]],
+            ['th-pr', data.phrae["infect"]],
+            ['th-py', data.phayao["infect"]],
+            ['th-so', data.sukhothai["infect"]],
+            ['th-ud', data.uttaradit["infect"]],
+            ['th-kn', data.kanchanaburi["infect"]],
+            ['th-tk', data.tak["infect"]],
+            ['th-ut', data.uthaithani["infect"]],
+            ['th-ns', data.nakhonsawan["infect"]],
+            ['th-pk', data.prachuapkhirikhan["infect"]],
+            ['th-ur', data.ubonratchathani["infect"]],
+            ['th-sk', data.sakaeo["infect"]],
+            ['th-ry', data.rayong["infect"]],
+            ['th-cy', data.chaiyaphum["infect"]],
+            ['th-su', data.surin["infect"]],
+            ['th-nf', data.nakhonphanom["infect"]],
+            ['th-bk', data.buengkan["infect"]],
+            ['th-mh', data.maehongson["infect"]],
+            ['th-pu', data.phuket["infect"]],
+            ['th-cp', data.chumphon["infect"]],
+            ['th-yl', data.yala["infect"]],
+            ['th-cr', data.chiangrai["infect"]],
+            ['th-cm', data.chiangmai["infect"]],
+            ['th-ln', data.lamphun["infect"]],
+            ['th-na', data.nan["infect"]],
+            ['th-lg', data.lampang["infect"]],
+            ['th-pb', data.prachinburi["infect"]],
+            ['th-rt', data.ratchaburi["infect"]],
+            ['th-ys', data.yasothon["infect"]],
+            ['th-ms', data.mahasarakham["infect"]],
+            ['th-un', data.udonthani["infect"]],
+            ['th-nb', data.nongbualamphu["infect"]]
         ];
-
         // Create the chart
         Highcharts.mapChart('grid8', {
             chart: {
@@ -1461,15 +1393,17 @@
             },
 
             colorAxis: {
-                min: 0
+                min: 0,
+                max: 1000,
+                stops: [[0, '#F1EEF6'], [0.5, '#900037'], [1, '#500007']],
             },
 
             series: [{
-                data: data,
+                data: items,
                 name: 'Random data',
                 states: {
                     hover: {
-                        color: '#BADA55'
+                        color: '#ffff59'
                     }
                 },
                 dataLabels: {
@@ -1478,6 +1412,7 @@
                 }
             }]
         });
+    });
     }
 
     document.addEventListener('DOMContentLoaded', function() {

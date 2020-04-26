@@ -94,7 +94,7 @@
                 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
                 <script src="https://code.highcharts.com/mapdata/countries/th/th-all.js"></script>
                 <div id="grid8" style="height: 700px;"></div>
-                <table id="th-table" class="table table-bordered table-striped table-hover table-data" style="margin-top: 72px;">
+                <table id="table" class="table table-bordered table-striped table-hover table-data" style="margin-top: 72px;">
                     <thead>
                         <tr>
                             <th>จังหวัด</th>
@@ -256,7 +256,7 @@
                 items += '<td>' +value.cure+'</td>';
                 items += '</tr>';
             });
-            $('#th-table').append(items);
+            $('#table').append(items);
         });
     });
 </script>

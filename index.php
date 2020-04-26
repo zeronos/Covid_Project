@@ -350,7 +350,7 @@
         });
         Highcharts.chart('grid1', {
             title: {
-                text: ''
+                text: 'fff'
             },
 
             subtitle: {
@@ -486,9 +486,11 @@
             }
 
         });
-        Highcharts.chart('grid3', {
+        //--------------------------------------------------------------------------------------------------------------------------
+        var chart = new Highcharts.chart({
             chart: {
-                type: 'column'
+                type: 'column',
+                renderTo: 'grid3'
             },
             title: {
                 text: 'Stacked column chart'
@@ -512,25 +514,41 @@
                 }
             },
             series: [{
-                name: 'John',
-                data: [5, 3, 4, 7, 2]
-            }, {
-                name: 'Jane',
-                data: [2, 2, 3, 2, 1]
-            }, {
-                name: 'Joe',
-                data: [3, 4, 4, 2, 5]
-            }]
+
+                }
+
+            ]
         });
-        Highcharts.chart('grid4', {
+        //--------------------------------------------------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------------------------------------------------
+        $.ajax({
+            dataType: 'json',
+            url: './DATA/phase2/job/career.json',
+            success: function(data) {
+
+                
+                alert(data);
+                /*chart.addSeries({
+                    data: [
+                        {
+                            name: 'dddd',
+                            y:    56
+                        },
+                    ]
+                });*/
+            }
+
+        });
+        chart = new Highcharts.chart({
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
                 plotShadow: false,
-                type: 'pie'
+                type: 'pie',
+                renderTo: 'grid4'
             },
             title: {
-                text: 'Browser market shares in January, 2018'
+                text: 'Covid'
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -551,31 +569,10 @@
                 }
             },
             series: [{
-                name: 'Brands',
-                colorByPoint: true,
-                data: [{
-                    name: 'Chrome',
-                    y: 61.41,
-                    sliced: true,
-                    selected: true
-                }, {
-                    name: 'Internet Explorer',
-                    y: 11.84
-                }, {
-                    name: 'Firefox',
-                    y: 10.85
-                }, {
-                    name: 'Edge',
-                    y: 4.67
-                }, {
-                    name: 'Safari',
-                    y: 4.18
-                }, {
-                    name: 'Other',
-                    y: 7.05
-                }]
+                
             }]
         });
+        //--------------------------------------------------------------------------------------------------------------------------
         Highcharts.chart('grid5', {
             chart: {
                 plotBackgroundColor: null,

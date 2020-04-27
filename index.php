@@ -278,6 +278,7 @@
             "paging": false,
             "searching": false
         });
+        //------------------------------------------------------------------------------------- phase1 ---------------------------------------------------------//
         Highcharts.chart('grid1', {
             title: {
                 text: 'fff'
@@ -416,7 +417,7 @@
             }
 
         });
-        //--------------------------------------------------------------------------------------------------------------------------
+         //------------------------------------------------------------------------------------- phase 2 ---------------------------------------------------------//
         var chart = new Highcharts.chart({
             chart: {
                 type: 'column',
@@ -450,26 +451,22 @@
             ]
         });
         //--------------------------------------------------------------------------------------------------------------------------
-        //--------------------------------------------------------------------------------------------------------------------------
-        $.ajax({
-            dataType: 'json',
-            url: './DATA/phase2/job/career.json',
-            success: function(data) {
-
-                
-                alert(data);
-                /*chart.addSeries({
-                    data: [
-                        {
-                            name: 'dddd',
-                            y:    56
-                        },
-                    ]
-                });*/
+        //------------------------------------------------------------- เรียกข้อมูลจากไฟล์ JSON -----------------------------------------------------------
+        $.getJSON('./DATA/phase2/job/career.json', function( data ) {
+            //console.log(data.update);
+            var json = [];
+            //ต้องดูว่าแต่ละกราฟใช้ format ไหน
+            for ( var i = 0; i < data.data.length;i++)
+            {
+                json.push({name:data.data[i].ชื่อ,y:data.data[i].ติดเชื้อ})
             }
+            option.series[0].data = json;
+            option.subtitle = {text:"ข้อมูลวันที่ "+data.update}
+            
+            var chart = new Highcharts.chart(option);
 
         });
-        chart = new Highcharts.chart({
+        var option = {
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
@@ -478,14 +475,16 @@
                 renderTo: 'grid4'
             },
             title: {
-                text: 'Covid'
+                text: 'จำนวนผู้ติดเชื้อ'
             },
             tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                pointFormat: '{series.name}:<b>{point.y}</b>',
+                valueSuffix: ' คน'
+
             },
             accessibility: {
                 point: {
-                    valueSuffix: '%'
+                    valueSuffix: 'คน'
                 }
             },
             plotOptions: {
@@ -499,9 +498,9 @@
                 }
             },
             series: [{
-                
+                name:'จำนวน'
             }]
-        });
+        }
         //--------------------------------------------------------------------------------------------------------------------------
         Highcharts.chart('grid5', {
             chart: {
@@ -700,6 +699,7 @@
             }
 
         });
+         //------------------------------------------------------------------------------------- phase3 ---------------------------------------------------------//
         Highcharts.chart('grid9', {
             chart: {
                 type: 'scatter',
@@ -1437,43 +1437,8 @@
             }]
         });
 
-        var myChart2 = Highcharts.chart('stack', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: 'Stacked column chart'
-            },
-            xAxis: {
-                categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: 'Total fruit consumption'
-                }
-            },
-            tooltip: {
-                pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
-                shared: true
-            },
-            plotOptions: {
-                column: {
-                    stacking: 'percent'
-                }
-            },
-            series: [{
-                name: 'John',
-                data: [5, 3, 4, 7, 2]
-            }, {
-                name: 'Jane',
-                data: [2, 2, 3, 2, 1]
-            }, {
-                name: 'Joe',
-                data: [3, 4, 4, 2, 5]
-            }]
-
-        });
+        
+         //------------------------------------------------------------------------------------- phase4 ---------------------------------------------------------//
 
         Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/world-population-density.json', function(data) {
 

@@ -65,6 +65,7 @@
                     <option value="">อายุ</option>
                 </select>
             </div>
+            <p id="demo"></p>
             <div class="grid-container">
                 <div class="start-grid-container grid-item" id="grid3" style="height: 560px;"></div>
                 <div class="grid-item" id="grid4" style="height: 280px;"></div>
@@ -249,12 +250,14 @@
         $.getJSON( "DATA/phase3/province.json", function( data ){
             var items = '';
             $.each(data, function(key, value){
+                if(key != "lastupdate"){
                 items += '<tr>';
                 items += '<td>' +key+'</td>';
-                items += '<td>' +value.dead+'</td>';
-                items += '<td>' +value.healing+'</td>';
                 items += '<td>' +value.cure+'</td>';
+                items += '<td>' +value.healing+'</td>';
+                items += '<td>' +value.dead+'</td>';
                 items += '</tr>';
+                }
             });
             $('#table').append(items);
         });
@@ -418,47 +421,81 @@
 
         });
          //------------------------------------------------------------------------------------- phase 2 ---------------------------------------------------------//
-        var chart = new Highcharts.chart({
+         $(document).ready(function(){
+            $.getJSON('./DATA/phase2/age/age.json', function( data ) {
+            var json = [];
+            var infect = [];
+            var dead = [];
+            $.each( data, function( key, val )
+            {
+                if(key != "Last Update"&&key != "Unit"&&key != "Toltal"){
+                json.push(key);
+                infect.push(val.ติดเชื้อ);
+                dead.push(val.ตาย);
+                }
+            });
+            option.series[0].data = infect;
+            option.series[0].name = "ติดเชื้อ";
+            option.series[0].color = 'rgba(165,170,217,1)';
+            option.series[0].pointPadding = 0.1;
+            option.series[0].pointPlacement = -0.2;
+            option.series[1].data = dead;
+            option.series[1].name = "ตาย";
+            option.series[1].color = 'rgba(248,161,63,1)';
+            option.series[1].pointPadding = 0.2;
+            option.series[1].pointPlacement = -0.2;
+            option.xAxis.categories = json;
+            
+            var chart = new Highcharts.chart(option);
+
+        });
+        var option = {
             chart: {
                 type: 'column',
                 renderTo: 'grid3'
             },
             title: {
-                text: 'Stacked column chart'
+                text: 'Efficiency Optimization by Branch'
             },
             xAxis: {
-                categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+                
             },
-            yAxis: {
+            yAxis: [{
                 min: 0,
                 title: {
-                    text: 'Total fruit consumption'
+                    text: 'จำนวนคน'
                 }
+            }],
+            legend: {
+                shadow: false
             },
             tooltip: {
-                pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
                 shared: true
             },
             plotOptions: {
                 column: {
-                    stacking: 'percent'
+                    grouping: false,
+                    shadow: false,
+                    borderWidth: 0
                 }
             },
             series: [{
-
-                }
-
-            ]
-        });
+                
+            }, {
+                
+            }]
+        }
+    });
         //--------------------------------------------------------------------------------------------------------------------------
         //------------------------------------------------------------- เรียกข้อมูลจากไฟล์ JSON -----------------------------------------------------------
+        $(document).ready(function(){
         $.getJSON('./DATA/phase2/job/career.json', function( data ) {
             //console.log(data.update);
             var json = [];
             //ต้องดูว่าแต่ละกราฟใช้ format ไหน
             for ( var i = 0; i < data.data.length;i++)
             {
-                json.push({name:data.data[i].ชื่อ,y:data.data[i].ติดเชื้อ})
+                json.push({name:data.data[i].ชื่อ,y:data.data[i].ติดเชื้อ});
             }
             option.series[0].data = json;
             option.subtitle = {text:"ข้อมูลวันที่ "+data.update}
@@ -498,26 +535,47 @@
                 }
             },
             series: [{
-                name:'จำนวน'
             }]
         }
+    });
+
         //--------------------------------------------------------------------------------------------------------------------------
-        Highcharts.chart('grid5', {
+        $(document).ready(function(){
+            $.getJSON('./DATA/phase2/age/age.json', function( data ) {
+            //console.log(data.update);
+            var json = [];
+            //ต้องดูว่าแต่ละกราฟใช้ format ไหน
+            $.each( data, function( key, val )
+            {
+                if(key != "Last Update"&&key != "Unit"&&key != "Toltal"){
+                json.push({name:key,y:val.ตาย});
+                }
+            });
+            option.series[0].data = json;
+            option.subtitle = {text:"ข้อมูลวันที่ "+data.Last_Update}
+            
+            var chart = new Highcharts.chart(option);
+
+        });
+        var option = {
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
                 plotShadow: false,
-                type: 'pie'
+                type: 'pie',
+                renderTo: 'grid5'
             },
             title: {
-                text: 'Browser market shares in January, 2018'
+                text: 'จำนวนผู้ติดเชื้อ'
             },
             tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                pointFormat: '{series.name}:<b>{point.y}</b>',
+                valueSuffix: ' คน'
+
             },
             accessibility: {
                 point: {
-                    valueSuffix: '%'
+                    valueSuffix: 'คน'
                 }
             },
             plotOptions: {
@@ -531,32 +589,39 @@
                 }
             },
             series: [{
-                name: 'Brands',
-                colorByPoint: true,
-                data: [{
-                    name: 'Chrome',
-                    y: 61.41,
-                    sliced: true,
-                    selected: true
-                }, {
-                    name: 'Internet Explorer',
-                    y: 11.84
-                }, {
-                    name: 'Firefox',
-                    y: 10.85
-                }, {
-                    name: 'Edge',
-                    y: 4.67
-                }, {
-                    name: 'Safari',
-                    y: 4.18
-                }, {
-                    name: 'Other',
-                    y: 7.05
-                }]
+                name:'จำนวน'
             }]
+        }
+    });
+    $(document).ready(function(){
+            $.getJSON('./DATA/phase2/age/ageInfectedDaily.json', function( data ) {
+            //console.log(data.update);
+            var json = [];
+            var i = 0 ;
+            //ต้องดูว่าแต่ละกราฟใช้ format ไหน
+            $.each( data.Data, function( key, val )
+            {
+                json.push({name:key,data:val});
+            });         
+                option.series[0] = json[0];
+                option.series[1] = json[1];
+                option.series[2] = json[2];
+                option.series[3] = json[3];
+                option.series[4] = json[4];
+                option.series[5] = json[5];
+                option.series[6] = json[6];
+                option.series[7] = json[7];
+                option.series[8] = json[8];
+                option.series[9] = json[9];
+            document.getElementById("demo").innerHTML=json;
+            option.xAxis.categories = data.LabelText;
+            var chart = new Highcharts.chart(option);
+
         });
-        Highcharts.chart('grid6', {
+        var option ={
+            chart: {
+                renderTo: 'grid6'
+            },
             title: {
                 text: ''
             },
@@ -572,8 +637,8 @@
             },
 
             xAxis: {
-                accessibility: {
-                    rangeDescription: 'Range: 2010 to 2017'
+                categories: {
+
                 }
             },
 
@@ -588,25 +653,12 @@
                     label: {
                         connectorAllowed: false
                     },
-                    pointStart: 2010
+                    pointStart: 0
                 }
             },
 
             series: [{
-                name: 'Installation',
-                data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-            }, {
-                name: 'Manufacturing',
-                data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-            }, {
-                name: 'Sales & Distribution',
-                data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-            }, {
-                name: 'Project Development',
-                data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-            }, {
-                name: 'Other',
-                data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+                
             }],
 
             responsive: {
@@ -623,7 +675,7 @@
                     }
                 }]
             }
-
+        }
         });
         Highcharts.chart('grid7', {
 
@@ -646,8 +698,7 @@
             },
 
             xAxis: {
-                categories: ['Sales', 'Marketing', 'Development', 'Customer Support',
-                    'Information Technology', 'Administration'
+                categories: ['ติดเชื้อ', 'หาย', 'ตาย', 'รักษา'
                 ],
                 tickmarkPlacement: 'on',
                 lineWidth: 0
@@ -672,11 +723,11 @@
 
             series: [{
                 name: 'Allocated Budget',
-                data: [43000, 19000, 60000, 35000, 17000, 10000],
+                data: [43000, 19000, 60000, 35000],
                 pointPlacement: 'on'
             }, {
                 name: 'Actual Spending',
-                data: [50000, 39000, 42000, 31000, 26000, 14000],
+                data: [50000, 39000, 42000, 31000],
                 pointPlacement: 'on'
             }],
 
@@ -697,8 +748,8 @@
                     }
                 }]
             }
+    });
 
-        });
          //------------------------------------------------------------------------------------- phase3 ---------------------------------------------------------//
         Highcharts.chart('grid9', {
             chart: {

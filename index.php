@@ -613,7 +613,6 @@
                 option.series[7] = json[7];
                 option.series[8] = json[8];
                 option.series[9] = json[9];
-            document.getElementById("demo").innerHTML=json;
             option.xAxis.categories = data.LabelText;
             var chart = new Highcharts.chart(option);
 
@@ -677,11 +676,36 @@
             }
         }
         });
-        Highcharts.chart('grid7', {
+        $(document).ready(function(){
+            $.getJSON('./DATA/phase2/age/age.json', function( data ) {
+            //console.log(data.update);
+            var json = [];
+            //ต้องดูว่าแต่ละกราฟใช้ format ไหน
+            $.each( data, function( key, val )
+            {
+                if(key != "Last Update"&&key != "Unit"&&key != "Toltal"){
+                json.push({name:key,data:[val.ติดเชื้อ,val.หาย,val.ตาย],pointPlacement: 'on'});
+                document.getElementById("demo").innerHTML=[val.ติดเชื้อ,val.หาย,val.ตาย];
+                }
+            });
+            option.series[0] = json[0];
+            option.series[1] = json[1];
+            option.series[2] = json[2];
+            option.series[3] = json[3];
+            option.series[4] = json[4];
+            option.series[5] = json[5];
+            option.series[6] = json[6];
+            option.series[7] = json[7];
+            option.series[8] = json[8];
+            option.series[9] = json[9];
+            var chart = new Highcharts.chart(option);
+        });
+        var option ={
 
             chart: {
                 polar: true,
-                type: 'line'
+                type: 'line',
+                renderTo: 'grid7'
             },
 
             accessibility: {
@@ -698,8 +722,7 @@
             },
 
             xAxis: {
-                categories: ['ติดเชื้อ', 'หาย', 'ตาย', 'รักษา'
-                ],
+                categories: ['ติดเชื้อ', 'หาย', 'ตาย'],
                 tickmarkPlacement: 'on',
                 lineWidth: 0
             },
@@ -712,7 +735,7 @@
 
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
+                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
             },
 
             legend: {
@@ -722,13 +745,7 @@
             },
 
             series: [{
-                name: 'Allocated Budget',
-                data: [43000, 19000, 60000, 35000],
-                pointPlacement: 'on'
-            }, {
-                name: 'Actual Spending',
-                data: [50000, 39000, 42000, 31000],
-                pointPlacement: 'on'
+            
             }],
 
             responsive: {
@@ -748,8 +765,8 @@
                     }
                 }]
             }
-    });
-
+    }
+});
          //------------------------------------------------------------------------------------- phase3 ---------------------------------------------------------//
         Highcharts.chart('grid9', {
             chart: {

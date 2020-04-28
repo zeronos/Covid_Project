@@ -65,7 +65,6 @@
                     <option value="">อายุ</option>
                 </select>
             </div>
-            <p id="demo"></p>
             <div class="grid-container">
                 <div class="start-grid-container grid-item" id="grid3" style="height: 560px;"></div>
                 <div class="grid-item" id="grid4" style="height: 280px;"></div>
@@ -685,7 +684,6 @@
             {
                 if(key != "Last Update"&&key != "Unit"&&key != "Toltal"){
                 json.push({name:key,data:[val.ติดเชื้อ,val.หาย,val.ตาย],pointPlacement: 'on'});
-                document.getElementById("demo").innerHTML=[val.ติดเชื้อ,val.หาย,val.ตาย];
                 }
             });
             option.series[0] = json[0];

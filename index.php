@@ -245,15 +245,15 @@
 
 </html>
 <script>
-    $(document).ready(function(){
-        $.getJSON( "DATA/phase3/province.json", function( data ){
+    $(document).ready(function() {
+        $.getJSON("DATA/phase3/province.json", function(data) {
             var items = '';
-            $.each(data, function(key, value){
+            $.each(data, function(key, value) {
                 items += '<tr>';
-                items += '<td>' +key+'</td>';
-                items += '<td>' +value.dead+'</td>';
-                items += '<td>' +value.healing+'</td>';
-                items += '<td>' +value.cure+'</td>';
+                items += '<td>' + key + '</td>';
+                items += '<td>' + value.dead + '</td>';
+                items += '<td>' + value.healing + '</td>';
+                items += '<td>' + value.cure + '</td>';
                 items += '</tr>';
             });
             $('#table').append(items);
@@ -278,25 +278,69 @@
             "paging": false,
             "searching": false
         });
+
         //------------------------------------------------------------------------------------- phase1 ---------------------------------------------------------//
-        Highcharts.chart('grid1', {
+        $.getJSON("DATA/phase1/ผู้ติดเชื้อสะสมในแต่ละวัน.json", function(data) {
+
+            //console.log(data.Data[100].Confirmed);
+            var infectFreq = [];
+            var deathFreq = [];
+            var hospitalFreq = [];
+            var wellFreq = [];
+            var date = [];
+
+            for (var i = 0; i < data.Data.length; i++) {
+                infectFreq[i] = data.Data[i].Confirmed;
+                deathFreq[i] = data.Data[i].Deaths;
+                hospitalFreq[i] = data.Data[i].Hospitalized;
+                wellFreq.push[i] = data.Data[i].Recovered;
+                date.push(data.Data[i].Date)
+            }
+            console.log(date);
+            var DATA = [{
+                    name: "ติดเชื้อ",
+                    data: infectFreq
+                },
+                {
+                    name: "ตาย",
+                    data: deathFreq
+                },
+                {
+                    name: "รักษา",
+                    data: hospitalFreq
+                },
+                {
+                    name: "หาย",
+                    data: wellFreq
+                }
+            ]
+
+
+            phase1_1_Opt.series = DATA;
+            phase1_1_Opt.xAxis = {
+                type: 'datetime',
+                categories: date,
+                dateTimeLabelFormats:{
+                    day: '%e. %b',
+                    month: '%b \'%y',
+                    year: '%Y'
+                }
+                
+            }
+
+
+
+
+            var chart = new Highcharts.chart('grid1', phase1_1_Opt);
+
+        });
+        var phase1_1_Opt = {
             title: {
-                text: 'fff'
+                text: 'กราฟสะสม'
             },
-
-            subtitle: {
-                text: 'Source: thesolarfoundation.com'
-            },
-
             yAxis: {
                 title: {
-                    text: 'Number of Employees'
-                }
-            },
-
-            xAxis: {
-                accessibility: {
-                    rangeDescription: 'Range: 2010 to 2017'
+                    text: 'สะสม (คน)'
                 }
             },
 
@@ -315,22 +359,7 @@
                 }
             },
 
-            series: [{
-                name: 'Installation',
-                data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-            }, {
-                name: 'Manufacturing',
-                data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-            }, {
-                name: 'Sales & Distribution',
-                data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-            }, {
-                name: 'Project Development',
-                data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-            }, {
-                name: 'Other',
-                data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-            }],
+            series: [{}, {}, {}, {}],
 
             responsive: {
                 rules: [{
@@ -347,7 +376,8 @@
                 }]
             }
 
-        });
+        }
+        //--------------------------------------------------------------------------------------------------------------------------------
         Highcharts.chart('grid2', {
             title: {
                 text: 'Solar Employment Growth by Sector, 2010-2016'
@@ -417,7 +447,7 @@
             }
 
         });
-         //------------------------------------------------------------------------------------- phase 2 ---------------------------------------------------------//
+        //------------------------------------------------------------------------------------- phase 2 ---------------------------------------------------------//
         var chart = new Highcharts.chart({
             chart: {
                 type: 'column',
@@ -452,19 +482,21 @@
         });
         //--------------------------------------------------------------------------------------------------------------------------
         //------------------------------------------------------------- เรียกข้อมูลจากไฟล์ JSON -----------------------------------------------------------
-        $.getJSON('./DATA/phase2/job/career.json', function( data ) {
+        $.getJSON('./DATA/phase2/job/career.json', function(data) {
             //console.log(data.update);
             var json = [];
             //ต้องดูว่าแต่ละกราฟใช้ format ไหน
-            for ( var i = 0; i < data.data.length;i++)
-            {
-                json.push({name:data.data[i].ชื่อ,y:data.data[i].ติดเชื้อ})
+            for (var i = 0; i < data.data.length; i++) {
+                json.push({
+                    name: data.data[i].ชื่อ,
+                    y: data.data[i].ติดเชื้อ
+                })
             }
             option.series[0].data = json;
-            option.subtitle = {text:"ข้อมูลวันที่ "+data.update}
-            
+            option.subtitle = {
+                text: "ข้อมูลวันที่ " + data.update
+            }
             var chart = new Highcharts.chart(option);
-
         });
         var option = {
             chart: {
@@ -498,9 +530,11 @@
                 }
             },
             series: [{
-                name:'จำนวน'
+                name: 'จำนวน'
             }]
         }
+
+
         //--------------------------------------------------------------------------------------------------------------------------
         Highcharts.chart('grid5', {
             chart: {
@@ -699,7 +733,7 @@
             }
 
         });
-         //------------------------------------------------------------------------------------- phase3 ---------------------------------------------------------//
+        //------------------------------------------------------------------------------------- phase3 ---------------------------------------------------------//
         Highcharts.chart('grid9', {
             chart: {
                 type: 'scatter',
@@ -1279,166 +1313,6 @@
                 ]
             }]
         });
-    });
-
-    function createMap() {
-        // Prepare demo data
-        // Data is joined to map using value of 'hc-key' property by default.
-        // See API docs for 'joinBy' for more info on linking data and map.
-        var myObj = [];
-        var items = [];
-        $.getJSON( "DATA/phase3/province.json", function( data ) {
-        items = [
-            ['th-ct', data.chanthaburi["infect"]],
-            ['th-4255', 1],
-            ['th-pg', data.phangnga["infect"]],
-            ['th-st', data.suratthani["infect"]],
-            ['th-kr', data.krabi["infect"]],
-            ['th-sa', data.satun["infect"]],
-            ['th-tg', data.trang["infect"]],
-            ['th-tt', data.trat["infect"]],
-            ['th-pl', data.phatthalung["infect"]],
-            ['th-ps', data.phitsanulok["infect"]],
-            ['th-kp', data.kamphaengphet["infect"]],
-            ['th-pc', data.phichit["infect"]],
-            ['th-sh', data.suphanburi["infect"]],
-            ['th-at', data.angthong["infect"]],
-            ['th-lb', data.lopburi["infect"]],
-            ['th-pa', data.phranakhonsiayutthaya["infect"]],
-            ['th-np', data.nakhonpathom["infect"]],
-            ['th-sb', data.singburi["infect"]],
-            ['th-cn', data.chainat["infect"]],
-            ['th-bm', data.bangkok["infect"]],
-            ['th-pt', data.pathumthani["infect"]],
-            ['th-no', data.nonthaburi["infect"]],
-            ['th-sp', data.samutprakan["infect"]],
-            ['th-ss', data.samutsakhon["infect"]],
-            ['th-sm', data.samutsongkhram["infect"]],
-            ['th-pe', data.phetchaburi["infect"]],
-            ['th-cc', data.chachoengsao["infect"]],
-            ['th-nn', data.nakhonnayok["infect"]],
-            ['th-cb', data.chonburi["infect"]],
-            ['th-br', data.buriram["infect"]],
-            ['th-kk', data.khonkaen["infect"]],
-            ['th-ph', data.phetchabun["infect"]],
-            ['th-kl', data.kalasin["infect"]],
-            ['th-sr', data.saraburi["infect"]],
-            ['th-nr', data.nakhonratchasima["infect"]],
-            ['th-si', data.sisaket["infect"]],
-            ['th-re', data.roiet["infect"]],
-            ['th-le', data.loei["infect"]],
-            ['th-nk', data.nongkhai["infect"]],
-            ['th-ac', data.amnatcharoen["infect"]],
-            ['th-md', data.mukdahan["infect"]],
-            ['th-sn', data.sakonnakhon["infect"]],
-            ['th-nw', data.narathiwat["infect"]],
-            ['th-pi', data.pattani["infect"]],
-            ['th-rn', data.ranong["infect"]],
-            ['th-nt', data.nakhonsithammarat["infect"]],
-            ['th-sg', data.songkhla["infect"]],
-            ['th-pr', data.phrae["infect"]],
-            ['th-py', data.phayao["infect"]],
-            ['th-so', data.sukhothai["infect"]],
-            ['th-ud', data.uttaradit["infect"]],
-            ['th-kn', data.kanchanaburi["infect"]],
-            ['th-tk', data.tak["infect"]],
-            ['th-ut', data.uthaithani["infect"]],
-            ['th-ns', data.nakhonsawan["infect"]],
-            ['th-pk', data.prachuapkhirikhan["infect"]],
-            ['th-ur', data.ubonratchathani["infect"]],
-            ['th-sk', data.sakaeo["infect"]],
-            ['th-ry', data.rayong["infect"]],
-            ['th-cy', data.chaiyaphum["infect"]],
-            ['th-su', data.surin["infect"]],
-            ['th-nf', data.nakhonphanom["infect"]],
-            ['th-bk', data.buengkan["infect"]],
-            ['th-mh', data.maehongson["infect"]],
-            ['th-pu', data.phuket["infect"]],
-            ['th-cp', data.chumphon["infect"]],
-            ['th-yl', data.yala["infect"]],
-            ['th-cr', data.chiangrai["infect"]],
-            ['th-cm', data.chiangmai["infect"]],
-            ['th-ln', data.lamphun["infect"]],
-            ['th-na', data.nan["infect"]],
-            ['th-lg', data.lampang["infect"]],
-            ['th-pb', data.prachinburi["infect"]],
-            ['th-rt', data.ratchaburi["infect"]],
-            ['th-ys', data.yasothon["infect"]],
-            ['th-ms', data.mahasarakham["infect"]],
-            ['th-un', data.udonthani["infect"]],
-            ['th-nb', data.nongbualamphu["infect"]]
-        ];
-        // Create the chart
-        Highcharts.mapChart('grid8', {
-            chart: {
-                map: 'countries/th/th-all'
-            },
-
-            title: {
-                text: 'Highmaps basic demo'
-            },
-
-            subtitle: {
-                text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/th/th-all.js">Thailand</a>'
-            },
-
-            mapNavigation: {
-                enabled: true,
-                buttonOptions: {
-                    verticalAlign: 'bottom'
-                }
-            },
-
-            colorAxis: {
-                min: 0,
-                max: 1000,
-                stops: [[0, '#F1EEF6'], [0.5, '#900037'], [1, '#500007']],
-            },
-
-            series: [{
-                data: items,
-                name: 'Random data',
-                states: {
-                    hover: {
-                        color: '#ffff59'
-                    }
-                },
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.name}'
-                }
-            }]
-        });
-    });
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var myChart = Highcharts.chart('container', {
-            chart: {
-                type: 'bar'
-            },
-            title: {
-                text: 'Fruit Consumption'
-            },
-            xAxis: {
-                categories: ['Apples', 'Bananas', 'Oranges']
-            },
-            yAxis: {
-                title: {
-                    text: 'Fruit eaten'
-                }
-            },
-            series: [{
-                name: 'Jane',
-                data: [1, 0, 4]
-            }, {
-                name: 'John',
-                data: [5, 7, 3]
-            }]
-        });
-
-        
-         //------------------------------------------------------------------------------------- phase4 ---------------------------------------------------------//
 
         Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/world-population-density.json', function(data) {
 
@@ -1447,6 +1321,7 @@
                 p.value = (p.value < 1 ? 1 : p.value);
             });
 
+            //------------------------------------------------------------------------------------- phase4 ---------------------------------------------------------//
             // Initiate the chart
             Highcharts.mapChart('world_map', {
                 chart: {
@@ -1485,4 +1360,139 @@
         });
 
     });
+
+    function createMap() {
+        // Prepare demo data
+        // Data is joined to map using value of 'hc-key' property by default.
+        // See API docs for 'joinBy' for more info on linking data and map.
+        var myObj = [];
+        var items = [];
+        $.getJSON("DATA/phase3/province.json", function(data) {
+            items = [
+                ['th-ct', data.chanthaburi["infect"]],
+                ['th-4255', 1],
+                ['th-pg', data.phangnga["infect"]],
+                ['th-st', data.suratthani["infect"]],
+                ['th-kr', data.krabi["infect"]],
+                ['th-sa', data.satun["infect"]],
+                ['th-tg', data.trang["infect"]],
+                ['th-tt', data.trat["infect"]],
+                ['th-pl', data.phatthalung["infect"]],
+                ['th-ps', data.phitsanulok["infect"]],
+                ['th-kp', data.kamphaengphet["infect"]],
+                ['th-pc', data.phichit["infect"]],
+                ['th-sh', data.suphanburi["infect"]],
+                ['th-at', data.angthong["infect"]],
+                ['th-lb', data.lopburi["infect"]],
+                ['th-pa', data.phranakhonsiayutthaya["infect"]],
+                ['th-np', data.nakhonpathom["infect"]],
+                ['th-sb', data.singburi["infect"]],
+                ['th-cn', data.chainat["infect"]],
+                ['th-bm', data.bangkok["infect"]],
+                ['th-pt', data.pathumthani["infect"]],
+                ['th-no', data.nonthaburi["infect"]],
+                ['th-sp', data.samutprakan["infect"]],
+                ['th-ss', data.samutsakhon["infect"]],
+                ['th-sm', data.samutsongkhram["infect"]],
+                ['th-pe', data.phetchaburi["infect"]],
+                ['th-cc', data.chachoengsao["infect"]],
+                ['th-nn', data.nakhonnayok["infect"]],
+                ['th-cb', data.chonburi["infect"]],
+                ['th-br', data.buriram["infect"]],
+                ['th-kk', data.khonkaen["infect"]],
+                ['th-ph', data.phetchabun["infect"]],
+                ['th-kl', data.kalasin["infect"]],
+                ['th-sr', data.saraburi["infect"]],
+                ['th-nr', data.nakhonratchasima["infect"]],
+                ['th-si', data.sisaket["infect"]],
+                ['th-re', data.roiet["infect"]],
+                ['th-le', data.loei["infect"]],
+                ['th-nk', data.nongkhai["infect"]],
+                ['th-ac', data.amnatcharoen["infect"]],
+                ['th-md', data.mukdahan["infect"]],
+                ['th-sn', data.sakonnakhon["infect"]],
+                ['th-nw', data.narathiwat["infect"]],
+                ['th-pi', data.pattani["infect"]],
+                ['th-rn', data.ranong["infect"]],
+                ['th-nt', data.nakhonsithammarat["infect"]],
+                ['th-sg', data.songkhla["infect"]],
+                ['th-pr', data.phrae["infect"]],
+                ['th-py', data.phayao["infect"]],
+                ['th-so', data.sukhothai["infect"]],
+                ['th-ud', data.uttaradit["infect"]],
+                ['th-kn', data.kanchanaburi["infect"]],
+                ['th-tk', data.tak["infect"]],
+                ['th-ut', data.uthaithani["infect"]],
+                ['th-ns', data.nakhonsawan["infect"]],
+                ['th-pk', data.prachuapkhirikhan["infect"]],
+                ['th-ur', data.ubonratchathani["infect"]],
+                ['th-sk', data.sakaeo["infect"]],
+                ['th-ry', data.rayong["infect"]],
+                ['th-cy', data.chaiyaphum["infect"]],
+                ['th-su', data.surin["infect"]],
+                ['th-nf', data.nakhonphanom["infect"]],
+                ['th-bk', data.buengkan["infect"]],
+                ['th-mh', data.maehongson["infect"]],
+                ['th-pu', data.phuket["infect"]],
+                ['th-cp', data.chumphon["infect"]],
+                ['th-yl', data.yala["infect"]],
+                ['th-cr', data.chiangrai["infect"]],
+                ['th-cm', data.chiangmai["infect"]],
+                ['th-ln', data.lamphun["infect"]],
+                ['th-na', data.nan["infect"]],
+                ['th-lg', data.lampang["infect"]],
+                ['th-pb', data.prachinburi["infect"]],
+                ['th-rt', data.ratchaburi["infect"]],
+                ['th-ys', data.yasothon["infect"]],
+                ['th-ms', data.mahasarakham["infect"]],
+                ['th-un', data.udonthani["infect"]],
+                ['th-nb', data.nongbualamphu["infect"]]
+            ];
+            // Create the chart
+            Highcharts.mapChart('grid8', {
+                chart: {
+                    map: 'countries/th/th-all'
+                },
+
+                title: {
+                    text: 'Highmaps basic demo'
+                },
+
+                subtitle: {
+                    text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/th/th-all.js">Thailand</a>'
+                },
+
+                mapNavigation: {
+                    enabled: true,
+                    buttonOptions: {
+                        verticalAlign: 'bottom'
+                    }
+                },
+
+                colorAxis: {
+                    min: 0,
+                    max: 1000,
+                    stops: [
+                        [0, '#F1EEF6'],
+                        [0.5, '#900037'],
+                        [1, '#500007']
+                    ],
+                },
+
+                series: [{
+                    data: items,
+                    name: 'Random data',
+                    states: {
+                        hover: {
+                            color: '#ffff59'
+                        }
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}'
+                    }
+                }]
+            });
+        });
+    }
 </script>

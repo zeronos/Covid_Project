@@ -8,16 +8,14 @@
             var deathFreq = [];
             var hospitalFreq = [];
             var wellFreq = [];
-
-            console.log(data.Data[110].Recovered)
+            //console.log(data.Data[110].Recovered)
             for (var i = 0; i < data.Data.length; i++) {
                 infectFreq[i] = data.Data[i].Confirmed;
                 deathFreq[i] = data.Data[i].Deaths;
                 hospitalFreq[i] = data.Data[i].Hospitalized;
                 wellFreq[i] = data.Data[i].Recovered;
-
             }
-            console.log(wellFreq);
+            //console.log(wellFreq);
             var DATA = [{
                     name: "ติดเชื้อ",
                     data: infectFreq
@@ -39,6 +37,9 @@
 
             phase1_1_Opt.series = DATA;
             phase1_1_Opt.xAxis.categories = data.date;
+            phase1_1_Opt.subtitle = {
+                text: "ข้อมูลวันที่ " + data.UpdateDate
+            }
             var chart = new Highcharts.chart('grid1', phase1_1_Opt);
 
         });
@@ -83,6 +84,13 @@
                         }
                     }
                 }]
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
+                shared: true
+            },
+            lang: {
+                thousandsSep: ','
             }
 
         }

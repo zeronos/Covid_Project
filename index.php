@@ -15,7 +15,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
                         <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
-                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่ 19 เมษายน 2563</p>
+                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่ 25 เมษายน 2563</p>
                     </div>
                 </div>
 
@@ -58,11 +58,11 @@
             </div>
             <div class="row">
                 <div class="col-sm-9"></div>
-                <select class="selectpicker col-sm-2">
-                    <option value="" selected>ศาสนา</option>
-                    <option value="">อาชีพ</option>
-                    <option value="">ภูมิภาค</option>
-                    <option value="">อายุ</option>
+                <select class="selectpicker col-sm-2" id="phase2_select">
+                    <option value="religion" selected>ศาสนา</option>
+                    <option value="job">อาชีพ</option>
+                    <option value="region">ภูมิภาค</option>
+                    <option value="age">อายุ</option>
                 </select>
             </div>
             <div class="grid-container">
@@ -243,8 +243,6 @@
         $('#choine-relation-section1').parent().attr('style', 'padding-left: 4rem;')
         $('#choine-relation-section2').parent().attr('style', 'padding-right: 4rem;')
 
-
-
         $('#world_table').DataTable({
             "scrollY": "300px",
             "scrollCollapse": true,
@@ -254,13 +252,46 @@
     });
 </script>
 
-<?php include('./controller/phase1/allFreqGraph_TH.php') ?>
-<?php include('./controller/phase1/allGraph_TH.php') ?>
+
+<?php
+//-------------phase1---------------------------//
+include('./controller/phase1/allFreqGraph_TH.php');
+include('./controller/phase1/allGraph_TH.php');
+?>
+
+<script>
+    //----------------phase2----------------------//
+    $('#phase2_select').change(function() {
+        if ($('.option:selected')) {
+            if ($(this).val() == "age") {
+               $.ajax({
+                   url:'./controller/phase2/age/columnGraph.php',
+                   success: function(data)
+                   {
+                       alert(data);
+                   }
+               });
+                
+            }
+            if ($(this).val() == "job") {
+                alert('true');
+               
+            }
+
+        } else
+            alert("false");
+    });
+</script>
+
+
 <?php include('./controller/phase2/age/columnGraph.php') ?>
-<?php include('./controller/phase2/career/infect_pieGraph.php') ?>
 <?php include('./controller/phase2/age/infect_pieGraph.php') ?>
 <?php include('./controller/phase2/age/dailyDeath_lineGraph.php') ?>
 <?php include('./controller/phase2/age/spiderGraph.php') ?>
+
+
+ <?php include('./controller/phase2/career/infect_pieGraph.php') ?>
+
 <?php include('./controller/phase3/map_TH.php') ?>
 <?php include('./controller/phase4/relationGraph.php') ?>
 <?php include('./controller/world/worldMap.php') ?>

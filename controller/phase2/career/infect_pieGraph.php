@@ -30,7 +30,6 @@
             tooltip: {
                 pointFormat: '{series.name}:<b>{point.y}</b>',
                 valueSuffix: ' คน'
-
             },
             accessibility: {
                 point: {

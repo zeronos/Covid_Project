@@ -1,9 +1,9 @@
-{"UpdateDate":"25\/04\/2020 11:33",
+{"UpdateDate":"25/04/2020 11:33",
  "Source":"https:\/\/covid19.th-stat.com\/",
  "Data":
  [
     {
-         "Date":"01\/01\/2020",
+         "Date":"01/01/2020",
          "NewConfirmed":0,
          "NewRecovered":0,
          "NewHospitalized":0,
@@ -14,7 +14,7 @@
          "Deaths":0
     },
     {
-         "Date":"01\/02\/2020",
+         "Date":"01/02/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -25,7 +25,7 @@
         "Deaths":0
     },
     {
-         "Date":"01\/03\/2020",
+         "Date":"01/03/2020",
          "NewConfirmed":0,
          "NewRecovered":0,
          "NewHospitalized":0,
@@ -36,7 +36,7 @@
          "Deaths":0
     },
     {
-         "Date":"01\/04\/2020",
+         "Date":"01/04/2020",
          "NewConfirmed":0,
          "NewRecovered":0,
          "NewHospitalized":0,
@@ -47,7 +47,7 @@
          "Deaths":0
     },
     {
-         "Date":"01\/05\/2020",
+         "Date":"01/05/2020",
          "NewConfirmed":0,
          "NewRecovered":0,
          "NewHospitalized":0,
@@ -58,7 +58,7 @@
          "Deaths":0
     },
     {
-        "Date":"01\/06\/2020",
+        "Date":"01/06/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -69,7 +69,7 @@
         "Deaths":0
     },
     {
-         "Date":"01\/07\/2020",
+         "Date":"01/07/2020",
          "NewConfirmed":0,
          "NewRecovered":0,
          "NewHospitalized":0,
@@ -80,7 +80,7 @@
          "Deaths":0
     },
     {
-         "Date":"01\/08\/2020",
+         "Date":"01/08/2020",
          "NewConfirmed":0,
          "NewRecovered":0,
          "NewHospitalized":0,
@@ -91,7 +91,7 @@
          "Deaths":0
     },
     {
-         "Date":"01\/09\/2020",
+         "Date":"01/09/2020",
          "NewConfirmed":0,
          "NewRecovered":0,
          "NewHospitalized":0,
@@ -102,7 +102,7 @@
          "Deaths":0
     },
     {
-        "Date":"01\/10\/2020",
+        "Date":"01/10/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -113,7 +113,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/11\/2020",
+        "Date":"01/11/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -124,7 +124,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/12\/2020",
+        "Date":"01/12/2020",
         "NewConfirmed":1,
         "NewRecovered":0,
         "NewHospitalized":1,
@@ -135,7 +135,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/13\/2020",
+        "Date":"01/13/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -146,7 +146,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/14\/2020",
+        "Date":"01/14/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -157,7 +157,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/15\/2020",
+        "Date":"01/15/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -168,7 +168,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/16\/2020",
+        "Date":"01/16/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -179,7 +179,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/17\/2020",
+        "Date":"01/17/2020",
         "NewConfirmed":1,
         "NewRecovered":0,
         "NewHospitalized":1,
@@ -190,7 +190,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/18\/2020",
+        "Date":"01/18/2020",
         "NewConfirmed":0,
         "NewRecovered":1,
         "NewHospitalized":-1,
@@ -201,7 +201,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/19\/2020",
+        "Date":"01/19/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -212,7 +212,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/20\/2020",
+        "Date":"01/20/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -223,7 +223,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/21\/2020",
+        "Date":"01/21/2020",
         "NewConfirmed":0,
         "NewRecovered":1,
         "NewHospitalized":-1,
@@ -234,7 +234,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/22\/2020",
+        "Date":"01/22/2020",
         "NewConfirmed":2,
         "NewRecovered":0,
         "NewHospitalized":2,
@@ -245,7 +245,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/23\/2020",
+        "Date":"01/23/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -256,7 +256,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/24\/2020",
+        "Date":"01/24/2020",
         "NewConfirmed":1,
         "NewRecovered":1,
         "NewHospitalized":0,
@@ -267,7 +267,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/25\/2020",
+        "Date":"01/25/2020",
         "NewConfirmed":1,
         "NewRecovered":0,
         "NewHospitalized":1,
@@ -278,7 +278,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/26\/2020",
+        "Date":"01/26/2020",
         "NewConfirmed":2,
         "NewRecovered":3,
         "NewHospitalized":-1,
@@ -289,7 +289,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/27\/2020",
+        "Date":"01/27/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -300,7 +300,7 @@
         "Deaths":0
     },
     {
-        "Date":"01\/28\/2020",
+        "Date":"01/28/2020",
         "NewConfirmed":6,
         "NewRecovered":0,
         "NewHospitalized":6,
@@ -344,7 +344,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/01\/2020",
+        "Date":"02/01/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -355,7 +355,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/02\/2020",
+        "Date":"02/02/2020",
         "NewConfirmed":0,
         "NewRecovered":1,
         "NewHospitalized":-1,
@@ -366,7 +366,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/03\/2020",
+        "Date":"02/03/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -377,7 +377,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/04\/2020",
+        "Date":"02/04/2020",
         "NewConfirmed":6,
         "NewRecovered":1,
         "NewHospitalized":5,
@@ -388,7 +388,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/05\/2020",
+        "Date":"02/05/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -399,7 +399,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/06\/2020",
+        "Date":"02/06/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -410,7 +410,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/07\/2020",
+        "Date":"02/07/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -421,7 +421,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/08\/2020",
+        "Date":"02/08/2020",
         "NewConfirmed":7,
         "NewRecovered":0,
         "NewHospitalized":7,
@@ -433,7 +433,7 @@
 
     },
     {
-        "Date":"02\/09\/2020",
+        "Date":"02/09/2020",
         "NewConfirmed":0,
         "NewRecovered":1,
         "NewHospitalized":-1,
@@ -444,7 +444,8 @@
         "Deaths":0
     },
     {
-        "Date":"02\/10\/2020",
+    
+        "Date":"02/10/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -455,7 +456,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/11\/2020",
+        "Date":"02/11/2020",
         "NewConfirmed":1,
         "NewRecovered":0,
         "NewHospitalized":1,
@@ -466,7 +467,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/12\/2020",
+        "Date":"02/12/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -477,7 +478,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/13\/2020",
+        "Date":"02/13/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -488,7 +489,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/14\/2020",
+        "Date":"02/14/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -499,7 +500,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/15\/2020",
+        "Date":"02/15/2020",
         "NewConfirmed":1,
         "NewRecovered":2,
         "NewHospitalized":-1,
@@ -510,7 +511,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/16\/2020",
+        "Date":"02/16/2020",
         "NewConfirmed":0,
         "NewRecovered":2,
         "NewHospitalized":-2,
@@ -521,7 +522,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/17\/2020",
+        "Date":"02/17/2020",
         "NewConfirmed":1,
         "NewRecovered":0,
         "NewHospitalized":1,
@@ -532,7 +533,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/18\/2020",
+        "Date":"02/18/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -543,7 +544,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/19\/2020",
+        "Date":"02/19/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -554,7 +555,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/20\/2020",
+        "Date":"02/20/2020",
         "NewConfirmed":0,
         "NewRecovered":2,
         "NewHospitalized":-2,
@@ -565,7 +566,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/21\/2020",
+        "Date":"02/21/2020",
         "NewConfirmed":0,
         "NewRecovered":2,
         "NewHospitalized":-2,
@@ -576,7 +577,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/22\/2020",
+        "Date":"02/22/2020",
         "NewConfirmed":0,
         "NewRecovered":1,
         "NewHospitalized":-1,
@@ -587,7 +588,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/23\/2020",
+        "Date":"02/23/2020",
         "NewConfirmed":0,
         "NewRecovered":1,
         "NewHospitalized":-1,
@@ -598,7 +599,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/24\/2020",
+        "Date":"02/24/2020",
         "NewConfirmed":0,
         "NewRecovered":0,
         "NewHospitalized":0,
@@ -609,7 +610,7 @@
         "Deaths":0
     },
     {
-        "Date":"02\/25\/2020",
+        "Date":"02/25/2020",
         "NewConfirmed":2,
         "NewRecovered":1,
         "NewHospitalized":1,
@@ -620,7 +621,7 @@
         "Deaths":0
         },
         {
-            "Date":"02\/26\/2020",
+            "Date":"02/26/2020",
             "NewConfirmed":3,
             "NewRecovered":2,
             "NewHospitalized":1,
@@ -631,7 +632,7 @@
             "Deaths":0
         },
         {
-            "Date":"02\/27\/2020",
+            "Date":"02/27/2020",
             "NewConfirmed":0,
             "NewRecovered":0,
             "NewHospitalized":0,
@@ -642,7 +643,7 @@
             "Deaths":0
         },
         {
-            "Date":"02\/28\/2020",
+            "Date":"02/28/2020",
             "NewConfirmed":1,
             "NewRecovered":4,
             "NewHospitalized":-3,
@@ -653,7 +654,7 @@
             "Deaths":0
         },
         {
-            "Date":"02\/29\/2020",
+            "Date":"02/29/2020",
             "NewConfirmed":1,
             "NewRecovered":0,
             "NewHospitalized":1,
@@ -664,7 +665,7 @@
             "Deaths":0
         },
         {
-            "Date":"03\/01\/2020",
+            "Date":"03/01/2020",
             "NewConfirmed":0,
             "NewRecovered":2,
             "NewHospitalized":-3,
@@ -675,7 +676,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/02\/2020",
+            "Date":"03/02/2020",
             "NewConfirmed":1,
             "NewRecovered":1,
             "NewHospitalized":0,
@@ -686,7 +687,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/03\/2020",
+            "Date":"03/03/2020",
             "NewConfirmed":0,
             "NewRecovered":0,
             "NewHospitalized":0,
@@ -697,7 +698,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/04\/2020",
+            "Date":"03/04/2020",
             "NewConfirmed":0,
             "NewRecovered":0,
             "NewHospitalized":0,
@@ -708,7 +709,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/05\/2020",
+            "Date":"03/05/2020",
             "NewConfirmed":4,
             "NewRecovered":0,
             "NewHospitalized":4,
@@ -719,7 +720,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/06\/2020",
+            "Date":"03/06/2020",
             "NewConfirmed":1,
             "NewRecovered":0,
             "NewHospitalized":1,
@@ -730,7 +731,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/07\/2020",
+            "Date":"03/07/2020",
             "NewConfirmed":2,
             "NewRecovered":0,
             "NewHospitalized":2,
@@ -741,7 +742,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/08\/2020",
+            "Date":"03/08/2020",
             "NewConfirmed":0,
             "NewRecovered":2,
             "NewHospitalized":-2,
@@ -752,7 +753,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/09\/2020",
+            "Date":"03/09/2020",
             "NewConfirmed":0,
             "NewRecovered":0,
             "NewHospitalized":0,
@@ -763,7 +764,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/10\/2020",
+            "Date":"03/10/2020",
             "NewConfirmed":3,
             "NewRecovered":0,
             "NewHospitalized":3,
@@ -774,7 +775,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/11\/2020",
+            "Date":"03/11/2020",
             "NewConfirmed":6,
             "NewRecovered":1,
             "NewHospitalized":5,
@@ -785,7 +786,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/12\/2020",
+            "Date":"03/12/2020",
             "NewConfirmed":11,
             "NewRecovered":1,
             "NewHospitalized":10,
@@ -796,7 +797,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/13\/2020",
+            "Date":"03/13/2020",
             "NewConfirmed":5,
             "NewRecovered":0,
             "NewHospitalized":5,
@@ -807,7 +808,7 @@
             "Deaths":1
          },
          {
-             "Date":"03\/14\/2020",
+             "Date":"03/14/2020",
              "NewConfirmed":7,
              "NewRecovered":0,
              "NewHospitalized":7,
@@ -818,7 +819,7 @@
              "Deaths":1
         },
         {
-            "Date":"03\/15\/2020",
+            "Date":"03/15/2020",
             "NewConfirmed":32,
             "NewRecovered":2,
             "NewHospitalized":30,
@@ -829,7 +830,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/16\/2020",
+            "Date":"03/16/2020",
             "NewConfirmed":33,
             "NewRecovered":1,
             "NewHospitalized":32,
@@ -840,7 +841,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/17\/2020",
+            "Date":"03/17/2020",
             "NewConfirmed":30,
             "NewRecovered":3,
             "NewHospitalized":27,
@@ -851,7 +852,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/18\/2020",
+            "Date":"03/18/2020",
             "NewConfirmed":35,
             "NewRecovered":1,
             "NewHospitalized":34,
@@ -862,7 +863,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/19\/2020",
+            "Date":"03/19/2020",
             "NewConfirmed":60,
             "NewRecovered":0,
             "NewHospitalized":60,
@@ -873,7 +874,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/20\/2020",
+            "Date":"03/20/2020",
             "NewConfirmed":50,
             "NewRecovered":1,
             "NewHospitalized":49,
@@ -884,7 +885,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/21\/2020",
+            "Date":"03/21/2020",
             "NewConfirmed":89,
             "NewRecovered":1,
             "NewHospitalized":88,
@@ -895,7 +896,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/22\/2020",
+            "Date":"03/22/2020",
             "NewConfirmed":188,
             "NewRecovered":1,
             "NewHospitalized":187,
@@ -906,7 +907,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/23\/2020",
+            "Date":"03/23/2020",
             "NewConfirmed":122,
             "NewRecovered":7,
             "NewHospitalized":115,
@@ -917,7 +918,7 @@
             "Deaths":1
         },
         {
-            "Date":"03\/24\/2020",
+            "Date":"03/24/2020",
             "NewConfirmed":106,
             "NewRecovered":5,
             "NewHospitalized":98,
@@ -928,7 +929,7 @@
             "Deaths":4
         },
         {
-            "Date":"03\/25\/2020",
+            "Date":"03/25/2020",
             "NewConfirmed":107,
             "NewRecovered":13,
             "NewHospitalized":94,
@@ -939,7 +940,7 @@
             "Deaths":4
         },
         {
-            "Date":"03\/26\/2020",
+            "Date":"03/26/2020",
             "NewConfirmed":111,
             "NewRecovered":18,
             "NewHospitalized":93,
@@ -950,7 +951,7 @@
             "Deaths":4
         },
         {
-            "Date":"03\/27\/2020",
+            "Date":"03/27/2020",
             "NewConfirmed":91
             ,"NewRecovered":9,
             "NewHospitalized":81,
@@ -961,7 +962,7 @@
             "Deaths":5
         },
         {
-            "Date":"03\/28\/2020",
+            "Date":"03/28/2020",
             "NewConfirmed":109,
             "NewRecovered":3,
             "NewHospitalized":105,
@@ -972,7 +973,7 @@
             "Deaths":6
         },
         {
-            "Date":"03\/29\/2020",
+            "Date":"03/29/2020",
             "NewConfirmed":143,
             "NewRecovered":11,
             "NewHospitalized":131,
@@ -983,7 +984,7 @@
             "Deaths":7
         },
         {
-            "Date":"03\/30\/2020",
+            "Date":"03/30/2020",
             "NewConfirmed":136,
             "NewRecovered":16,
             "NewHospitalized":118,
@@ -994,7 +995,7 @@
             "Deaths":9
         },
         {
-            "Date":"03\/31\/2020",
+            "Date":"03/31/2020",
             "NewConfirmed":127,
             "NewRecovered":215,
             "NewHospitalized":-89,
@@ -1005,7 +1006,7 @@
             "Deaths":10
         },
         {
-            "Date":"04\/01\/2020",
+            "Date":"04/01/2020",
             "NewConfirmed":120,
             "NewRecovered":74,
             "NewHospitalized":44,
@@ -1016,7 +1017,7 @@
             "Deaths":12
         },
         {
-            "Date":"04\/02\/2020",
+            "Date":"04/02/2020",
             "NewConfirmed":104,
             "NewRecovered":89,
             "NewHospitalized":12,
@@ -1027,7 +1028,7 @@
             "Deaths":15
         },
         {
-            "Date":"04\/03\/2020",
+            "Date":"04/03/2020",
             "NewConfirmed":103,
             "NewRecovered":76,
             "NewHospitalized":23,
@@ -1038,7 +1039,7 @@
             "Deaths":19
         },
         {
-            "Date":"04\/04\/2020",
+            "Date":"04/04/2020",
             "NewConfirmed":89,
             "NewRecovered":31,
             "NewHospitalized":57,
@@ -1049,7 +1050,7 @@
             "Deaths":20
         },
         {
-            "Date":"04\/05\/2020",
+            "Date":"04/05/2020",
             "NewConfirmed":102,
             "NewRecovered":62,
             " NewHospitalized":37,
@@ -1060,7 +1061,7 @@
             "Deaths":23
         },
         {
-            "Date":"04\/06\/2020",
+            "Date":"04/06/2020",
             "NewConfirmed":51,
             "NewRecovered":119,
             "NewHospitalized":-71,
@@ -1071,7 +1072,7 @@
             "Deaths":26
         },
         {
-            "Date":"04\/07\/2020",
+            "Date":"04/07/2020",
             "NewConfirmed":38,
             "NewRecovered":31,
             "NewHospitalized":6,
@@ -1082,7 +1083,7 @@
             "Deaths":27
         },
         {
-            "Date":"04\/08\/2020",
+            "Date":"04/08/2020",
             "NewConfirmed":111,
             "NewRecovered":64,
             "NewHospitalized":44,
@@ -1093,7 +1094,7 @@
             "Deaths":30
         },
         {
-            "Date":"04\/09\/2020",
+            "Date":"04/09/2020",
             "NewConfirmed":54,
             "NewRecovered":52,
             "NewHospitalized":0,
@@ -1104,7 +1105,7 @@
             "Deaths":32
         },
         {
-            "Date":"04\/10\/2020",
+            "Date":"04/10/2020",
             "NewConfirmed":50,
             "NewRecovered":73,
             "NewHospitalized":-24,
@@ -1115,7 +1116,7 @@
             "Deaths":33
         },
         {
-            "Date":"04\/11\/2020",
+            "Date":"04/11/2020",
             "NewConfirmed":45,
             "NewRecovered":122,
             "NewHospitalized":-79,
@@ -1126,7 +1127,7 @@
             "Deaths":35
         },
         {
-            "Date":"04\/12\/2020",
+            "Date":"04/12/2020",
             "NewConfirmed":33,
             "NewRecovered":83,
             "NewHospitalized":-53,
@@ -1137,7 +1138,7 @@
             "Deaths":38
         },
         {
-            "Date":"04\/13\/2020",
+            "Date":"04/13/2020",
             "NewConfirmed":28,
             "NewRecovered":70,
             "NewHospitalized":-44,
@@ -1148,7 +1149,7 @@
             "Deaths":40
         },
         {
-            "Date":"04\/14\/2020",
+            "Date":"04/14/2020",
             "NewConfirmed":34,
             "NewRecovered":117,
             "NewHospitalized":-84,
@@ -1159,7 +1160,7 @@
             "Deaths":41
         },
         {
-            "Date":"04\/15\/2020",
+            "Date":"04/15/2020",
             "NewConfirmed":30,
             "NewRecovered":92,
             "NewHospitalized":-64,
@@ -1170,7 +1171,7 @@
             "Deaths":43
         },
         {
-            "Date":"04\/16\/2020",
+            "Date":"04/16/2020",
             "NewConfirmed":29,
             "NewRecovered":96,
             "NewHospitalized":-70,
@@ -1181,7 +1182,7 @@
             "Deaths":46
         },
         {
-            "Date":"04\/17\/2020",
+            "Date":"04/17/2020",
             "NewConfirmed":28,
             "NewRecovered":96,
             "NewHospitalized":-69,
@@ -1192,7 +1193,7 @@
             "Deaths":47
         },
         {
-            "Date":"04\/18\/2020",
+            "Date":"04/18/2020",
             "NewConfirmed":33,
             "NewRecovered":98,
             "NewHospitalized":-65,
@@ -1203,7 +1204,7 @@
             "Deaths":47
         },
         {
-            "Date":"04\/19\/2020",
+            "Date":"04/19/2020",
             "NewConfirmed":32,
             "NewRecovered":141,
             "NewHospitalized":-109,
@@ -1214,7 +1215,7 @@
             "Deaths":47
         },
         {
-            "Date":"04\/20\/2020",
+            "Date":"04/20/2020",
             "NewConfirmed":27,
             "NewRecovered":71,
             "NewHospitalized":-44,
@@ -1225,7 +1226,7 @@
             "Deaths":47
         },
         {
-            "Date":"04\/21\/2020",
+            "Date":"04/21/2020",
             "NewConfirmed":19,
             "NewRecovered":109,
             "NewHospitalized":-91,
@@ -1236,7 +1237,7 @@
             "Deaths":48
         },
         {
-            "Date":"04\/22\/2020",
+            "Date":"04/22/2020",
             "NewConfirmed":15,
             "NewRecovered":244,
             "NewHospitalized":-230,
@@ -1247,7 +1248,7 @@
             "Deaths":49
         },
         {
-            "Date":"04\/23\/2020",
+            "Date":"04/23/2020",
             "NewConfirmed":13,
             "NewRecovered":78,
             "NewHospitalized":-66,
@@ -1258,7 +1259,7 @@
             "Deaths":50
         },
         {
-            "Date":"04\/24\/2020",
+            "Date":"04/24/2020",
             "NewConfirmed":15,
             "NewRecovered":60,
             "NewHospitalized":-45,
@@ -1269,7 +1270,7 @@
             "Deaths":50
         },
         {
-            "Date":"04\/25\/2020",
+            "Date":"04/25/2020",
             "NewConfirmed":53,
             "NewRecovered":57,
             "NewHospitalized":-5,
@@ -1279,6 +1280,22 @@
             "Hospitalized":309,
             "Deaths":51
         }
+    ],
+
+    "date":["1 ม.ค","2 ม.ค","3/01/2020","4/01/2020","5/01/2020","6 ม.ค","7/01/2020","8/01/2020","9/01/2020","10/01/2020","11 ม.ค"
+        ,"12/01/2020","13/01/2020","14/01/2020","15/01/2020","16 ม.ค","17/01/2020","18/01/2020","19/01/2020","20/01/2020",
+        "21 ม.ค","22/01/2020","23/01/2020","24/01/2020","25/012/2020","26 ม.ค","27/01/2020","28/01/2020","29/01/2020",
+        "30/01/2020","31 ม.ค",
+        "1/02/2020","2/02/2020","3/02/2020","4/02/2020","5 ก.พ","6/02/2020","7/02/2020","8/02/2020","9/02/2020","10 ก.พ",
+        "11/02/2020","12/02/2020","13/02/2020","14/02/2020","15 ก.พ","16/02/2020","17/02/2020","18/02/2020","19/02/2020",
+        "20 ก.พ","21/02/2020","22/02/2020","23/02/2020","24/02/2020","25 ก.พ","26/02/2020","27/02/2020","28/02/2020","29/02/2020",
+        "1 มี.ค","2/03/2020","3/03/2020","4/03/2020","5/03/2020","6 มี.ค","7/03/2020","8/03/2020","/03/2020","10/03/2020",
+        "11 มี.ค","12/03/2020","13/03/2020","14/03/2020","15/03/2020","16 มี.ค","17/03/2020","18/03/2020","19/03/2020",
+        "20/03/2020","21 มี.ค","22/03/2020","23/03/2020","24/03/2020","25/03/2020","26 มี.ค","27/03/2020","28/03/2020",
+        "29/03/2020","30/03/2020","31 มี.ค",
+        "1/04/2020","2/04/2020","3/04/2020","4/04/2020","5 เม.ย","6/04/2020","7/04/2020","8/04/2020","9/04/2020","10 เม.ย",
+        "11/04/2020","12/04/2020","13/04/2020","14/04/2020","15 เม.ย","16/04/2020","17/04/2020","18/04/2020","19/04/2020","20 เม.ย",
+        "21/04/2020","22/04/2020","23/04/2020","24/04/2020","25 เม.ย"
     ]
 }
 

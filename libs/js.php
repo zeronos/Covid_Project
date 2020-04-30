@@ -29,12 +29,14 @@
 <!-- Hihg Chart All JS -->
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
 <script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
 <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <!-- <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script> -->
 <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
 <!-- <script src="https://code.highcharts.com/maps/modules/data.js"></script> -->
+<script src="https://code.highcharts.com/mapdata/countries/th/th-all.js"></script>
 
 <!-- Bootstap-Select JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>

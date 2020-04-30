@@ -19,7 +19,7 @@
                     <div class="card bg-danger text-white"style="width: 100%;height: 200px;font-size:50px;">
                         <div class="card-body text-center">
                             <p class="card-text" id="text1"></p>
-                        
+                        </div>
                     </div>
                 <div class="card-columns text-white"style="width: 100%;font-size:30px;">
                     <div class="card bg-warning"style="height: 200px">

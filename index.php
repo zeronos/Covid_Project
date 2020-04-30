@@ -1,4 +1,5 @@
 <?php include("libs/head.php"); ?>
+<title>รายงานสถานการณ์โควิด-19</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
@@ -49,8 +50,7 @@
                     <div class="col-md-8  section-heading">
                         <br><br>
                         <h2 class="heading mb-3">ภาพรวมประเทศไทย</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis consequatur cum neque?
-                            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                        <p></p>
                     </div>
 
             </div>
@@ -69,8 +69,7 @@
                     <div class="col-md-8  section-heading">
                         <br><br>
                         <h2 class="heading mb-3">ติดเชื้อแยกตามกลุ่ม</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
-                            texts.
+                        <p>
                         </p>
                     </div>
                 </div>
@@ -104,8 +103,7 @@
                     <div class="col-md-8  section-heading">
                         <br><br>
                         <h2 class="heading mb-3">ติดเชื้อแยกตามพื้นที่</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
-                            texts.
+                        <p>
                         </p>
                     </div>
                 </div>
@@ -127,8 +125,7 @@
                     <div class="col-md-8  section-heading">
                         <br><br>
                         <h2 class="heading mb-3">ปัจจัยที่มีความสัมพันธ์</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
-                            texts.
+                        <p>
                         </p>
                     </div>
                 </div>
@@ -164,8 +161,7 @@
                     <div class="col-md-8  section-heading">
                         <br><br>
                         <h2 class="heading mb-3">ภาพรวมทั่วโลก</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
-                            texts.
+                        <p>
                         </p>
                     </div>
                 </div>

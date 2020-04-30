@@ -11,7 +11,6 @@
         <!---------- การ์ด เสียชีวิต รักษาหาย ติดเชื้อ ---------->
         <div class="intro-section" id="home-section" style="background-color: #ccc;">
             <div class="container">
-
                 <div class="row align-items-center">
                     <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
                         <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
@@ -40,8 +39,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
             </div>
         </div>
 
@@ -62,6 +59,7 @@
                 <div class="grid-item" id="grid2"></div>
             </div>
         </div>
+    </div>
         <hr>
 
         <!---------- กราฟ ติดเชื้อแยกตามกลุ่ม ---------------->

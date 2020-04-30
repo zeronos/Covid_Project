@@ -25,18 +25,19 @@
                     </div>
                 <div class="card-columns text-white"style="width: 100%;font-size:30px;">
                     <div class="card bg-warning"style="height: 200px">
-                    <div class="card-body text-center">
-                        <p class="card-text"id="text2"></p>
-                    </div>
+                        <div class="card-body text-center">
+                            <p class="card-text"id="text2"></p>
+                        </div>
                     </div>
                     <div class="card bg-success">
-                    <div class="card-body text-center"style="height: 200px">
-                        <p class="card-text"id="text3"></p>
-                    </div>
+                        <div class="card-body text-center"style="height: 200px">
+                            <p class="card-text"id="text3"></p>
+                        </div>
                     </div>
                     <div class="card bg-primary">
-                    <div class="card-body text-center"style="height: 200px">
-                        <p class="card-text"id="text4"></p>
+                        <div class="card-body text-center"style="height: 200px">
+                            <p class="card-text"id="text4"></p>
+                        </div>
                     </div>
                 </div>
                 </div>

@@ -1,6 +1,6 @@
 <?php include("libs/head.php"); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="site-wrap">
@@ -17,7 +17,30 @@
                         <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
                         <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่ 25 เมษายน 2563</p>
                     </div>
+                    <div class="card bg-danger text-white"style="width: 100%;height: 200px;font-size:50px;">
+                        <div class="card-body text-center">
+                            <p class="card-text" id="text1"></p>
+                        </div>
+                    </div>
+                <div class="card-columns text-white"style="width: 100%;font-size:30px;">
+                    <div class="card bg-warning"style="height: 200px">
+                        <div class="card-body text-center">
+                            <p class="card-text"id="text2"></p>
+                        </div>
+                    </div>
+                    <div class="card bg-success">
+                        <div class="card-body text-center"style="height: 200px">
+                            <p class="card-text"id="text3"></p>
+                        </div>
+                    </div>
+                    <div class="card bg-primary">
+                        <div class="card-body text-center"style="height: 200px">
+                            <p class="card-text"id="text4"></p>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
 
             </div>
         </div>
@@ -32,7 +55,6 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis consequatur cum neque?
                             Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
                     </div>
-                </div>
 
             </div>
             <div class="grid-container" style="padding: 2rem;">
@@ -281,6 +303,13 @@ include('./controller/phase1/allGraph_TH.php');
         } else
             alert("false");
     });
+    $.getJSON('./DATA/phase2/age/age.json', function(data) {
+        document.getElementById("text1").innerHTML = "ติดเชื้อสะสม"+"<br>"+data.Toltal["ติดเชื้อ"]+" คน";
+        document.getElementById("text2").innerHTML = "เสียชีวิต"+"<br>"+data.Toltal["ตาย"]+" คน";
+        document.getElementById("text3").innerHTML = "หาย"+"<br>"+data.Toltal["หาย"]+" คน";
+        document.getElementById("text4").innerHTML = "รักษา"+"<br>"+data.Toltal["รักษา"]+" คน";
+    });
+
 </script>
 
 

@@ -1,6 +1,6 @@
 <?php include("libs/head.php"); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="site-wrap">
@@ -15,10 +15,31 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
                         <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
-                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่ 19 เมษายน 2563</p>
+                        <p class="lead mx-auto desc mb-5"></p>
+                    </div>
+
+                    <div class="card bg-danger text-white"style="width: 100%;height: 200px;font-size:50px;">
+                        <div class="card-body text-center">
+                            <p class="card-text" id="text1"></p>
+                        </div>
+                    </div>
+                <div class="card-columns text-white"style="width: 100%;font-size:30px;">
+                    <div class="card bg-warning"style="height: 200px">
+                    <div class="card-body text-center">
+                        <p class="card-text"id="text2"></p>
+                    </div>
+                    </div>
+                    <div class="card bg-success">
+                    <div class="card-body text-center"style="height: 200px">
+                        <p class="card-text"id="text3"></p>
+                    </div>
+                    </div>
+                    <div class="card bg-primary">
+                    <div class="card-body text-center"style="height: 200px">
+                        <p class="card-text"id="text4"></p>
                     </div>
                 </div>
-
+                </div>
             </div>
         </div>
 
@@ -57,18 +78,19 @@
 
             </div>
             <div class="row">
-                <div class="col-sm-9"></div>
-                <select class="selectpicker col-sm-2">
-                    <option value="" selected>ศาสนา</option>
-                    <option value="">อาชีพ</option>
-                    <option value="">ภูมิภาค</option>
-                    <option value="">อายุ</option>
+                <div class="col-sm-9" ></div>
+                <select class="selectpicker col-sm-2" onchange="change_myselect(this.value)">
+                    <option value="1" selected>ศาสนา</option>
+                    <option value="2">อาชีพ</option>
+                    <option value="3">ภูมิภาค</option>
+                    <option value="4">อายุ</option>
                 </select>
             </div>
             <div class="grid-container">
-                <div class="start-grid-container grid-item" id="grid3" style="height: 560px;"></div>
-                <div class="grid-item" id="grid4" style="height: 280px;"></div>
-                <div class="grid-item" id="grid5" style="height: 280px;"></div>
+            <div class="start-grid-container grid-item" id="grid3" style="height: 560px;"></div>
+            <div class="grid-item" id="grid4" style="height: 280px;"></div>
+            <div class="grid-item" id="grid5" style="height: 280px;"></div>
+  
             </div>
             <div class="grid-container">
                 <div class="grid-item" id="grid6"></div>
@@ -252,8 +274,17 @@
             "searching": false
         });
     });
-</script>
 
+
+
+    $.getJSON('./DATA/phase2/age/age.json', function(data) {
+        document.getElementById("text1").innerHTML = "ติดเชื้อสะสม"+"<br>"+data.Toltal["ติดเชื้อ"]+" คน";
+        document.getElementById("text2").innerHTML = "เสียชีวิต"+"<br>"+data.Toltal["ตาย"]+" คน";
+        document.getElementById("text3").innerHTML = "หาย"+"<br>"+data.Toltal["หาย"]+" คน";
+        document.getElementById("text4").innerHTML = "รักษา"+"<br>"+data.Toltal["รักษา"]+" คน";
+    });
+
+</script>
 <?php include('./controller/phase1/allFreqGraph_TH.php') ?>
 <?php include('./controller/phase1/allGraph_TH.php') ?>
 <?php include('./controller/phase2/age/columnGraph.php') ?>

@@ -7,7 +7,8 @@
     <div class="site-wrap">
 
         <?php include("libs/responsive.php"); ?>
-        <?php include("libs/navbar.php"); ?>
+        <?php include("libs/navbar.php"); ?> 
+        
 
         <!---------- การ์ด เสียชีวิต รักษาหาย ติดเชื้อ ---------->
         <div class="intro-section" id="home-section" style="background-color: #ccc;">
@@ -15,7 +16,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
                         <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
-                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่ 25 เมษายน 2563</p>
+                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่     25 เมษายน 2563</p>
                     </div>
                     <div class="card bg-danger text-white"style="width: 100%;height: 200px;font-size:50px;">
                         <div class="card-body text-center">
@@ -42,6 +43,7 @@
             </div>
             </div>
         </div>
+        
 
         <!---------- กราฟ ภาพรวมประเทศไทย ---------------->
         <div class="site-section" id="all-section">

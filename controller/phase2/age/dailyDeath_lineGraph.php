@@ -30,16 +30,16 @@
                 renderTo: 'grid6'
             },
             title: {
-                text: ''
+                text: 'จำนวนผู้ติดเชื้อรายวัน'
             },
 
             subtitle: {
-                text: 'Source: thesolarfoundation.com'
+                text: 'ข้อมูลวันที่ 19/04/2020'
             },
 
             yAxis: {
                 title: {
-                    text: 'Number of Employees'
+                    text: 'จำนวน (คน)'
                 }
             },
 

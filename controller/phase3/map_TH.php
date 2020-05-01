@@ -115,11 +115,11 @@
                 },
 
                 title: {
-                    text: 'Highmaps basic demo'
+                    text: 'ภาพรวมในแต่ละจังหวัด'
                 },
 
                 subtitle: {
-                    text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/th/th-all.js">Thailand</a>'
+                    text: ''
                 },
 
                 mapNavigation: {
@@ -141,7 +141,7 @@
 
                 series: [{
                     data: items,
-                    name: 'Random data',
+                    name: 'จังหวัด',
                     states: {
                         hover: {
                             color: '#ffff59'

@@ -12,7 +12,7 @@
                 },
 
                 title: {
-                    text: 'Zoom in on country by double click'
+                    text: ''
                 },
 
                 mapNavigation: {

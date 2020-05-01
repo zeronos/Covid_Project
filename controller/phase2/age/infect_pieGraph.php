@@ -14,7 +14,7 @@
             });
             option.series[0].data = json;
             option.subtitle = {
-                text: "ข้อมูลวันที่ " + data.Last_Update
+                text: "ข้อมูลวันที่ 19/04/2020"
             }
 
             var chart = new Highcharts.chart(option);

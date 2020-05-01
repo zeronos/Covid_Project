@@ -32,7 +32,10 @@
                 renderTo: 'grid3'
             },
             title: {
-                text: 'Efficiency Optimization by Branch'
+                text: 'กราฟผู้ติดเชื้อและเสียชีวิต'
+            },
+            subtitle: {
+                text: 'ข้อมูลวันที่ 19/04/2020'
             },
             xAxis: {
 

@@ -38,7 +38,7 @@
             },
 
             title: {
-                text: 'spending',
+                text: 'กราฟปริมาณ',
                 x: -80
             },
 
@@ -60,7 +60,7 @@
 
             tooltip: {
                 shared: true,
-                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+                pointFormat: '<span style="color:{series.color}">อายุ {series.name}: <b>{point.y:,.0f} คน</b><br/>'
             },
 
             legend: {

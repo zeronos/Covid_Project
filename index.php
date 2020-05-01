@@ -839,7 +839,7 @@
             grid6.xAxis.categories = data.LabelText;
             new Highcharts.chart(grid6);
         });
-    }
+    } 
 
     function loadGrid7() {
         $.getJSON('./DATA/phase2/gender/gender.json', function(data) {

@@ -2,6 +2,7 @@
 <html lang="th">
 
 <head>
+    <title>รายงานสถานการณ์โควิด-19</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- All Templete CSS -->
@@ -18,6 +19,8 @@
     <link rel="stylesheet" href="./asset/css/aos.css">
     <link rel="stylesheet" href="./asset/css/jquery.mb.YTPlayer.min.css" media="all">
     <link rel="stylesheet" href="./asset/css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
     <!-- Datable CSS -->
     <link href="./asset/css/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">

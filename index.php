@@ -396,7 +396,7 @@
                     if (key != "Last Update" && key != "Unit" && key != "Toltal") {
                         json.push({
                             name: val.ชื่อ,
-                            data: [val.ติดเชื้อ],
+                            data: [val.ติดเชื้อ,0,0],
                             pointPlacement: 'on'
                         });
                     }
@@ -517,7 +517,7 @@
                     if (key != "Last Update" && key != "Unit" && key != "Toltal") {
                         json.push({
                             name: key,
-                            data: [val.ติดเชื้อ, val.ตาย],
+                            data: [val.ติดเชื้อ,0, val.ตาย],
                             pointPlacement: 'on'
                         });
                     }
@@ -850,7 +850,7 @@
                 if (key != "Last Update" && key != "Unit" && key != "Toltal") {
                     json.push({
                         name: key,
-                        data: [val.ติดเชื้อ, val.หาย, val.ตาย],
+                        data: [val.ติดเชื้อ, 0, 0],
                         pointPlacement: 'on'
                     });
                 }

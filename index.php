@@ -437,6 +437,10 @@
                 grid3.series[1].pointPadding = 0.2;
                 grid3.series[1].pointPlacement = -0.2;
                 grid3.xAxis.categories = json;
+
+                grid3.subtitle = {
+                    text: "ข้อมูลวันที่ 19/04/2020"
+                }
                 new Highcharts.chart(grid3);
             });
 
@@ -455,7 +459,7 @@
                 });
                 grid4.series[0].data = json;
                 grid4.subtitle = {
-                    text: "ข้อมูลวันที่ " + data.Last_Update
+                    text: "ข้อมูลวันที่ 19/04/2020"
                 }
                 new Highcharts.chart(grid4);
             });
@@ -475,7 +479,7 @@
                 });
                 grid5.series[0].data = json;
                 grid5.subtitle = {
-                    text: "ข้อมูลวันที่ " + data.Last_Update
+                    text: "ข้อมูลวันที่ 19/04/2020" 
                 }
                 new Highcharts.chart(grid5);
             });
@@ -575,7 +579,7 @@
                 });
                 grid4.series[0].data = json;
                 grid4.subtitle = {
-                    text: "ข้อมูลวันที่ " + data.Last_Update
+                    text: "ข้อมูลวันที่ 19/04/2020"
                 }
                 new Highcharts.chart(grid4);
             });
@@ -595,7 +599,7 @@
                 });
                 grid5.series[0].data = json;
                 grid5.subtitle = {
-                    text: "ข้อมูลวันที่ " + data.Last_Update
+                    text: "ข้อมูลวันที่ 19/04/2020"
                 }
                 new Highcharts.chart(grid5);
             });
@@ -774,6 +778,12 @@
             grid3.series[1].pointPadding = 0.2;
             grid3.series[1].pointPlacement = -0.2;
             grid3.xAxis.categories = json;
+            grid3.title = {
+                text: 'กราฟผู้ติดเชื้อและเสียชีวิต'
+            }
+            grid3.subtitle = {
+                text: "ข้อมูลวันที่ 19/04/2020"
+            }
             new Highcharts.chart(grid3);
         });
     }
@@ -793,7 +803,10 @@
             });
             grid4.series[0].data = json;
             grid4.subtitle = {
-                text: "ข้อมูลวันที่ " + data.Last_Update
+                text: "ข้อมูลวันที่ 19/04/2020"
+            }
+            grid4.subtitle = {
+                text: "ข้อมูลวันที่ 19/04/2020"
             }
             new Highcharts.chart(grid4);
         });
@@ -813,8 +826,11 @@
                 }
             });
             grid5.series[0].data = json;
+            grid5.title ={
+                text:'จำนวนผู้เสียชีวิต'
+            }
             grid5.subtitle = {
-                text: "ข้อมูลวันที่ " + data.Last_Update
+                text: "ข้อมูลวันที่ 19/04/2020"
             }
             new Highcharts.chart(grid5);
         });
@@ -837,6 +853,13 @@
             grid6.series[1] = json[1];
             grid6.series[2] = json[2];
             grid6.xAxis.categories = data.LabelText;
+
+            grid6.title = {
+                text: "กราฟผู้ติดเชื้อรายวัน"
+            }
+            grid6.subtitle = {
+                text: "ข้อมูลวันที่ 19/04/2020"
+            }
             new Highcharts.chart(grid6);
         });
     }
@@ -858,6 +881,10 @@
             grid7.series[0] = json[0];
             grid7.series[1] = json[1];
             grid7.series[2] = json[2];
+
+            grid7.title = {
+                text: "ภาพรวม"
+            }
             new Highcharts.chart(grid7);
         });
     }
@@ -977,11 +1004,11 @@
                 },
 
                 title: {
-                    text: 'Highmaps basic demo'
+                    text: 'ภาพรวมในแต่ละพื้นที่'
                 },
 
                 subtitle: {
-                    text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/th/th-all.js">Thailand</a>'
+                    text: 'ข้อมูลวันที่ 19/04/2020'
                 },
 
                 mapNavigation: {
@@ -1200,7 +1227,7 @@
                 },
 
                 title: {
-                    text: 'Zoom in on country by double click'
+                    text: ''
                 },
 
                 mapNavigation: {

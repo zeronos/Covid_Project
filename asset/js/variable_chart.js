@@ -669,3 +669,62 @@ var worldRecover_lineChart = {
         }]
     }
 }
+var grid10 = {
+    title: {
+        text: 'ติดเชื้อแยกตามประเภทจังหวัด',
+    },
+
+    subtitle: {
+        text: 'Source: thesolarfoundation.com',
+    },
+
+    yAxis: {
+        title: {
+            text: 'จำนวนผู้ติดเชื้อ(คน)',
+        },
+    },
+
+    xAxis: {
+        categories: {},
+        title: {
+            text: 'วันที่',
+        }
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false,
+            },
+            pointStart: 0,
+        },
+    },
+
+    series: [{}],
+
+    tooltip: {
+        pointFormat: 'ผู้ติดเชื้อ {series.name}: <b>{point.y:.0f} คน</b><br/>',
+        shared: true,
+    },
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500,
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                },
+            },
+        }, ],
+    },
+}

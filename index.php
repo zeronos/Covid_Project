@@ -117,6 +117,9 @@
 
                 </table>
             </div>
+            <div class="container">
+                <div id="grid10" style="height: 500px;"></div>
+            </div>
         </div>
         <hr>
 
@@ -291,7 +294,7 @@
     document.getElementById("worldRegion_spiderChart").addEventListener("load", load_worldRegion_spiderChart());
     document.getElementById("world_barChart").addEventListener("load", load_world_barChart());
     document.getElementById("world_lineChart").addEventListener("load", load_world_lineChart());
-
+    document.getElementById("grid10").addEventListener("load", loadGrid10());
     document.getElementById("worldDaed_lineChart").addEventListener("load", load_worldDaed_lineChart());
     document.getElementById("worldNewInfect_lineChart").addEventListener("load", load_worldNewInfect_lineChart());
     document.getElementById("worldRecover_lineChart").addEventListener("load", load_worldRecover_lineChart());
@@ -919,7 +922,7 @@
 
     function loadGrid8() {
         $.getJSON("DATA/phase3/province.json", function(data) {
-            let myObj = [];
+            let maxIn = [];
             let items = [];
             let table = '<thead>\n' + '<tr>\n' + '<th>จังหวัด</th>\n' + '<th>ติดเชื้อ</th>\n' + '<th>หาย</th>\n' + '<th>ตาย</th>\n' + '</tr>\n' + ' </thead>\n';
 
@@ -927,9 +930,9 @@
                 if (key != "lastupdate") {
                     table += '<tr>';
                     table += '<td>' + key + '</td>';
-                    table += '<td>' + value.cure + '</td>';
-                    table += '<td>' + value.healing + '</td>';
-                    table += '<td>' + value.dead + '</td>';
+                    table += '<td style="text-align:right">' + value.infect + '</td>';
+                    table += '<td style="text-align:right">' + value.healing + '</td>';
+                    table += '<td style="text-align:right">' + value.dead + '</td>';
                     table += '</tr>';
                 }
             });
@@ -943,6 +946,12 @@
                 "scrollCollapse": true,
                 "paging": false,
                 "searching": false
+            });
+
+            $.each(data, function(key, value) {
+                if(key != "lastupdate"){
+                maxIn.push(value.infect);
+                }
             });
 
             items = [
@@ -1048,7 +1057,7 @@
 
                 colorAxis: {
                     min: 0,
-                    max: 1000,
+                    max: Math.max.apply(Math, maxIn),
                     stops: [
                         [0, '#F1EEF6'],
                         [0.5, '#900037'],
@@ -1068,7 +1077,10 @@
                         enabled: true,
                         format: '{point.name}'
                     }
-                }]
+                }],
+                tooltip: {
+                    valueSuffix: ' คน',
+                }
             });
         });
     }
@@ -1475,5 +1487,21 @@
         });
    }
 
+   function loadGrid10() {
+        $.getJSON("DATA/phase2/tourist/ProvinceTouristNewInfectDaily.json", function(data) {
+            let json = [];
+            $.each(data.Data, function(key, val) {
+                json.push({
+                    name: key,
+                    data: val
+                });
+            });
+        grid10.xAxis.categories = data.LabelText ;
+        grid10.series[0] = json[0];
+        grid10.series[1] = json[1];
+        grid10.series[2] = json[2];
+        new Highcharts.chart('grid10', grid10);
 
+        });
+    }
 </script>

@@ -117,6 +117,9 @@
 
                 </table>
             </div>
+            <div class="container">
+                <div id="grid10" style="height: 500px;"></div>
+                </div>
         </div>
         <hr>
 
@@ -269,6 +272,7 @@
     document.getElementById("grid7").addEventListener("load", loadGrid7());
     document.getElementById("grid8").addEventListener("load", loadGrid8());
     document.getElementById("grid9").addEventListener("load", loadGrid9());
+    document.getElementById("grid10").addEventListener("load", loadGrid10());
     document.getElementById("world_map").addEventListener("load", load_World_map());
 
     $(document).ready(function() {
@@ -439,10 +443,6 @@
                 grid3.series[1].pointPadding = 0.2;
                 grid3.series[1].pointPlacement = -0.2;
                 grid3.xAxis.categories = json;
-
-                grid3.subtitle = {
-                    text: "ข้อมูลวันที่ 19/04/2020"
-                }
                 new Highcharts.chart(grid3);
             });
 
@@ -461,7 +461,7 @@
                 });
                 grid4.series[0].data = json;
                 grid4.subtitle = {
-                    text: "ข้อมูลวันที่ 19/04/2020"
+                    text: "ข้อมูลวันที่ " + data.Last_Update
                 }
                 new Highcharts.chart(grid4);
             });
@@ -481,7 +481,7 @@
                 });
                 grid5.series[0].data = json;
                 grid5.subtitle = {
-                    text: "ข้อมูลวันที่ 19/04/2020" 
+                    text: "ข้อมูลวันที่ " + data.Last_Update
                 }
                 new Highcharts.chart(grid5);
             });
@@ -581,7 +581,7 @@
                 });
                 grid4.series[0].data = json;
                 grid4.subtitle = {
-                    text: "ข้อมูลวันที่ 19/04/2020"
+                    text: "ข้อมูลวันที่ " + data.Last_Update
                 }
                 new Highcharts.chart(grid4);
             });
@@ -601,7 +601,7 @@
                 });
                 grid5.series[0].data = json;
                 grid5.subtitle = {
-                    text: "ข้อมูลวันที่ 19/04/2020"
+                    text: "ข้อมูลวันที่ " + data.Last_Update
                 }
                 new Highcharts.chart(grid5);
             });
@@ -780,12 +780,6 @@
             grid3.series[1].pointPadding = 0.2;
             grid3.series[1].pointPlacement = -0.2;
             grid3.xAxis.categories = json;
-            grid3.title = {
-                text: 'กราฟผู้ติดเชื้อและเสียชีวิต'
-            }
-            grid3.subtitle = {
-                text: "ข้อมูลวันที่ 19/04/2020"
-            }
             new Highcharts.chart(grid3);
         });
     }
@@ -805,10 +799,7 @@
             });
             grid4.series[0].data = json;
             grid4.subtitle = {
-                text: "ข้อมูลวันที่ 19/04/2020"
-            }
-            grid4.subtitle = {
-                text: "ข้อมูลวันที่ 19/04/2020"
+                text: "ข้อมูลวันที่ " + data.Last_Update
             }
             new Highcharts.chart(grid4);
         });
@@ -828,11 +819,8 @@
                 }
             });
             grid5.series[0].data = json;
-            grid5.title ={
-                text:'จำนวนผู้เสียชีวิต'
-            }
             grid5.subtitle = {
-                text: "ข้อมูลวันที่ 19/04/2020"
+                text: "ข้อมูลวันที่ " + data.Last_Update
             }
             new Highcharts.chart(grid5);
         });
@@ -855,13 +843,6 @@
             grid6.series[1] = json[1];
             grid6.series[2] = json[2];
             grid6.xAxis.categories = data.LabelText;
-
-            grid6.title = {
-                text: "กราฟผู้ติดเชื้อรายวัน"
-            }
-            grid6.subtitle = {
-                text: "ข้อมูลวันที่ 19/04/2020"
-            }
             new Highcharts.chart(grid6);
         });
     } 
@@ -883,17 +864,14 @@
             grid7.series[0] = json[0];
             grid7.series[1] = json[1];
             grid7.series[2] = json[2];
-
-            grid7.title = {
-                text: "ภาพรวม"
-            }
             new Highcharts.chart(grid7);
         });
     }
 
+
     function loadGrid8() {
         $.getJSON("DATA/phase3/province.json", function(data) {
-            let myObj = [];
+            let maxIn = [];
             let items = [];
             let table = '<thead>\n' + '<tr>\n' + '<th>จังหวัด</th>\n' + '<th>ติดเชื้อ</th>\n' + '<th>หาย</th>\n' + '<th>ตาย</th>\n' + '</tr>\n' + ' </thead>\n';
 
@@ -901,9 +879,9 @@
                 if (key != "lastupdate") {
                     table += '<tr>';
                     table += '<td>' + key + '</td>';
-                    table += '<td>' + value.cure + '</td>';
-                    table += '<td>' + value.healing + '</td>';
-                    table += '<td>' + value.dead + '</td>';
+                    table += '<td style="text-align:right">' + value.infect + '</td>';
+                    table += '<td style="text-align:right">' + value.healing + '</td>';
+                    table += '<td style="text-align:right">' + value.dead + '</td>';
                     table += '</tr>';
                 }
             });
@@ -919,6 +897,11 @@
                 "searching": false
             });
 
+            $.each(data, function(key, value) {
+                if(key != "lastupdate"){
+                maxIn.push(value.infect);
+                }
+            });
             items = [
                 ['th-ct', data.chanthaburi["infect"]],
                 ['th-4255', 1],
@@ -1006,11 +989,11 @@
                 },
 
                 title: {
-                    text: 'ภาพรวมในแต่ละพื้นที่'
+                    text: 'Highmaps basic demo'
                 },
 
                 subtitle: {
-                    text: 'ข้อมูลวันที่ 19/04/2020'
+                    text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/th/th-all.js">Thailand</a>'
                 },
 
                 mapNavigation: {
@@ -1022,14 +1005,13 @@
 
                 colorAxis: {
                     min: 0,
-                    max: 1000,
+                    max: Math.max.apply(Math, maxIn),
                     stops: [
                         [0, '#F1EEF6'],
                         [0.5, '#900037'],
                         [1, '#500007']
                     ],
                 },
-
                 series: [{
                     data: items,
                     name: 'จังหวัด',
@@ -1042,7 +1024,10 @@
                         enabled: true,
                         format: '{point.name}'
                     }
-                }]
+                }],
+                tooltip: {
+                    valueSuffix: ' คน',
+                }
             });
         });
     }
@@ -1229,7 +1214,7 @@
                 },
 
                 title: {
-                    text: ''
+                    text: 'Zoom in on country by double click'
                 },
 
                 mapNavigation: {
@@ -1257,6 +1242,23 @@
                     }
                 }]
             });
+        });
+    }
+    function loadGrid10() {
+        $.getJSON("DATA/phase2/tourist/ProvinceTouristNewInfectDaily.json", function(data) {
+            let json = [];
+            $.each(data.Data, function(key, val) {
+                json.push({
+                    name: key,
+                    data: val
+                });
+            });
+        grid10.xAxis.categories = data.LabelText ;
+        grid10.series[0] = json[0];
+        grid10.series[1] = json[1];
+        grid10.series[2] = json[2];
+        new Highcharts.chart('grid10', grid10);
+
         });
     }
 </script>

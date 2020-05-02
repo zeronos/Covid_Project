@@ -33,20 +33,20 @@
 
 	<div class="container-fluid">
 		<div class="d-flex align-items-center">
-			<div class="site-logo"><img src="./asset/images/KU-logo.png"></div>
+			<div class="site-logo"><img src="./asset/images/KU-logo2.png"width = "100" height = "100"></div>
 			<div class="ml-auto">
 				<nav class="site-navigation position-relative text-right" role="navigation">
 					<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-						<li><a href="#home-section" class="nav-link">หน้าแรก</a></li>
-						<li><a href="#all-section" class="nav-link">ภาพรวม</a></li>
-						<li><a href="#group-section" class="nav-link">แยกตามกลุ่ม</a></li>
-						<li><a href="#area-section" class="nav-link">แยกตามพื้นที่</a></li>
-						<li><a href="#relation-section" class="nav-link">ความสัมพันธ์</a></li>
-						<li><a href="#world-section" class="nav-link">ทั่วโลก</a></li>
+						<li><a href="#home-section" class="nav-link" style = "color: black;">หน้าแรก</a></li>
+						<li><a href="#all-section" class="nav-link"style = "color: black;">ภาพรวม</a></li>
+						<li><a href="#group-section" class="nav-link"style = "color: black;">แยกตามกลุ่ม</a></li>
+						<li><a href="#area-section" class="nav-link"style = "color: black;">แยกตามพื้นที่</a></li>
+						<li><a href="#relation-section" class="nav-link"style = "color: black;">ความสัมพันธ์</a></li>
+						<li><a href="#world-section" class="nav-link"style = "color: black;">ทั่วโลก</a></li>
 						<li>
 							<div class="blob"></div>
 						</li>
-						<li><a>อัปเดตล่าสุด 25/04/63</a></li>
+						<li><a style = "color: black;">อัปเดตล่าสุด 28/4/63</a></li>
 					</ul>
 				</nav>
 				<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>

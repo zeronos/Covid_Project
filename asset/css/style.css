@@ -863,6 +863,7 @@ h5,
 
 .sticky-wrapper {
     position: absolute;
+    background: white;
     z-index: 100;
     width: 100%;
 }
@@ -892,7 +893,7 @@ h5,
 
 .sticky-wrapper .site-navbar .site-menu>li>a.active:after {
     height: 2px;
-    background: #fff;
+    background: rgb(255, 0, 0);
     content: "";
     position: absolute;
     bottom: 0;

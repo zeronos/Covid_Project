@@ -5,8 +5,8 @@
     <div class="site-wrap">
 
         <?php include("libs/responsive.php"); ?>
-        <?php include("libs/navbar.php"); ?> 
-        
+        <?php include("libs/navbar.php"); ?>
+
 
         <!---------- การ์ด เสียชีวิต รักษาหาย ติดเชื้อ ---------->
         <div class="intro-section" id="home-section" style="background-color: #ccc;">
@@ -14,7 +14,7 @@
                 <div id="card" class="row align-items-center" style="padding-top: 13%;">
                     <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
                         <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
-                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่     25 เมษายน 2563</p>
+                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่ 25 เมษายน 2563</p>
                     </div>
                     <div class="card bg-danger text-white" style="width: 100%;height: 200px;font-size:50px;">
                         <div class="card-body text-center">
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </div>
-        
+
 
         <!---------- กราฟ ภาพรวมประเทศไทย ---------------->
         <div class="site-section" id="all-section">
@@ -233,13 +233,31 @@
                     </div>
                 </div>
                 <br>
-
                 <div class="row" data-aos="fade-up">
                     <div class="col-md-6">
-                        <div id="container" style="width: 100%;height: 100%;"></div>
+                        <div id="worldAll_pieChart" style="height: 280px;"></div>
                     </div>
                     <div class="col-md-6">
-                        <div id="stack" style="width: 100%;height: 100%;"></div>
+                        <div id="worldRegion_spiderChart" style="width: 100%;height: 100%;"></div>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-6">
+                        <div id="world_barChart" style="height: 100%;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="world_lineChart" style="height: 100%;"></div>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-4">
+                        <div id="worldDaed_lineChart" style="height: 100%;"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="worldNewInfect_lineChart" style="height: 100%;"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div id="worldRecover_lineChart" style="height: 100%;"></div>
                     </div>
                 </div>
 
@@ -257,7 +275,6 @@
 </html>
 
 <script src="./asset/js/variable_chart.js"></script>
-
 <script>
     document.getElementById("card").addEventListener("load", loadCard());
     document.getElementById("grid1").addEventListener("load", loadGrid1());
@@ -270,6 +287,14 @@
     document.getElementById("grid8").addEventListener("load", loadGrid8());
     document.getElementById("grid9").addEventListener("load", loadGrid9());
     document.getElementById("world_map").addEventListener("load", load_World_map());
+    document.getElementById("worldAll_pieChart").addEventListener("load", load_worldAll_pieChart());
+    document.getElementById("worldRegion_spiderChart").addEventListener("load", load_worldRegion_spiderChart());
+    document.getElementById("world_barChart").addEventListener("load", load_world_barChart());
+    document.getElementById("world_lineChart").addEventListener("load", load_world_lineChart());
+
+    document.getElementById("worldDaed_lineChart").addEventListener("load", load_worldDaed_lineChart());
+    document.getElementById("worldNewInfect_lineChart").addEventListener("load", load_worldNewInfect_lineChart());
+    document.getElementById("worldRecover_lineChart").addEventListener("load", load_worldRecover_lineChart());
 
     $(document).ready(function() {
 
@@ -286,7 +311,7 @@
     });
 
     $('#phase2_select').change(function() {
-        let select = $(this).val();  
+        let select = $(this).val();
 
         grid4.series = [{}];
         grid5.series = [{}];
@@ -325,7 +350,7 @@
                 grid3.series[1].pointPlacement = -0.2;
                 grid3.xAxis.categories = json;
 
-                
+
                 new Highcharts.chart(grid3);
             });
 
@@ -398,7 +423,7 @@
                     if (key != "Last Update" && key != "Unit" && key != "Toltal") {
                         json.push({
                             name: val.ชื่อ,
-                            data: [val.ติดเชื้อ,0,0],
+                            data: [val.ติดเชื้อ, 0, 0],
                             pointPlacement: 'on'
                         });
                     }
@@ -481,7 +506,7 @@
                 });
                 grid5.series[0].data = json;
                 grid5.subtitle = {
-                    text: "ข้อมูลวันที่ 19/04/2020" 
+                    text: "ข้อมูลวันที่ 19/04/2020"
                 }
                 new Highcharts.chart(grid5);
             });
@@ -523,7 +548,7 @@
                     if (key != "Last Update" && key != "Unit" && key != "Toltal") {
                         json.push({
                             name: key,
-                            data: [val.ติดเชื้อ,0, val.ตาย],
+                            data: [val.ติดเชื้อ, 0, val.ตาย],
                             pointPlacement: 'on'
                         });
                     }
@@ -539,7 +564,7 @@
             });
 
         } else if (select == "age") {
-        
+
             // grid3
             $.getJSON('./DATA/phase2/age/age.json', function(data) {
                 let json = [];
@@ -803,6 +828,7 @@
                     });
                 }
             });
+            //console.log(json);
             grid4.series[0].data = json;
             grid4.subtitle = {
                 text: "ข้อมูลวันที่ 19/04/2020"
@@ -828,8 +854,8 @@
                 }
             });
             grid5.series[0].data = json;
-            grid5.title ={
-                text:'จำนวนผู้เสียชีวิต'
+            grid5.title = {
+                text: 'จำนวนผู้เสียชีวิต'
             }
             grid5.subtitle = {
                 text: "ข้อมูลวันที่ 19/04/2020"
@@ -839,7 +865,7 @@
     }
 
     function loadGrid6() {
-    
+
         $.getJSON('./DATA/phase2/gender/GenderNewInfectDaily.json', function(data) {
             //console.log(data.update);
             let json = [];
@@ -864,7 +890,7 @@
             }
             new Highcharts.chart(grid6);
         });
-    } 
+    }
 
     function loadGrid7() {
         $.getJSON('./DATA/phase2/gender/gender.json', function(data) {
@@ -1217,46 +1243,237 @@
     }
 
     function load_World_map() {
-        Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/world-population-density.json', function(data) {
-            // Prevent logarithmic errors in color calulcation
-            data.forEach(function(p) {
-                p.value = (p.value < 1 ? 1 : p.value);
-            });
-            // Initiate the chart
-            Highcharts.mapChart('world_map', {
-                chart: {
-                    map: 'custom/world'
-                },
 
+        $.getJSON('./DATA/world/รายงานโควิดแต่ละประเทศ.json', function(data) {
+
+            //console.log(data.india);
+
+            var items = [];
+            $.each(data, function(key, val) {
+                if (key != 'lastupdate') {
+                    items.push({
+                        name: key,
+                        infect: val.infect,
+                        dead: val.dead,
+                        recovered: val.recovered,
+                        critical: val.critical,
+                        code: val.code
+                    })
+                }
+            })
+            //console.log(items);
+            $('#world_map').highcharts('Map', {
                 title: {
-                    text: ''
+                    text: 'World'
                 },
-
                 mapNavigation: {
                     enabled: true,
                     enableDoubleClickZoomTo: true
                 },
-
                 colorAxis: {
                     min: 1,
-                    max: 1000,
+                    max: 100000,
                     type: 'logarithmic'
                 },
-
                 series: [{
-                    data: data,
-                    joinBy: ['iso-a3', 'code3'],
-                    name: 'Population density',
+                    data: items,
+
+                    mapData: Highcharts.maps['custom/world'],
                     states: {
                         hover: {
-                            color: '#a4edba'
+                            color: '#ffff59'
                         }
                     },
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}'
+                    },
                     tooltip: {
-                        valueSuffix: '/km²'
+                        formatter: function() {
+                            var string = 'ประเทศ' + '<b>' + this.key + '</b>' + '<br>';
+                            string += 'เสียชีวิต' + point.dead + " คน" + '<br>';
+                            string += 'หาย' + point.recovered + " คน" + '<br>';
+                            string += 'รักษา' + point.critical + " คน" + '<br>';
+                            string += 'ติดเชื้อ' + point.infect + " คน";
+
+                            return string;
+                        }
                     }
                 }]
             });
         });
     }
+
+    function load_worldAll_pieChart() {
+        $.getJSON('./DATA/world/globalAll.json', function(data) {
+            let items = [];
+            items.push({
+                name: "ตาย",
+                y: data.Dead.sum
+            }, {
+                name: "หาย",
+                y: data.recover.sum
+            }, {
+                name: "ติดเชื้อ",
+                y: data.infect.sum
+            }, )
+            //console.log(items)
+
+            // Build the chart
+            Highcharts.chart('worldAll_pieChart', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'ทั่วโลก'
+                },
+                subtitle: {
+                    text: "ข้อมูลวันที่ " + data.Last_Update
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.y} คน</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false
+                        },
+                        showInLegend: true
+                    }
+                },
+                series: [{
+                    name: 'จำนวน',
+                    data: items
+                }]
+            });
+
+        });
+
+    }
+
+    function load_worldRegion_spiderChart() {
+        $.getJSON('./DATA/world/รวมเลขทุกประเทศเป็นทวีป.json', function(data) {
+            //console.log(data.continent[0].name);
+            var items = [];
+            $.each(data.continent, function(key, val) {
+                if (key != "Last Update" && key != "Unit" && key != "Toltal") {
+                    items.push({
+                        name: val.name,
+                        data:[val.confirm,val.dead,val.recovered,val.well],
+                        pointPlacement: 'on'
+                    });
+                }
+            });
+
+            //console.log(items);
+
+            for(var i = 0;i<items.length;i++) {
+                wolrdRegionSpiderChart.series[i] = items[i]
+            }
+
+            new Highcharts.chart(wolrdRegionSpiderChart)
+        });
+    }
+
+    function load_world_barChart()
+    {
+        var items = [];
+        var xaxis = [];
+        $.getJSON('./DATA/world/โควิดทวีป.json', function(data) {
+
+            //console.log(data.lastupdate);
+
+            $.each(data, function(key, value) {
+                
+                if(key == data.lastupdate)
+                {
+                    $.each(value, function(key, value) {
+
+                        $.each(value, function(key, value) {
+                            xaxis.push(key);
+                            items.push(value.totalcases);
+                        })
+                    })
+                }
+            });
+
+            worldRegion_barChart.xAxis.categories = xaxis
+            worldRegion_barChart.series[0] = {
+                name:'ติดเชื้อ',
+                data: items
+            }
+            worldRegion_barChart.subtitle.text = "ข้อมูลวันที่ "+data.lastupdate
+            new Highcharts.chart(worldRegion_barChart)
+        });
+    }
+
+    function load_world_lineChart()
+    {
+
+        $.getJSON('./DATA/world/โควิดทวีป.json', function(data){
+            
+            new Highcharts.chart('world_lineChart',worldRegion_lineChart);
+        });
+        
+    }
+
+   function load_worldDaed_lineChart()
+   {
+         $.getJSON('./DATA/world/worldRegionDeath.json', function(data){
+
+            //console.log(data)
+            items = [];
+            $.each(data.Data, function(key, value){
+                items.push({
+                    name: key,
+                    data: value
+                })
+            })
+            //console.log(items)
+            worldDead_lineChart.xAxis.categories = data.date
+            worldDead_lineChart.series = items
+            
+            new Highcharts.chart('worldDaed_lineChart',worldDead_lineChart);
+        });
+   }
+
+   function load_worldNewInfect_lineChart()
+   {
+         $.getJSON('./DATA/world/worldRegionNewInfect.json', function(data){
+            items = [];
+            $.each(data.Data, function(key, value){
+                items.push({
+                    name: key,
+                    data: value
+                })
+            })
+            worldNewInfect_lineChart.xAxis.categories = data.date
+            worldNewInfect_lineChart.series = items
+
+            new Highcharts.chart('worldNewInfect_lineChart',worldNewInfect_lineChart);
+        });
+   }
+   function load_worldRecover_lineChart()
+   {
+         $.getJSON('./DATA/world/worldRegionRecovered.json', function(data){
+            items = [];
+            $.each(data.Data, function(key, value){
+                items.push({
+                    name: key,
+                    data: value
+                })
+            })
+            worldRecover_lineChart.xAxis.categories = data.date
+            worldRecover_lineChart.series = items
+            
+            new Highcharts.chart('worldRecover_lineChart',worldRecover_lineChart);
+        });
+   }
+
+
 </script>

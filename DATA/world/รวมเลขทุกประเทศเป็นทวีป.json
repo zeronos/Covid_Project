@@ -1,0 +1,46 @@
+{
+    "continent": [
+        {
+            "name": "Europe",
+            "confirm": 1090274,
+            "dead": 101827,
+            "recovered": 309887,
+            "well": 678179
+        },
+        {
+            "name": "Asia",
+            "confirm": 364622,
+            "dead": 14497,
+            "recovered": 170920,
+            "well": 179205
+        },
+        {
+            "name": "Africa",
+            "confirm": 22287,
+            "dead": 1121,
+            "recovered": 5486,
+            "well": 15680
+        },
+        {
+            "name": "North America",
+            "confirm": 814199,
+            "dead": 43340,
+            "recovered": 85841,
+            "well": 685018
+        },
+        {
+            "name": "South America",
+            "confirm": 82139,
+            "dead": 3847,
+            "recovered": 36326,
+            "well": 41966
+        },
+        {
+            "name": "Oceania",
+            "confirm": 8002,
+            "dead": 79,
+            "recovered": 5036,
+            "well": 2887
+        }
+    ]
+}

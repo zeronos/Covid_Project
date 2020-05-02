@@ -1,0 +1,5090 @@
+{
+    "lastupdate": "22/4/2020",
+
+    "1/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 0
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "2/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 0
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "3/1/2020": [
+        {
+            "asia":{
+            "newcases":17 ,
+            "totalcases": 17
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "4/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 17
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "5/1/2020": [
+        {
+            "asia":{
+            "newcases":15 ,
+            "totalcases": 32
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "6/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 32
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "7/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 32
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "8/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 32
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "9/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 32
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "10/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 32
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "11/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 32
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "12/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 32
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "13/1/2020": [
+        {
+            "asia":{
+            "newcases":1 ,
+            "totalcases": 33
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "14/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 33
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "15/1/2020": [
+        {
+            "asia":{
+            "newcases":1 ,
+            "totalcases": 34
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "16/1/2020": [
+        {
+            "asia":{
+            "newcases":0 ,
+            "totalcases": 34
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "17/1/2020": [
+        {
+            "asia":{
+            "newcases":5 ,
+            "totalcases": 39
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "18/1/2020": [
+        {
+            "asia":{
+            "newcases":17 ,
+            "totalcases": 56
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "19/1/2020": [
+        {
+            "asia":{
+            "newcases":136 ,
+            "totalcases": 192
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "20/1/2020": [
+        {
+            "asia":{
+            "newcases":20 ,
+            "totalcases": 212
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        }
+
+      ],
+      "21/1/2020": [
+        {
+            "asia":{
+            "newcases":152 ,
+            "totalcases": 364
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 1
+            }
+        }
+
+      ],
+      "22/1/2020": [
+        {
+            "asia":{
+            "newcases":142 ,
+            "totalcases": 506
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 1
+            }
+        }
+
+      ],
+      "23/1/2020": [
+        {
+            "asia":{
+            "newcases":97 ,
+            "totalcases": 603
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 1
+            }
+        }
+
+      ],
+      "24/1/2020": [
+        {
+            "asia":{
+            "newcases":266 ,
+            "totalcases": 869
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 1
+            }
+        }
+
+      ],
+      "25/1/2020": [
+        {
+            "asia":{
+            "newcases":448 ,
+            "totalcases": 1317
+            }
+        },
+        {
+            "europe": {
+                "newcases":3 ,
+                "totalcases": 3
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 2
+            }
+        }
+
+      ],
+      "26/1/2020": [
+        {
+            "asia":{
+            "newcases":669 ,
+            "totalcases": 1986
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 3
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":3 ,
+                "totalcases": 4
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 3
+            }
+        }
+
+      ],
+      "27/1/2020": [
+        {
+            "asia":{
+            "newcases":793 ,
+            "totalcases": 2779
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 3
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 4
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":3 ,
+                "totalcases": 6
+            }
+        }
+
+      ],
+      "28/1/2020": [
+        {
+            "asia":{
+            "newcases":1765 ,
+            "totalcases": 4544
+            }
+        },
+        {
+            "europe": {
+                "newcases":1 ,
+                "totalcases": 4
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 4
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 7
+            }
+        }
+
+      ],
+      "29/1/2020": [
+        {
+            "asia":{
+            "newcases":1475 ,
+            "totalcases": 6019
+            }
+        },
+        {
+            "europe": {
+                "newcases":4 ,
+                "totalcases": 8
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 4
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 8
+            }
+        }
+
+      ],
+      "30/1/2020": [
+        {
+            "asia":{
+            "newcases":1749 ,
+            "totalcases": 7768
+            }
+        },
+        {
+            "europe": {
+                "newcases":2 ,
+                "totalcases": 10
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":2 ,
+                "totalcases": 6
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3 ,
+                "totalcases": 4
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 8
+            }
+        }
+
+      ],
+      "31/1/2020": [
+        {
+            "asia":{
+            "newcases":1994 ,
+            "totalcases": 9762
+            }
+        },
+        {
+            "europe": {
+                "newcases":7 ,
+                "totalcases": 17
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 7
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 4
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 9
+            }
+        }
+
+      ],
+      "1/2/2020": [
+        {
+            "asia":{
+            "newcases":2110 ,
+            "totalcases": 11872
+            }
+        },
+        {
+            "europe": {
+                "newcases":6 ,
+                "totalcases": 23
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":2 ,
+                "totalcases": 9
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 4
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":2 ,
+                "totalcases": 11
+            }
+        }
+
+      ],
+      "2/2/2020": [
+        {
+            "asia":{
+            "newcases":2603 ,
+            "totalcases": 14475
+            }
+        },
+        {
+            "europe": {
+                "newcases":1 ,
+                "totalcases": 24
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":2 ,
+                "totalcases": 11
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1 ,
+                "totalcases": 5
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 12
+            }
+        }
+
+      ],
+      "3/2/2020": [
+        {
+            "asia":{
+            "newcases":2814 ,
+            "totalcases": 17289
+            }
+        },
+        {
+            "europe": {
+                "newcases":1 ,
+                "totalcases": 25
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 11
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 5
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":3 ,
+                "totalcases": 15
+            }
+        }
+
+      ],
+      "4/2/2020": [
+        {
+            "asia":{
+            "newcases":3240 ,
+            "totalcases": 20529
+            }
+        },
+        {
+            "europe": {
+                "newcases":3 ,
+                "totalcases": 28
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 11
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 5
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 15
+            }
+        }
+
+      ],
+      "5/2/2020": [
+        {
+            "asia":{
+            "newcases":3905 ,
+            "totalcases": 24434
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 28
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 12
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 5
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 16
+            }
+        }
+
+      ],
+      "6/2/2020": [
+        {
+            "asia":{
+            "newcases":3749 ,
+            "totalcases": 28183
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 28
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 13
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 5
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 17
+            }
+        }
+
+      ],
+      "7/2/2020": [
+        {
+            "asia":{
+            "newcases":3213 ,
+            "totalcases": 31396
+            }
+        },
+        {
+            "europe": {
+                "newcases":2 ,
+                "totalcases": 30
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 14
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 5
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":2 ,
+                "totalcases": 19
+            }
+        }
+
+      ],
+      "8/2/2020": [
+        {
+            "asia":{
+            "newcases":3434 ,
+            "totalcases": 34830
+            }
+        },
+        {
+            "europe": {
+                "newcases":6 ,
+                "totalcases": 36
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 14
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":2 ,
+                "totalcases": 7
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 19
+            }
+        }
+
+      ],
+      "9/2/2020": [
+        {
+            "asia":{
+            "newcases":2618 ,
+            "totalcases": 37448
+            }
+        },
+        {
+            "europe": {
+                "newcases":1 ,
+                "totalcases": 37
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 14
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 7
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 19
+            }
+        }
+
+      ],
+      "10/2/2020": [
+        {
+            "asia":{
+            "newcases":2987 ,
+            "totalcases": 40435
+            }
+        },
+        {
+            "europe": {
+                "newcases":1 ,
+                "totalcases": 38
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 14
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 7
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 19
+            }
+        }
+
+      ],
+      "11/2/2020": [
+        {
+            "asia":{
+            "newcases":2559 ,
+            "totalcases": 42994
+            }
+        },
+        {
+            "europe": {
+                "newcases":4 ,
+                "totalcases": 42
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 14
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1 ,
+                "totalcases": 8
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 20
+            }
+        }
+
+      ],
+      "12/2/2020": [
+        {
+            "asia":{
+            "newcases":2070 ,
+            "totalcases": 45064
+            }
+        },
+        {
+            "europe": {
+                "newcases":2 ,
+                "totalcases": 44
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 14
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 8
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 20
+            }
+        }
+
+      ],
+      "13/2/2020": [
+        {
+            "asia":{
+            "newcases":15149 ,
+            "totalcases": 60213
+            }
+        },
+        {
+            "europe": {
+                "newcases":1 ,
+                "totalcases": 45
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 14
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 8
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 21
+            }
+        }
+
+      ],
+      "14/2/2020": [
+        {
+            "asia":{
+            "newcases":4213 ,
+            "totalcases": 64426
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 45
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 15
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 8
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 22
+            }
+        }
+
+      ],
+      "15/2/2020": [
+        {
+            "asia":{
+            "newcases":2558 ,
+            "totalcases": 66984
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 45
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 15
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1 ,
+                "totalcases": 9
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1 ,
+                "totalcases": 23
+            }
+        }
+
+      ],
+      "16/2/2020": [
+        {
+            "asia":{
+            "newcases":2162 ,
+            "totalcases": 69146
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 45
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 15
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 9
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 23
+            }
+        }
+
+      ],
+      "17/2/2020": [
+        {
+            "asia":{
+            "newcases":2065 ,
+            "totalcases": 71211
+            }
+        },
+        {
+            "europe": {
+                "newcases":1 ,
+                "totalcases": 46
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 15
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1 ,
+                "totalcases": 10
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 23
+            }
+        }
+
+      ],
+      "18/2/2020": [
+        {
+            "asia":{
+            "newcases":1995 ,
+            "totalcases": 73206
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 46
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 15
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 10
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 23
+            }
+        }
+
+      ],
+      "19/2/2020": [
+        {
+            "asia":{
+            "newcases":1864 ,
+            "totalcases": 75070
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 46
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 15
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":0 ,
+                "totalcases": 10
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 23
+            }
+        }
+
+      ],
+      "20/2/2020": [
+        {
+            "asia":{
+            "newcases":530 ,
+            "totalcases": 75600
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 46
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 15
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":2 ,
+                "totalcases": 12
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 23
+            }
+        }
+
+      ],
+      "21/2/2020": [
+        {
+            "asia":{
+            "newcases":989 ,
+            "totalcases": 76589
+            }
+        },
+        {
+            "europe": {
+                "newcases":0 ,
+                "totalcases": 46
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":2 ,
+                "totalcases": 17
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3 ,
+                "totalcases": 15
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":2 ,
+                "totalcases": 25
+            }
+        }
+
+      ],
+      "22/2/2020": [
+        {
+            "asia":{
+            "newcases":1031 ,
+            "totalcases": 77620
+            }
+        },
+        {
+            "europe": {
+                "newcases":14 ,
+                "totalcases": 60
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":4 ,
+                "totalcases": 21
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":17 ,
+                "totalcases": 32
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":19 ,
+                "totalcases": 44
+            }
+        }
+
+      ],
+      "23/2/2020": [
+        {
+            "asia":{
+            "newcases":933 ,
+            "totalcases": 78553
+            }
+        },
+        {
+            "europe": {
+                "newcases":62 ,
+                "totalcases": 122
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 22
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":12 ,
+                "totalcases": 44
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 44
+            }
+        }
+
+      ],
+      "24/2/2020": [
+        {
+            "asia":{
+            "newcases":450 ,
+            "totalcases": 79003
+            }
+        },
+        {
+            "europe": {
+                "newcases":57 ,
+                "totalcases": 179
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 22
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":20 ,
+                "totalcases": 64
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 44
+            }
+        }
+
+      ],
+      "25/2/2020": [
+        {
+            "asia":{
+            "newcases":651 ,
+            "totalcases": 79654
+            }
+        },
+        {
+            "europe": {
+                "newcases":98 ,
+                "totalcases": 277
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 0
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 22
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":24 ,
+                "totalcases": 88
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":20 ,
+                "totalcases": 64
+            }
+        }
+
+      ],
+      "26/2/2020": [
+        {
+            "asia":{
+            "newcases":689 ,
+            "totalcases": 80343
+            }
+        },
+        {
+            "europe": {
+                "newcases":105 ,
+                "totalcases": 382
+            }
+        },
+        {
+            "africa":{
+                "newcases":1 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "oceania": {
+                "newcases":0 ,
+                "totalcases": 22
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":67 ,
+                "totalcases": 155
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":0 ,
+                "totalcases": 64
+            }
+        }
+
+      ],
+      "27/2/2020": [
+        {
+            "asia":{
+            "newcases":929 ,
+            "totalcases": 81272
+            }
+        },
+        {
+            "europe": {
+                "newcases":99 ,
+                "totalcases": 481
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 23
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":70 ,
+                "totalcases": 225
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":7 ,
+                "totalcases": 71
+            }
+        }
+
+      ],
+      "28/2/2020": [
+        {
+            "asia":{
+            "newcases":786 ,
+            "totalcases": 82058
+            }
+        },
+        {
+            "europe": {
+                "newcases":339 ,
+                "totalcases": 820
+            }
+        },
+        {
+            "africa":{
+                "newcases":1 ,
+                "totalcases": 2
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 24
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":134 ,
+                "totalcases": 359
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":3 ,
+                "totalcases": 74
+            }
+        }
+
+      ],
+      "29/2/2020": [
+        {
+            "asia":{
+            "newcases":1369 ,
+            "totalcases": 83427
+            }
+        },
+        {
+            "europe": {
+                "newcases":302 ,
+                "totalcases": 1122
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 2
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":0 ,
+                "totalcases": 1
+            }
+        },
+        {
+            "oceania": {
+                "newcases":2 ,
+                "totalcases": 26
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":155 ,
+                "totalcases": 514
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":10 ,
+                "totalcases": 84
+            }
+        }
+
+      ],
+      "1/3/2020": [
+        {
+            "asia":{
+            "newcases":1186 ,
+            "totalcases": 84613
+            }
+        },
+        {
+            "europe": {
+                "newcases":405 ,
+                "totalcases": 1527
+            }
+        },
+        {
+            "africa":{
+                "newcases":0 ,
+                "totalcases": 2
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2 ,
+                "totalcases": 3
+            }
+        },
+        {
+            "oceania": {
+                "newcases":1 ,
+                "totalcases": 27
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":218 ,
+                "totalcases": 732
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":9 ,
+                "totalcases": 93
+            }
+        }
+
+      ],
+      "2/3/2020": [
+        {
+            "asia":{
+            "newcases":919 ,
+            "totalcases": 85532
+            }
+        },
+        {
+            "europe": {
+                "newcases":679 ,
+                "totalcases": 2206
+            }
+        },
+        {
+            "africa":{
+                "newcases":2 ,
+                "totalcases": 4
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":5 ,
+                "totalcases": 8
+            }
+        },
+        {
+            "oceania": {
+                "newcases":3 ,
+                "totalcases": 30
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":410 ,
+                "totalcases": 1142
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":26 ,
+                "totalcases": 119
+            }
+        }
+
+      ],
+      "3/3/2020": [
+        {
+            "asia":{
+            "newcases":732 ,
+            "totalcases": 86264
+            }
+        },
+        {
+            "europe": {
+                "newcases":297 ,
+                "totalcases": 2503
+            }
+        },
+        {
+            "africa":{
+                "newcases":3 ,
+                "totalcases": 7
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1 ,
+                "totalcases": 9
+            }
+        },
+        {
+            "oceania": {
+                "newcases":4 ,
+                "totalcases": 34
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":541 ,
+                "totalcases": 1683
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":17 ,
+                "totalcases": 136
+            }
+        }
+
+      ],
+      "4/3/2020": [
+        {
+            "asia":{
+            "newcases":661 ,
+            "totalcases": 86925
+            }
+        },
+        {
+            "europe": {
+                "newcases":861 ,
+                "totalcases": 3364
+            }
+        },
+        {
+            "africa":{
+                "newcases":2 ,
+                "totalcases": 9
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2 ,
+                "totalcases": 11
+            }
+        },
+        {
+            "oceania": {
+                "newcases":9 ,
+                "totalcases": 43
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":853 ,
+                "totalcases": 2536
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":25 ,
+                "totalcases": 161
+            }
+        }
+
+      ],
+      "5/3/2020": [
+        {
+            "asia":{
+            "newcases":646 ,
+            "totalcases": 87571
+            }
+        },
+        {
+            "europe": {
+                "newcases":922 ,
+                "totalcases": 4286
+            }
+        },
+        {
+            "africa":{
+                "newcases":9 ,
+                "totalcases": 18
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":6 ,
+                "totalcases": 17
+            }
+        },
+        {
+            "oceania": {
+                "newcases":12 ,
+                "totalcases": 55
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":607 ,
+                "totalcases": 3143
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":37 ,
+                "totalcases": 198
+            }
+        }
+
+      ],
+      "6/3/2020": [
+        {
+            "asia":{
+            "newcases":732 ,
+            "totalcases": 88303
+            }
+        },
+        {
+            "europe": {
+                "newcases":1392 ,
+                "totalcases": 5678
+            }
+        },
+        {
+            "africa":{
+                "newcases":8 ,
+                "totalcases": 26
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":10 ,
+                "totalcases": 27
+            }
+        },
+        {
+            "oceania": {
+                "newcases":8 ,
+                "totalcases": 63
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":620 ,
+                "totalcases": 3763
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":86 ,
+                "totalcases": 284
+            }
+        }
+
+      ],
+      "7/3/2020": [
+        {
+            "asia":{
+            "newcases":704 ,
+            "totalcases": 89007
+            }
+        },
+        {
+            "europe": {
+                "newcases":1853 ,
+                "totalcases": 7531
+            }
+        },
+        {
+            "africa":{
+                "newcases":2 ,
+                "totalcases": 28
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":14 ,
+                "totalcases": 41
+            }
+        },
+        {
+            "oceania": {
+                "newcases":5 ,
+                "totalcases": 68
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1270 ,
+                "totalcases": 5033
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":113 ,
+                "totalcases": 397
+            }
+        }
+
+      ],
+      "8/3/2020": [
+        {
+            "asia":{
+            "newcases":492 ,
+            "totalcases": 89499
+            }
+        },
+        {
+            "europe": {
+                "newcases":1954 ,
+                "totalcases": 9485
+            }
+        },
+        {
+            "africa":{
+                "newcases":1 ,
+                "totalcases": 29
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2 ,
+                "totalcases": 43
+            }
+        },
+        {
+            "oceania": {
+                "newcases":11 ,
+                "totalcases": 79
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1130 ,
+                "totalcases": 6163
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":101 ,
+                "totalcases": 498
+            }
+        }
+
+      ],
+      "9/3/2020": [
+        {
+            "asia":{
+            "newcases":364 ,
+            "totalcases": 89863
+            }
+        },
+        {
+            "europe": {
+                "newcases":2503 ,
+                "totalcases": 11988
+            }
+        },
+        {
+            "africa":{
+                "newcases":5 ,
+                "totalcases": 34
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":27 ,
+                "totalcases": 70
+            }
+        },
+        {
+            "oceania": {
+                "newcases":6 ,
+                "totalcases": 85
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":834 ,
+                "totalcases": 6997
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":132 ,
+                "totalcases": 630
+            }
+        }
+
+      ],
+      "10/3/2020": [
+        {
+            "asia":{
+            "newcases":242 ,
+            "totalcases": 90105
+            }
+        },
+        {
+            "europe": {
+                "newcases":3373 ,
+                "totalcases": 15361
+            }
+        },
+        {
+            "africa":{
+                "newcases":6 ,
+                "totalcases": 40
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":9 ,
+                "totalcases": 79
+            }
+        },
+        {
+            "oceania": {
+                "newcases":20 ,
+                "totalcases": 105
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":665 ,
+                "totalcases": 7662
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":222 ,
+                "totalcases": 852
+            }
+        }
+
+      ],
+      "11/3/2020": [
+        {
+            "asia":{
+            "newcases":385 ,
+            "totalcases": 90490
+            }
+        },
+        {
+            "europe": {
+                "newcases":2694 ,
+                "totalcases": 18055
+            }
+        },
+        {
+            "africa":{
+                "newcases":6 ,
+                "totalcases": 46
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":34 ,
+                "totalcases": 113
+            }
+        },
+        {
+            "oceania": {
+                "newcases":12 ,
+                "totalcases": 117
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":956 ,
+                "totalcases": 8618
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":291 ,
+                "totalcases": 1143
+            }
+        }
+
+      ],
+      "12/3/2020": [
+        {
+            "asia":{
+            "newcases":313 ,
+            "totalcases": 90803
+            }
+        },
+        {
+            "europe": {
+                "newcases":4867 ,
+                "totalcases": 22922
+            }
+        },
+        {
+            "africa":{
+                "newcases":12 ,
+                "totalcases": 58
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":45 ,
+                "totalcases": 158
+            }
+        },
+        {
+            "oceania": {
+                "newcases":14 ,
+                "totalcases": 131
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1319 ,
+                "totalcases": 9937
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":317 ,
+                "totalcases": 1460
+            }
+        }
+
+      ],
+      "13/3/2020": [
+        {
+            "asia":{
+            "newcases":237 ,
+            "totalcases": 91040
+            }
+        },
+        {
+            "europe": {
+                "newcases":6445 ,
+                "totalcases": 29367
+            }
+        },
+        {
+            "africa":{
+                "newcases":20 ,
+                "totalcases": 78
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":68 ,
+                "totalcases": 226
+            }
+        },
+        {
+            "oceania": {
+                "newcases":30 ,
+                "totalcases": 161
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1154 ,
+                "totalcases": 11091
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":398 ,
+                "totalcases": 1858
+            }
+        }
+
+      ],
+      "14/3/2020": [
+        {
+            "asia":{
+            "newcases":339 ,
+            "totalcases": 91379
+            }
+        },
+        {
+            "europe": {
+                "newcases":6820 ,
+                "totalcases": 36187
+            }
+        },
+        {
+            "africa":{
+                "newcases":31 ,
+                "totalcases": 109
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":80 ,
+                "totalcases": 306
+            }
+        },
+        {
+            "oceania": {
+                "newcases":42 ,
+                "totalcases": 203
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1490 ,
+                "totalcases": 12581
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":573 ,
+                "totalcases": 2431
+            }
+        }
+
+      ],
+      "15/3/2020": [
+        {
+            "asia":{
+            "newcases":328 ,
+            "totalcases": 91707
+            }
+        },
+        {
+            "europe": {
+                "newcases":5273 ,
+                "totalcases": 41460
+            }
+        },
+        {
+            "africa":{
+                "newcases":37 ,
+                "totalcases": 146
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":105 ,
+                "totalcases": 411
+            }
+        },
+        {
+            "oceania": {
+                "newcases":54 ,
+                "totalcases": 257
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1479 ,
+                "totalcases": 14060
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":864 ,
+                "totalcases": 3295
+            }
+        }
+
+      ],
+      "16/3/2020": [
+        {
+            "asia":{
+            "newcases":477 ,
+            "totalcases": 92184
+            }
+        },
+        {
+            "europe": {
+                "newcases":12916 ,
+                "totalcases": 54376
+            }
+        },
+        {
+            "africa":{
+                "newcases":68 ,
+                "totalcases": 214
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":163 ,
+                "totalcases": 574
+            }
+        },
+        {
+            "oceania": {
+                "newcases":49 ,
+                "totalcases": 306
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1467 ,
+                "totalcases": 15527
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":911 ,
+                "totalcases": 4206
+            }
+        }
+
+      ],
+      "17/3/2020": [
+        {
+            "asia":{
+            "newcases":620 ,
+            "totalcases": 92804
+            }
+        },
+        {
+            "europe": {
+                "newcases":9441 ,
+                "totalcases": 63817
+            }
+        },
+        {
+            "africa":{
+                "newcases":64 ,
+                "totalcases": 278
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":244 ,
+                "totalcases": 818
+            }
+        },
+        {
+            "oceania": {
+                "newcases":77 ,
+                "totalcases": 383
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1187 ,
+                "totalcases": 16714
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1045 ,
+                "totalcases": 5251
+            }
+        }
+
+      ],
+      "18/3/2020": [
+        {
+            "asia":{
+            "newcases":456 ,
+            "totalcases": 93260
+            }
+        },
+        {
+            "europe": {
+                "newcases":10476 ,
+                "totalcases": 74293
+            }
+        },
+        {
+            "africa":{
+                "newcases":50 ,
+                "totalcases": 328
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":249 ,
+                "totalcases": 1067
+            }
+        },
+        {
+            "oceania": {
+                "newcases":91 ,
+                "totalcases": 474
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1477 ,
+                "totalcases": 18191
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":1941 ,
+                "totalcases": 7192
+            }
+        }
+
+      ],
+      "19/3/2020": [
+        {
+            "asia":{
+            "newcases":683 ,
+            "totalcases": 93943
+            }
+        },
+        {
+            "europe": {
+                "newcases":12489 ,
+                "totalcases": 86782
+            }
+        },
+        {
+            "africa":{
+                "newcases":110 ,
+                "totalcases": 438
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":370 ,
+                "totalcases": 1437
+            }
+        },
+        {
+            "oceania": {
+                "newcases":122 ,
+                "totalcases": 474
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1365 ,
+                "totalcases": 18313
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":3175 ,
+                "totalcases": 10367
+            }
+        }
+
+      ],
+      "20/3/2020": [
+        {
+            "asia":{
+            "newcases":791 ,
+            "totalcases": 94734
+            }
+        },
+        {
+            "europe": {
+                "newcases":21108 ,
+                "totalcases": 107890
+            }
+        },
+        {
+            "africa":{
+                "newcases":88 ,
+                "totalcases": 526
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":523 ,
+                "totalcases": 1960
+            }
+        },
+        {
+            "oceania": {
+                "newcases":156 ,
+                "totalcases": 630
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1461 ,
+                "totalcases": 19774
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":5092 ,
+                "totalcases": 15459
+            }
+        }
+
+      ],
+      "21/3/2020": [
+        {
+            "asia":{
+            "newcases":830 ,
+            "totalcases": 95564
+            }
+        },
+        {
+            "europe": {
+                "newcases":19690 ,
+                "totalcases": 127580
+            }
+        },
+        {
+            "africa":{
+                "newcases":185 ,
+                "totalcases": 711
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":788 ,
+                "totalcases": 2748
+            }
+        },
+        {
+            "oceania": {
+                "newcases":194 ,
+                "totalcases": 824
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1444 ,
+                "totalcases": 21218
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":5597 ,
+                "totalcases": 21056
+            }
+        }
+
+      ],
+      "22/3/2020": [
+        {
+            "asia":{
+            "newcases":1268 ,
+            "totalcases": 96832
+            }
+        },
+        {
+            "europe": {
+                "newcases":22669 ,
+                "totalcases": 150249
+            }
+        },
+        {
+            "africa":{
+                "newcases":135 ,
+                "totalcases": 846
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":690 ,
+                "totalcases": 3438
+            }
+        },
+        {
+            "oceania": {
+                "newcases":243 ,
+                "totalcases": 1067
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1457 ,
+                "totalcases": 22675
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":7567 ,
+                "totalcases": 28623
+            }
+        }
+
+      ],
+      "23/3/2020": [
+        {
+            "asia":{
+            "newcases":1003 ,
+            "totalcases": 97835
+            }
+        },
+        {
+            "europe": {
+                "newcases":19920 ,
+                "totalcases": 170169
+            }
+        },
+        {
+            "africa":{
+                "newcases":150 ,
+                "totalcases": 996
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":981 ,
+                "totalcases": 4419
+            }
+        },
+        {
+            "oceania": {
+                "newcases":650 ,
+                "totalcases": 1717
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1460 ,
+                "totalcases": 24135
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":8852 ,
+                "totalcases": 37475
+            }
+        }
+
+      ],
+      "24/3/2020": [
+        {
+            "asia":{
+            "newcases":943 ,
+            "totalcases": 98778
+            }
+        },
+        {
+            "europe": {
+                "newcases":23810 ,
+                "totalcases": 193979
+            }
+        },
+        {
+            "africa":{
+                "newcases":374 ,
+                "totalcases": 1370
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":883 ,
+                "totalcases": 5302
+            }
+        },
+        {
+            "oceania": {
+                "newcases":162 ,
+                "totalcases": 1879
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":2000 ,
+                "totalcases": 26135
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":11613 ,
+                "totalcases": 49088
+            }
+        }
+
+      ],
+      "25/3/2020": [
+        {
+            "asia":{
+            "newcases":1080 ,
+            "totalcases": 99858
+            }
+        },
+        {
+            "europe": {
+                "newcases":23839 ,
+                "totalcases": 217818
+            }
+        },
+        {
+            "africa":{
+                "newcases":434 ,
+                "totalcases": 1804
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":919 ,
+                "totalcases": 6221
+            }
+        },
+        {
+            "oceania": {
+                "newcases":652 ,
+                "totalcases": 2531
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":2743 ,
+                "totalcases": 28878
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":9260 ,
+                "totalcases": 58348
+            }
+        }
+
+      ],
+      "26/3/2020": [
+        {
+            "asia":{
+            "newcases":1047 ,
+            "totalcases": 100905
+            }
+        },
+        {
+            "europe": {
+                "newcases":29466 ,
+                "totalcases": 247284
+            }
+        },
+        {
+            "africa":{
+                "newcases":406 ,
+                "totalcases": 2210
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1136 ,
+                "totalcases": 7357
+            }
+        },
+        {
+            "oceania": {
+                "newcases":454 ,
+                "totalcases": 2985
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3085 ,
+                "totalcases": 31963
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":15610 ,
+                "totalcases": 73958
+            }
+        }
+
+      ],
+      "27/3/2020": [
+        {
+            "asia":{
+            "newcases":1203 ,
+            "totalcases": 102108
+            }
+        },
+        {
+            "europe": {
+                "newcases":35651 ,
+                "totalcases": 282935
+            }
+        },
+        {
+            "africa":{
+                "newcases":550 ,
+                "totalcases": 2760
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1110 ,
+                "totalcases": 8467
+            }
+        },
+        {
+            "oceania": {
+                "newcases":449 ,
+                "totalcases": 3434
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3002 ,
+                "totalcases": 34965
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":17753 ,
+                "totalcases": 91711
+            }
+        }
+
+      ],
+      "28/3/2020": [
+        {
+            "asia":{
+            "newcases":1315 ,
+            "totalcases": 103423
+            }
+        },
+        {
+            "europe": {
+                "newcases":37061 ,
+                "totalcases": 319996
+            }
+        },
+        {
+            "africa":{
+                "newcases":445 ,
+                "totalcases": 3205
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1382 ,
+                "totalcases": 9849
+            }
+        },
+        {
+            "oceania": {
+                "newcases":290 ,
+                "totalcases": 3724
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3704 ,
+                "totalcases": 38669
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":19740 ,
+                "totalcases": 111451
+            }
+        }
+
+      ],
+      "29/3/2020": [
+        {
+            "asia":{
+            "newcases":1722 ,
+            "totalcases": 105145
+            }
+        },
+        {
+            "europe": {
+                "newcases":36123 ,
+                "totalcases": 356119
+            }
+        },
+        {
+            "africa":{
+                "newcases":338 ,
+                "totalcases": 3543
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1356 ,
+                "totalcases": 11205
+            }
+        },
+        {
+            "oceania": {
+                "newcases":495 ,
+                "totalcases": 4219
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4027 ,
+                "totalcases": 42696
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":21101 ,
+                "totalcases": 132552
+            }
+        }
+
+      ],
+      "30/3/2020": [
+        {
+            "asia":{
+            "newcases":1514 ,
+            "totalcases": 106659
+            }
+        },
+        {
+            "europe": {
+                "newcases":31568 ,
+                "totalcases": 387687
+            }
+        },
+        {
+            "africa":{
+                "newcases":453 ,
+                "totalcases": 3996
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1113 ,
+                "totalcases": 12318
+            }
+        },
+        {
+            "oceania": {
+                "newcases":361 ,
+                "totalcases": 4580
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3805 ,
+                "totalcases": 46501
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":19673 ,
+                "totalcases": 152225
+            }
+        }
+
+      ],
+      "31/3/2020": [
+        {
+            "asia":{
+            "newcases":2002 ,
+            "totalcases": 108661
+            }
+        },
+        {
+            "europe": {
+                "newcases":31199 ,
+                "totalcases": 418886
+            }
+        },
+        {
+            "africa":{
+                "newcases":460 ,
+                "totalcases": 4456
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1176 ,
+                "totalcases": 13494
+            }
+        },
+        {
+            "oceania": {
+                "newcases":561 ,
+                "totalcases": 5141
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4019 ,
+                "totalcases": 50520
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":23027 ,
+                "totalcases": 175252
+            }
+        }
+
+      ],
+      "1/4/2020": [
+        {
+            "asia":{
+            "newcases":962 ,
+            "totalcases": 109623
+            }
+        },
+        {
+            "europe": {
+                "newcases":39263 ,
+                "totalcases": 458149
+            }
+        },
+        {
+            "africa":{
+                "newcases":383 ,
+                "totalcases": 4839
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2130 ,
+                "totalcases": 15624
+            }
+        },
+        {
+            "oceania": {
+                "newcases":151 ,
+                "totalcases": 5292
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4029 ,
+                "totalcases": 54549
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":26594 ,
+                "totalcases": 201846
+            }
+        }
+
+      ],
+      "2/4/2020": [
+        {
+            "asia":{
+            "newcases":2451 ,
+            "totalcases": 112074
+            }
+        },
+        {
+            "europe": {
+                "newcases":38287 ,
+                "totalcases": 496436
+            }
+        },
+        {
+            "africa":{
+                "newcases":700 ,
+                "totalcases": 5539
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2630 ,
+                "totalcases": 18254
+            }
+        },
+        {
+            "oceania": {
+                "newcases":347 ,
+                "totalcases": 5639
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4012 ,
+                "totalcases": 58561
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":28701 ,
+                "totalcases": 230547
+            }
+        }
+
+      ],
+      "3/4/2020": [
+        {
+            "asia":{
+            "newcases":1985 ,
+            "totalcases": 114059
+            }
+        },
+        {
+            "europe": {
+                "newcases":37165 ,
+                "totalcases": 533601
+            }
+        },
+        {
+            "africa":{
+                "newcases":427 ,
+                "totalcases": 5966
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2252 ,
+                "totalcases": 20506
+            }
+        },
+        {
+            "oceania": {
+                "newcases":297 ,
+                "totalcases": 5936
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4505 ,
+                "totalcases": 63066
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":30706 ,
+                "totalcases": 261253
+            }
+        }
+
+      ],
+      "4/4/2020": [
+        {
+            "asia":{
+            "newcases":2317 ,
+            "totalcases": 116376
+            }
+        },
+        {
+            "europe": {
+                "newcases":40775 ,
+                "totalcases": 574376
+            }
+        },
+        {
+            "africa":{
+                "newcases":579 ,
+                "totalcases": 6545
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2362 ,
+                "totalcases": 22868
+            }
+        },
+        {
+            "oceania": {
+                "newcases":385 ,
+                "totalcases": 6321
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":1176 ,
+                "totalcases": 64242
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":34290 ,
+                "totalcases": 295543
+            }
+        }
+
+      ],
+      "5/4/2020": [
+        {
+            "asia":{
+            "newcases":1915 ,
+            "totalcases": 118291
+            }
+        },
+        {
+            "europe": {
+                "newcases":37559 ,
+                "totalcases": 611935
+            }
+        },
+        {
+            "africa":{
+                "newcases":960 ,
+                "totalcases": 7505
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2405 ,
+                "totalcases": 25273
+            }
+        },
+        {
+            "oceania": {
+                "newcases":188 ,
+                "totalcases": 6509
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":7606 ,
+                "totalcases": 71848
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":36074 ,
+                "totalcases": 331617
+            }
+        }
+
+      ],
+      "6/4/2020": [
+        {
+            "asia":{
+            "newcases":3110 ,
+            "totalcases": 121401
+            }
+        },
+        {
+            "europe": {
+                "newcases":33512 ,
+                "totalcases": 645447
+            }
+        },
+        {
+            "africa":{
+                "newcases":601 ,
+                "totalcases": 8106
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2314 ,
+                "totalcases": 27587
+            }
+        },
+        {
+            "oceania": {
+                "newcases":99 ,
+                "totalcases": 6605
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4046 ,
+                "totalcases": 75894
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":27556 ,
+                "totalcases": 359173
+            }
+        }
+
+      ],
+      "7/4/2020": [
+        {
+            "asia":{
+            "newcases":2453 ,
+            "totalcases": 123854
+            }
+        },
+        {
+            "europe": {
+                "newcases":30231 ,
+                "totalcases": 675678
+            }
+        },
+        {
+            "africa":{
+                "newcases":626 ,
+                "totalcases": 8732
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1977 ,
+                "totalcases": 29564
+            }
+        },
+        {
+            "oceania": {
+                "newcases":132 ,
+                "totalcases": 6737
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3756 ,
+                "totalcases": 79650
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":32217 ,
+                "totalcases": 391390
+            }
+        }
+
+      ],
+      "8/4/2020": [
+        {
+            "asia":{
+            "newcases":2324 ,
+            "totalcases": 126178
+            }
+        },
+        {
+            "europe": {
+                "newcases":32730 ,
+                "totalcases": 708408
+            }
+        },
+        {
+            "africa":{
+                "newcases":473 ,
+                "totalcases": 9205
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":3085 ,
+                "totalcases": 32649
+            }
+        },
+        {
+            "oceania": {
+                "newcases":146 ,
+                "totalcases": 6883
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3657 ,
+                "totalcases": 83307
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":32487 ,
+                "totalcases": 423877
+            }
+        }
+
+      ],
+      "9/4/2020": [
+        {
+            "asia":{
+            "newcases":2320 ,
+            "totalcases": 128498
+            }
+        },
+        {
+            "europe": {
+                "newcases":37803 ,
+                "totalcases": 746211
+            }
+        },
+        {
+            "africa":{
+                "newcases":684 ,
+                "totalcases": 9889
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":5248 ,
+                "totalcases": 37897
+            }
+        },
+        {
+            "oceania": {
+                "newcases":123 ,
+                "totalcases": 7006
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3315 ,
+                "totalcases": 86622
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":35437 ,
+                "totalcases": 459314
+            }
+        }
+
+      ],
+      "10/4/2020": [
+        {
+            "asia":{
+            "newcases":2858 ,
+            "totalcases": 131356
+            }
+        },
+        {
+            "europe": {
+                "newcases":39486 ,
+                "totalcases": 785697
+            }
+        },
+        {
+            "africa":{
+                "newcases":695 ,
+                "totalcases": 10584
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":4360 ,
+                "totalcases": 42257
+            }
+        },
+        {
+            "oceania": {
+                "newcases":124 ,
+                "totalcases": 7130
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3398 ,
+                "totalcases": 90020
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":36118 ,
+                "totalcases": 495432
+            }
+        }
+
+      ],
+      "11/4/2020": [
+        {
+            "asia":{
+            "newcases":2710 ,
+            "totalcases": 134066
+            }
+        },
+        {
+            "europe": {
+                "newcases":38805 ,
+                "totalcases": 824502
+            }
+        },
+        {
+            "africa":{
+                "newcases":577 ,
+                "totalcases": 11161
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":5752 ,
+                "totalcases": 48009
+            }
+        },
+        {
+            "oceania": {
+                "newcases":107 ,
+                "totalcases": 7237
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3675 ,
+                "totalcases": 93695
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":37723 ,
+                "totalcases": 533155
+            }
+        }
+
+      ],
+      "12/4/2020": [
+        {
+            "asia":{
+            "newcases":4461 ,
+            "totalcases": 138527
+            }
+        },
+        {
+            "europe": {
+                "newcases":39469 ,
+                "totalcases": 863971
+            }
+        },
+        {
+            "africa":{
+                "newcases":569 ,
+                "totalcases": 11730
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":3273 ,
+                "totalcases": 51282
+            }
+        },
+        {
+            "oceania": {
+                "newcases":65 ,
+                "totalcases": 7302
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3622 ,
+                "totalcases": 97317
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":30248 ,
+                "totalcases": 563403
+            }
+        }
+
+      ],
+      "13/4/2020": [
+        {
+            "asia":{
+            "newcases":3311 ,
+            "totalcases": 138527
+            }
+        },
+        {
+            "europe": {
+                "newcases":32252 ,
+                "totalcases": 863971
+            }
+        },
+        {
+            "africa":{
+                "newcases":730 ,
+                "totalcases": 11730
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":2978 ,
+                "totalcases": 51282
+            }
+        },
+        {
+            "oceania": {
+                "newcases":50 ,
+                "totalcases": 7302
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3534 ,
+                "totalcases": 97317
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":29535 ,
+                "totalcases": 563403
+            }
+        }
+
+      ],
+      "14/4/2020": [
+        {
+            "asia":{
+            "newcases":3936 ,
+            "totalcases": 142463
+            }
+        },
+        {
+            "europe": {
+                "newcases":28981 ,
+                "totalcases": 892952
+            }
+        },
+        {
+            "africa":{
+                "newcases":644 ,
+                "totalcases": 12374
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":1944 ,
+                "totalcases": 53226
+            }
+        },
+        {
+            "oceania": {
+                "newcases":56 ,
+                "totalcases": 7358
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3840 ,
+                "totalcases": 101157
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":26985 ,
+                "totalcases": 590388
+            }
+        }
+
+      ],
+      "15/4/2020": [
+        {
+            "asia":{
+            "newcases":3696 ,
+            "totalcases": 146159
+            }
+        },
+        {
+            "europe": {
+                "newcases":32547 ,
+                "totalcases": 925499
+            }
+        },
+        {
+            "africa":{
+                "newcases":830 ,
+                "totalcases": 13204
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":5562 ,
+                "totalcases": 58788
+            }
+        },
+        {
+            "oceania": {
+                "newcases":58 ,
+                "totalcases": 7416
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3617 ,
+                "totalcases": 104774
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":28923 ,
+                "totalcases": 619311
+            }
+        }
+
+      ],
+      "16/4/2020": [
+        {
+            "asia":{
+            "newcases":3717 ,
+            "totalcases": 149876
+            }
+        },
+        {
+            "europe": {
+                "newcases":35212 ,
+                "totalcases": 960711
+            }
+        },
+        {
+            "africa":{
+                "newcases":807 ,
+                "totalcases": 14011
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":5234 ,
+                "totalcases": 64022
+            }
+        },
+        {
+            "oceania": {
+                "newcases":48 ,
+                "totalcases": 7464
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3569 ,
+                "totalcases": 108343
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":32421 ,
+                "totalcases": 651732
+            }
+        }
+
+      ],
+      "17/4/2020": [
+        {
+            "asia":{
+            "newcases":4619 ,
+            "totalcases": 154495
+            }
+        },
+        {
+            "europe": {
+                "newcases":36297 ,
+                "totalcases": 997008
+            }
+        },
+        {
+            "africa":{
+                "newcases":918 ,
+                "totalcases": 14929
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":4612 ,
+                "totalcases": 68634
+            }
+        },
+        {
+            "oceania": {
+                "newcases":59 ,
+                "totalcases": 7523
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3684 ,
+                "totalcases": 112027
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":34150 ,
+                "totalcases": 685882
+            }
+        }
+
+      ],
+      "18/4/2020": [
+        {
+            "asia":{
+            "newcases":4106 ,
+            "totalcases": 158601
+            }
+        },
+        {
+            "europe": {
+                "newcases":34993 ,
+                "totalcases": 1032001
+            }
+        },
+        {
+            "africa":{
+                "newcases":1397 ,
+                "totalcases": 16326
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":5560 ,
+                "totalcases": 74194
+            }
+        },
+        {
+            "oceania": {
+                "newcases":44 ,
+                "totalcases": 7567
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":3520 ,
+                "totalcases": 115547
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":33704 ,
+                "totalcases": 719586
+            }
+        }
+
+      ],
+      "19/4/2020": [
+        {
+            "asia":{
+            "newcases":4636 ,
+            "totalcases": 163237
+            }
+        },
+        {
+            "europe": {
+                "newcases":33633 ,
+                "totalcases": 1065634
+            }
+        },
+        {
+            "africa":{
+                "newcases":972 ,
+                "totalcases": 17298
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":5393 ,
+                "totalcases": 79587
+            }
+        },
+        {
+            "oceania": {
+                "newcases":57 ,
+                "totalcases": 7624
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4049 ,
+                "totalcases": 119596
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":35381 ,
+                "totalcases": 754967
+            }
+        }
+
+      ],
+      "20/4/2020": [
+        {
+            "asia":{
+            "newcases":4330 ,
+            "totalcases": 167567
+            }
+        },
+        {
+            "europe": {
+                "newcases":32537 ,
+                "totalcases": 1098171
+            }
+        },
+        {
+            "africa":{
+                "newcases":1134 ,
+                "totalcases": 18432
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":4661 ,
+                "totalcases": 84248
+            }
+        },
+        {
+            "oceania": {
+                "newcases":34 ,
+                "totalcases": 7676
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4109 ,
+                "totalcases": 123705
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":27334 ,
+                "totalcases": 782301
+            }
+        }
+
+      ],
+      "21/4/2020": [
+        {
+            "asia":{
+            "newcases":3983 ,
+            "totalcases": 171550
+            }
+        },
+        {
+            "europe": {
+                "newcases":31482 ,
+                "totalcases": 1129653
+            }
+        },
+        {
+            "africa":{
+                "newcases":775 ,
+                "totalcases": 19207
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":4238 ,
+                "totalcases": 88486
+            }
+        },
+        {
+            "oceania": {
+                "newcases":20 ,
+                "totalcases": 7696
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4288 ,
+                "totalcases": 127993
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":31066 ,
+                "totalcases": 813367
+            }
+        }
+
+      ],
+      "22/4/2020": [
+        {
+            "asia":{
+            "newcases":6233 ,
+            "totalcases": 177783
+            }
+        },
+        {
+            "europe": {
+                "newcases":36704 ,
+                "totalcases": 1166357
+            }
+        },
+        {
+            "africa":{
+                "newcases":1196  ,
+                "totalcases": 20403
+            }
+        },
+        {
+            "southamerica": {
+                "newcases":5140 ,
+                "totalcases": 93626
+            }
+        },
+        {
+            "oceania": {
+                "newcases":30 ,
+                "totalcases": 7726
+            }
+        },
+        {
+            "middleeast":{
+                "newcases":4020 ,
+                "totalcases": 132013
+            }
+        },
+        {
+            "northamerica": {
+                "newcases":39787 ,
+                "totalcases": 853154
+            }
+        }
+
+      ]
+
+}

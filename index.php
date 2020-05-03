@@ -14,7 +14,7 @@
                 <div id="card" class="row align-items-center" style="padding-top: 13%;">
                     <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
                         <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
-                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่     28 เมษายน 2563</p>
+                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่     19 เมษายน 2563</p>
                     </div>
                     <div class="card bg-danger text-white" style="width: 100%;height: 200px;font-size:50px;">
                         <div class="card-body text-center">
@@ -1219,6 +1219,9 @@ $.getJSON('./DATA/world/รายงานโควิดแต่ละปร�
         title: {
             text: 'World'
         },
+        subtitle:{
+            text: 'ข้อมูลวันที่ '+ data.lastupdate
+        },
         mapNavigation: {
             enabled: true,
             enableDoubleClickZoomTo: true
@@ -1313,7 +1316,7 @@ $.getJSON('./DATA/world/globalAll.json', function(data) {
 
 function load_worldRegion_spiderChart() {
 $.getJSON('./DATA/world/รวมเลขทุกประเทศเป็นทวีป.json', function(data) {
-    //console.log(data.continent[0].name);
+    //console.log(data.lastupdate);
     var items = [];
     $.each(data.continent, function(key, val) {
         if (key != "Last Update" && key != "Unit" && key != "Toltal") {
@@ -1330,6 +1333,8 @@ $.getJSON('./DATA/world/รวมเลขทุกประเทศเป็�
     for(var i = 0;i<items.length;i++) {
         wolrdRegionSpiderChart.series[i] = items[i]
     }
+
+    wolrdRegionSpiderChart.subtitle.text = "ข้อมูลวันที่ "+data.lastupdate
 
     new Highcharts.chart(wolrdRegionSpiderChart)
 });
@@ -1371,7 +1376,7 @@ function load_world_lineChart()
 {
 $.getJSON('./DATA/world/totalcaseโควิดทวีป.json', function(data){
 
-    console.log(data)
+    //console.log(data)
     items = [];
     $.each(data, function(key, value){
         if(key != "lastupdate" && key != "date")

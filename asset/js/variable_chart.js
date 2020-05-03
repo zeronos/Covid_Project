@@ -378,6 +378,9 @@ var wolrdRegionSpiderChart = {
         text: 'กราฟทวีป',
         x: -80,
     },
+    subtitle:{
+        text: ''
+    },
 
     pane: {
         size: '80%',

@@ -46,7 +46,7 @@
 						<li>
 							<div class="blob"></div>
 						</li>
-						<li><a style = "color: black;">อัปเดตล่าสุด 28/4/63</a></li>
+						<li><a style = "color: black;">อัปเดตล่าสุด 26/04/63</a></li>
 					</ul>
 				</nav>
 				<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>

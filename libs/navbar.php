@@ -33,7 +33,7 @@
 
 	<div class="container-fluid">
 		<div class="d-flex align-items-center">
-			<div class="site-logo"><img src="./asset/images/KU-logo2.png"width = "100" height = "100"></div>
+			<div class="site-logo"><img src="./asset/images/KU-logo2.png"width = "80" height = "90"></div>
 			<div class="ml-auto">
 				<nav class="site-navigation position-relative text-right" role="navigation">
 					<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">

@@ -5,539 +5,695 @@
         "infect":1425,
         "dead":19,
         "healing":112,
-        "cure":1309
+        "cure":1309,
+        "code":"th-bm",
+        "population":5666264
     },
 
     "phuket" : {
         "infect":192,
         "dead":1,
         "healing":64,
-        "cure":127
+        "cure":127,
+        "code":"th-pu",
+        "population": 416582
     },
 
     "nonthaburi": {
         "infect":150,
         "dead":1,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-no",
+        "population":1265387
     },
 
     "samutprakan": {
         "infect":108,
         "dead":5,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-sm",
+        "population":1344875
     },
 
     "yala": {
         "infect":101,
         "dead":2,
         "healing":52,
-        "cure":47
+        "cure":47,
+        "code":"th-yl",
+        "population":536330
     },
 
     "chiangrai": {
         "infect":9,
         "dead":0,
         "healing":0,
-        "cure":9
+        "cure":9,
+        "code":"th-cr",
+        "population":1298304
     },
 
     "chiangmai": {
         "infect":40,
         "dead":1,
         "healing":15,
-        "cure":24
+        "cure":24,
+        "code":"th-cm",
+        "population":1779254
     },
 
     "maehongson": {
         "infect":5,
         "dead":0,
         "healing":0,
-        "cure":5
+        "cure":5,
+        "code":"th-mh",
+        "population": 284138
     },
 
     "phayao": {
         "infect":3,
         "dead":0,
         "healing":3,
-        "cure":0
+        "cure":0,
+        "code":"th-py",
+        "population": 472356
     },
     
     "nan": {
         "infect":0,
         "dead":0,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-na",
+        "population":478227
     },
     
     "phrae": {
         "infect":1,
         "dead":0,
         "healing":0,
-        "cure":1
+        "cure":1,
+        "code":"th-pr",
+        "population":441726
     },
 
     "lampang": {
         "infect":4,
         "dead":0,
         "healing":4,
-        "cure":0
+        "cure":0,
+        "code":"th-lg",
+        "population":738316
     },
 
     "lamphun": {
         "infect":4,
         "dead":0,
         "healing":0,
-        "cure":4
+        "cure":4,
+        "code":"th-ln",
+        "population": 405075
     },
 
     "tak": {
         "infect":3,
         "dead":0,
         "healing":1,
-        "cure":2
+        "cure":2,
+        "code":"th-tk",
+        "population": 665620
     },
 
     "uttaradit": {
         "infect":3,
         "dead":0,
         "healing":0,
-        "cure":3
+        "cure":3,
+        "code":"th-ud",
+        "population": 453103
     },
 
     "sukhothai": {
         "infect":3,
         "dead":0,
         "healing":0,
-        "cure":3
+        "cure":3,
+        "code":"th-so",
+        "population": 595072
     },
 
     "phitsanulok": {
         "infect":6,
         "dead":0,
         "healing":4,
-        "cure":2
+        "cure":2,
+        "code":"th-ps",
+        "population": 865247
     },
 
     "kamphaengphet": {
         "infect":0,
         "dead":0,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-kp",
+        "population": 725867
     },
 
     "kanchanaburi": {
         "infect":9,
         "dead":0,
         "healing":0,
-        "cure":9
+        "cure":9,
+        "code":"th-kn",
+        "population": 895525
     },
 
     "ratchaburi": {
         "infect":8,
         "dead":1,
         "healing":1,
-        "cure":6
+        "cure":6,
+        "code":"th-rt",
+        "population": 873101
     },
 
     "phetchaburi": {
         "infect":1,
         "dead":0,
         "healing":0,
-        "cure":1
+        "cure":1,
+        "code":"th-pe",
+        "population":485191
     },
 
     "samutsongkhram": {
         "infect":1,
         "dead":0,
         "healing":0,
-        "cure":1
+        "cure":1,
+        "code":"th-sm",
+        "population": 193305
     },
 
     "phichit": {
         "infect":0,
         "dead":0,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-pc",
+        "population": 536311
     },
 
     "nakhonsawan": {
         "infect":9,
         "dead":0,
         "healing":5,
-        "cure":4
+        "cure":4,
+        "code":"th-ns",
+        "population": 1059887
     },
 
     "uthaithani": {
         "infect":1,
         "dead":0,
         "healing":0,
-        "cure":1
+        "cure":1,
+        "code":"th-ut",
+        "population": 328618
     },
 
     "chainat": {
         "infect":0,
         "dead":0,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-cn",
+        "population": 326611
     },
 
     "suphanburi": {
         "infect":5,
         "dead":0,
         "healing":3,
-        "cure":2
+        "cure":2,
+        "code":"th-sh",
+        "population":846334
     },
     
     "nakhonpathom": {
         "infect":20,
         "dead":0,
         "healing":13,
-        "cure":7
+        "cure":7,
+        "code":"th-np",
+        "population": 920030
     },
 
     "samutsakhon": {
         "infect":18,
         "dead":0,
         "healing":6,
-        "cure":12
+        "cure":12,
+        "code":"th-ss",
+        "population":584703
     },
 
     "loei": {
         "infect":5,
         "dead":0,
         "healing":3,
-        "cure":2
+        "cure":2,
+        "code":"th-le",
+        "population": 642950
     },
 
     "phetchabun": {
         "infect":3,
         "dead":0,
         "healing":0,
-        "cure":3
+        "cure":3,
+        "code":"th-ph",
+        "population":992451
     },
 
     "lopburi": {
         "infect":3,
         "dead":0,
         "healing":0,
-        "cure":3
+        "cure":3,
+        "code":"th-lb",
+        "population": 755556
     },
 
     "saraburi": {
         "infect":5,
         "dead":0,
         "healing":1,
-        "cure":4
+        "cure":4,
+        "code":"th-sr",
+        "population": 645911
     },
 
     "singburi": {
         "infect":0,
         "dead":0,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-sb",
+        "population": 208446
     },
 
     "angthong": {
         "infect":0,
         "dead":0,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-at",
+        "population": 279654
     },
 
     "phranakhonsiayutthaya": {
         "infect":6,
         "dead":1,
         "healing":1,
-        "cure":4
+        "cure":4,
+        "code":"th-pa",
+        "population": 820188
     },
 
     "pathumthani": {
         "infect":41,
         "dead":2,
         "healing":8,
-        "cure":31
+        "cure":31,
+        "code":"th-pt",
+        "population": 1163604
     },
 
     "nakhonnayok": {
         "infect":2,
         "dead":0,
         "healing":1,
-        "cure":1
+        "cure":1,
+        "code":"th-nn",
+        "population": 260751
     },
 
     "chachoengsao": {
         "infect":21,
         "dead":1,
         "healing":1,
-        "cure":19
+        "cure":19,
+        "code":"th-cc",
+        "population": 720113
     },
 
     "chonburi": {
         "infect":86,
         "dead":2,
         "healing":23,
-        "cure":61
+        "cure":61,
+        "code":"th-cb",
+        "population": 1558301
     },
 
     "rayong": {
         "infect":6,
         "dead":0,
         "healing":1,
-        "cure":5
+        "cure":5,
+        "code":"th-ry",
+        "population": 734753
     },
 
     "chanthaburi": {
         "infect":3,
         "dead":0,
         "healing":0,
-        "cure":3
+        "cure":3,
+        "code":"th-ct",
+        "population":537698
     },
 
     "trat": {
         "infect":0,
         "dead":0,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-tt",
+        "population": 229958
     },
 
     "prachinburi": {
         "infect":8,
         "dead":1,
         "healing":4,
-        "cure":3
+        "cure":3,
+        "code":"th-pb",
+        "population": 494680
     },
 
     "sakaeo": {
         "infect":10,
         "dead":0,
         "healing":0,
-        "cure":10
+        "cure":10,
+        "code":"th-sk",
+        "population": 566303
     },
 
     "nakhonratchasima": {
         "infect":18,
         "dead":0,
         "healing":9,
-        "cure":9
+        "cure":9,
+        "code":"th-nr",
+        "population": 2648927
     },
 
     "buriram": {
         "infect":13,
         "dead":1,
         "healing":6,
-        "cure":6
+        "cure":6,
+        "code":"th-br",
+        "population":1595747
     },
 
     "surin": {
         "infect":9,
         "dead":1,
         "healing":0,
-        "cure":8
+        "cure":8,
+        "code":"th-su",
+        "population":1396831
     },
 
     "sisaket": {
         "infect":8,
         "dead":0,
         "healing":0,
-        "cure":8
+        "cure":8,
+        "code":"th-si",
+        "population": 1472859
     },
 
     "ubonratchathani": {
         "infect":15,
         "dead":0,
         "healing":7,
-        "cure":8
+        "cure":8,
+        "code":"th-ur",
+        "population": 1878146
     },
 
     "chaiyaphum": {
         "infect":3,
         "dead":0,
         "healing":0,
-        "cure":3
+        "cure":3,
+        "code":"th-cy",
+        "population":1137357
     },
 
     "khonkaen": {
         "infect":6,
         "dead":0,
         "healing":2,
-        "cure":4
+        "cure":4,
+        "code":"th-kk",
+        "population": 1802872
     },
 
     "mahasarakham": {
         "infect":1,
         "dead":0,
         "healing":0,
-        "cure":1
+        "cure":1,
+        "code":"th-ms",
+        "population": 962665
     },
 
     "roiet": {
         "infect":3,
         "dead":0,
         "healing":0,
-        "cure":3
+        "cure":3,
+        "code":"th-re",
+        "population": 1305211
     },
 
     "yasothon": {
         "infect":1,
         "dead":0,
         "healing":0,
-        "cure":1
+        "cure":1,
+        "code":"th-ys",
+        "population": 537299
+
     },
 
     "amnatcharoen": {
         "infect":2,
         "dead":0,
         "healing":0,
-        "cure":2
+        "cure":2,
+        "code":"th-ac",
+        "population": 378438
     },
 
     "nongbualamphu": {
         "infect":4,
         "dead":0,
         "healing":0,
-        "cure":4
+        "cure":4,
+        "code":"th-nb",
+        "population": 512780
     },
 
     "udonthani": {
         "infect":8,
         "dead":0,
         "healing":2,
-        "cure":6
+        "cure":6,
+        "code":"th-un",
+        "population": 1586646
     },
 
     "kalasin": {
         "infect":3,
         "dead":0,
         "healing":0,
-        "cure":3
+        "cure":3,
+        "code":"th-kl",
+        "population": 983418
     },
 
     "mukdahan": {
         "infect":4,
         "dead":0,
         "healing":0,
-        "cure":4
+        "cure":4,
+        "code":"th-md",
+        "population": 353174
     },
 
     "nongkhai": {
         "infect":3,
         "dead":0,
         "healing":0,
-        "cure":3
+        "cure":3,
+        "code":"th-nk",
+        "population": 522311
     },
 
     "sakonnakhon": {
         "infect":1,
         "dead":0,
         "healing":1,
-        "cure":0
+        "cure":0,
+        "code":"th-sn",
+        "population":1153390
     },
 
     "nakhonphanom": {
         "infect":2,
         "dead":0,
         "healing":2,
-        "cure":0
+        "cure":0,
+        "code":"th-nf",
+        "population": 719136
     },
 
     "buengkan": {
         "infect":0,
         "dead":0,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-bk",
+        "population": 424091
     },
 
     "prachuapkhirikhan": {
         "infect":17,
         "dead":2,
         "healing":4,
-        "cure":11
+        "cure":11,
+        "code":"th-pk",
+        "population": 554116
     },
 
     "chumphon": {
         "infect":10,
         "dead":2,
         "healing":7,
-        "cure":1
+        "cure":1,
+        "code":"th-cp",
+        "population": 511304
     },
 
     "ranong": {
         "infect":0,
         "dead":0,
         "healing":0,
-        "cure":0
+        "cure":0,
+        "code":"th-rn",
+        "population":193370
     },
 
     "suratthani": {
         "infect":18,
         "dead":0,
         "healing":6,
-        "cure":12
+        "cure":12,
+        "code":"th-st",
+        "population": 1068010
     },
 
     "phangnga": {
         "infect":2,
         "dead":0,
         "healing":2,
-        "cure":0
+        "cure":0,
+        "code":"th-pg",
+        "population": 268788
     },
 
     "krabi": {
         "infect":18,
         "dead":0,
         "healing":8,
-        "cure":10
+        "cure":10,
+        "code":"th-kr",
+        "population": 476739
     },
 
     "nakhonsithammarat": {
         "infect":12,
         "dead":1,
         "healing":7,
-        "cure":4
+        "cure":4,
+        "code":"th-nt",
+        "population": 1561927
     },
 
     "trang": {
         "infect":7,
         "dead":0,
         "healing":1,
-        "cure":6
+        "cure":6,
+        "code":"th-tg",
+        "population": 643164
     },
 
     "phatthalung": {
         "infect":14,
         "dead":0,
         "healing":7,
-        "cure":7
+        "cure":7,
+        "code":"th-pl",
+        "population":524865
+
     },
 
     "songkhla": {
         "infect":56,
         "dead":0,
         "healing":11,
-        "cure":45
+        "cure":45,
+        "code":"th-sg",
+        "population": 1435968
     },
 
     "satun": {
         "infect":18,
         "dead":0,
         "healing":18,
-        "cure":0
+        "cure":0,
+        "code":"th-sa",
+        "population": 323586
     },
 
     "pattani": {
         "infect":90,
         "dead":1,
         "healing":59,
-        "cure":30
+        "cure":30,
+        "code":"th-pi",
+        "population": 725104
     },
 
     "narathiwat": {
         "infect":33,
         "dead":1,
         "healing":16,
-        "cure":16
+        "cure":16,
+        "code":"th-nw",
+        "population": 808020
     }
 
 }

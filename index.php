@@ -138,7 +138,6 @@
             </div>
             <div class="row">
                 <div class="col-sm-8"></div>
-<p id="demo"></p>
                 <select class="selectpicker col-sm-2" id="choine-relation-section1">
                     <option value="">1</option>
                     <option value="">2</option>
@@ -154,7 +153,7 @@
 
             </div>
             <div class="grid-container3">
-                <div class="grid-item" id="grid9"></div>
+                <div class="grid-item" id="grid9" ></div>
             </div>
         </div>
         <hr>
@@ -839,18 +838,19 @@
 
 
     function loadGrid8() {
-        $.getJSON("DATA/phase3/province.json", function(data) {
+        $.getJSON("DATA/phase3/th.json", function(data) {
             let maxIn = [];
             let items = [];
-            let table = '<thead>\n' + '<tr>\n' + '<th>จังหวัด</th>\n' + '<th>ติดเชื้อ</th>\n' + '<th>หาย</th>\n' + '<th>ตาย</th>\n' + '</tr>\n' + ' </thead>\n';
+            let table = '<thead>\n' + '<tr>\n' + '<th>จังหวัด</th>\n' + '<th>ติดเชื้อ</th>\n' + '<th>หาย</th>\n' + '<th>รักษา</th>\n'+ '<th>ตาย</th>\n' + '</tr>\n' + ' </thead>\n';
 
             $.each(data, function(key, value) {
                 if (key != "lastupdate") {
                     table += '<tr>';
                     table += '<td>' + key + '</td>';
-                    table += '<td style="text-align:right">' + numberWithCommas(value.infect) + '</td>';
-                    table += '<td style="text-align:right">' + numberWithCommas(value.healing) + '</td>';
-                    table += '<td style="text-align:right">' + numberWithCommas(value.dead) + '</td>';
+                    table += '<td style="text-align:right">' + formatNumber(value.infect) + '</td>';
+                    table += '<td style="text-align:right">' + formatNumber(value.healing) + '</td>';
+                    table += '<td style="text-align:right">' + formatNumber(value.cure) + '</td>';
+                    table += '<td style="text-align:right">' + formatNumber(value.dead) + '</td>';
                     table += '</tr>';
                 }
             });
@@ -869,97 +869,23 @@
             $.each(data, function(key, value) {
                 if(key != "lastupdate"){
                 maxIn.push(value.infect);
-                document.getElementById("demo").innerHTML=data.bangkok["population"];
-                }
+                items.push({
+                name: key,
+                value: value.infect,
+                dead: value.dead,
+                recovered: value.healing,
+                critical: value.cure,
+                "hc-key": value.code
+                })
+            }
             });
-            items = [
-                ['th-ct', data.chanthaburi["infect"]],
-                ['th-4255', 1],
-                ['th-pg', data.phangnga["infect"]],
-                ['th-st', data.suratthani["infect"]],
-                ['th-kr', data.krabi["infect"]],
-                ['th-sa', data.satun["infect"]],
-                ['th-tg', data.trang["infect"]],
-                ['th-tt', data.trat["infect"]],
-                ['th-pl', data.phatthalung["infect"]],
-                ['th-ps', data.phitsanulok["infect"]],
-                ['th-kp', data.kamphaengphet["infect"]],
-                ['th-pc', data.phichit["infect"]],
-                ['th-sh', data.suphanburi["infect"]],
-                ['th-at', data.angthong["infect"]],
-                ['th-lb', data.lopburi["infect"]],
-                ['th-pa', data.phranakhonsiayutthaya["infect"]],
-                ['th-np', data.nakhonpathom["infect"]],
-                ['th-sb', data.singburi["infect"]],
-                ['th-cn', data.chainat["infect"]],
-                ['th-bm', data.bangkok["infect"]],
-                ['th-pt', data.pathumthani["infect"]],
-                ['th-no', data.nonthaburi["infect"]],
-                ['th-sp', data.samutprakan["infect"]],
-                ['th-ss', data.samutsakhon["infect"]],
-                ['th-sm', data.samutsongkhram["infect"]],
-                ['th-pe', data.phetchaburi["infect"]],
-                ['th-cc', data.chachoengsao["infect"]],
-                ['th-nn', data.nakhonnayok["infect"]],
-                ['th-cb', data.chonburi["infect"]],
-                ['th-br', data.buriram["infect"]],
-                ['th-kk', data.khonkaen["infect"]],
-                ['th-ph', data.phetchabun["infect"]],
-                ['th-kl', data.kalasin["infect"]],
-                ['th-sr', data.saraburi["infect"]],
-                ['th-nr', data.nakhonratchasima["infect"]],
-                ['th-si', data.sisaket["infect"]],
-                ['th-re', data.roiet["infect"]],
-                ['th-le', data.loei["infect"]],
-                ['th-nk', data.nongkhai["infect"]],
-                ['th-ac', data.amnatcharoen["infect"]],
-                ['th-md', data.mukdahan["infect"]],
-                ['th-sn', data.sakonnakhon["infect"]],
-                ['th-nw', data.narathiwat["infect"]],
-                ['th-pi', data.pattani["infect"]],
-                ['th-rn', data.ranong["infect"]],
-                ['th-nt', data.nakhonsithammarat["infect"]],
-                ['th-sg', data.songkhla["infect"]],
-                ['th-pr', data.phrae["infect"]],
-                ['th-py', data.phayao["infect"]],
-                ['th-so', data.sukhothai["infect"]],
-                ['th-ud', data.uttaradit["infect"]],
-                ['th-kn', data.kanchanaburi["infect"]],
-                ['th-tk', data.tak["infect"]],
-                ['th-ut', data.uthaithani["infect"]],
-                ['th-ns', data.nakhonsawan["infect"]],
-                ['th-pk', data.prachuapkhirikhan["infect"]],
-                ['th-ur', data.ubonratchathani["infect"]],
-                ['th-sk', data.sakaeo["infect"]],
-                ['th-ry', data.rayong["infect"]],
-                ['th-cy', data.chaiyaphum["infect"]],
-                ['th-su', data.surin["infect"]],
-                ['th-nf', data.nakhonphanom["infect"]],
-                ['th-bk', data.buengkan["infect"]],
-                ['th-mh', data.maehongson["infect"]],
-                ['th-pu', data.phuket["infect"]],
-                ['th-cp', data.chumphon["infect"]],
-                ['th-yl', data.yala["infect"]],
-                ['th-cr', data.chiangrai["infect"]],
-                ['th-cm', data.chiangmai["infect"]],
-                ['th-ln', data.lamphun["infect"]],
-                ['th-na', data.nan["infect"]],
-                ['th-lg', data.lampang["infect"]],
-                ['th-pb', data.prachinburi["infect"]],
-                ['th-rt', data.ratchaburi["infect"]],
-                ['th-ys', data.yasothon["infect"]],
-                ['th-ms', data.mahasarakham["infect"]],
-                ['th-un', data.udonthani["infect"]],
-                ['th-nb', data.nongbualamphu["infect"]]
-            ];
-
             Highcharts.mapChart('grid8', {
                 chart: {
                     map: 'countries/th/th-all'
                 },
 
                 title: {
-                    text: 'Highmaps basic demo'
+                    text: 'ผู้ติดเชื้อในประเทศไทยแยกตามจังหวัด'
                 },
 
                 subtitle: {
@@ -984,7 +910,6 @@
                 },
                 series: [{
                     data: items,
-                    name: 'จังหวัด',
                     states: {
                         hover: {
                             color: '#ffff59'
@@ -999,7 +924,10 @@
                 headerFormat: '',
                 pointFormatter: function() {
                     var string = '<b>'+this.name + ':<br>';
-                    string += '<span style="color:#8a1900">●</span>'+' ติดเชื้อ '+this.value+' คน'+'</b>'+'<br>';
+                    string += '<span style="color:#8a1900">●</span>'+' ติดเชื้อ '+formatNumber(this.value)+' คน'+'</b>'+'<br>';
+                    string += '<span style="color:#e1e1db">●</span>'+' ตาย '+formatNumber(this.dead)+' คน'+'</b>'+'<br>';
+                    string += '<span style="color:#02fd45">●</span>'+' หาย '+formatNumber(this.recovered)+' คน'+'</b>'+'<br>';
+                    string += '<span style="color:#feff7a">●</span>'+' รักษา '+formatNumber(this.critical)+' คน'+'</b>'+'<br>';
                     return string;
                 }
         },
@@ -1008,172 +936,94 @@
     }
 
     function loadGrid9() {
-        Highcharts.chart('grid9', {
-            chart: {
-                type: 'scatter',
-                zoomType: 'xy'
-            },
-            title: {
-                text: ''
-            },
-            subtitle: {
-                text: ''
-            },
-            xAxis: {
-                title: {
-                    enabled: true,
-                    text: 'Height (cm)'
-                },
-                startOnTick: true,
-                endOnTick: true,
-                showLastLabel: true
-            },
-            yAxis: {
-                title: {
-                    text: 'Weight (kg)'
+        $.getJSON("DATA/phase3/th.json", function(data) {
+            let items = [];
+            let state = [];
+            $.each(data, function(key, value) {
+                if(key != "lastupdate"){
+                    items.push({name:key,data:[[value.population,value.infect]]})
                 }
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'left',
-                verticalAlign: 'top',
-                x: 100,
-                y: 70,
-                floating: true,
-                backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
-                borderWidth: 1
-            },
-            plotOptions: {
-                scatter: {
-                    marker: {
-                        radius: 5,
-                        states: {
-                            hover: {
-                                enabled: true,
-                                lineColor: 'rgb(100,100,100)'
-                            }
-                        }
-                    },
-                    states: {
-                        hover: {
-                            marker: {
-                                enabled: false
-                            }
-                        }
-                    },
-                    tooltip: {
-                        headerFormat: '<b>{series.name}</b><br>',
-                        pointFormat: '{point.x} cm, {point.y} kg'
-                    }
-                }
-            },
-            series: [{
-                name: 'Female',
-                color: 'rgba(223, 83, 83, .5)',
-                data: [
-                    [161.2, 51.6],
-                    [167.5, 59.0],
-                    [159.5, 49.2],
-                    [157.0, 63.0],
-                    [155.8, 53.6],
-                    [170.0, 59.0],
-                    [159.1, 47.6],
-                    [166.0, 69.8],
-                    [176.2, 66.8],
-                    [160.2, 75.2],
-                    [162.0, 55.0],
-                    [176.5, 83.0],
-                    [160.0, 54.4],
-                    [152.0, 45.8],
-                    [162.1, 53.6],
-                    [170.0, 73.2],
-                    [160.2, 52.1],
-                    [161.3, 67.9],
-                    [166.4, 56.6],
-                    [168.9, 62.3],
-                    [163.8, 58.5],
-                    [167.6, 54.5],
-                    [160.0, 50.2],
-                    [161.3, 60.3],
-                    [167.6, 58.3],
-                    [165.1, 56.2],
-                    [160.0, 50.2],
-                    [170.0, 72.9],
-                    [157.5, 59.8],
-                    [167.6, 61.0],
-                    [160.7, 69.1],
-                    [163.2, 55.9],
-                    [152.4, 46.5],
-                    [157.5, 54.3],
-                    [168.3, 54.8],
-                    [180.3, 60.7],
-                    [165.5, 60.0],
-                    [165.0, 62.0],
-                    [164.5, 60.3],
-                    [156.0, 52.7],
-                    [160.0, 74.3],
-                    [163.0, 62.0],
-                    [165.7, 73.1],
-                    [161.0, 80.0],
-                    [162.0, 54.7],
-                    [166.0, 53.2],
-                    [174.0, 75.7],
-                    [172.7, 61.1],
-                    [167.6, 55.7],
-                    [151.1, 48.7],
-                    [164.5, 52.3],
-                    [163.5, 50.0],
-                    [152.0, 59.3],
-                    [169.0, 62.5],
-                    [164.0, 55.7],
-                    [161.2, 54.8],
-                    [155.0, 45.9],
-                    [170.0, 70.6],
-                    [176.2, 67.2],
-                    [170.0, 69.4],
-                    [162.5, 58.2],
-                    [170.3, 64.8],
-                    [164.1, 71.6],
-                    [169.5, 52.8],
-                    [163.2, 59.8],
-                    [154.5, 49.0],
-                    [159.8, 50.0],
-                    [173.2, 69.2],
-                    [170.0, 55.9],
-                    [161.4, 63.4],
-                    [163.8, 67.3]
-                ]
-
-            }, {
-                name: 'Male',
-                color: 'rgba(119, 152, 191, .5)',
-                data: [
-                    [174.0, 65.6],
-                    [175.3, 71.8],
-                    [193.5, 80.7],
-                    [186.5, 72.6],
-                    [187.2, 78.8],
-                    [181.5, 74.8],
-                    [184.0, 86.4],
-                    [184.5, 78.4],
-                    [175.0, 62.0],
-                    [184.0, 81.6],
-                    [180.0, 76.6],
-                    [172.7, 84.1],
-                    [172.7, 76.8],
-                    [177.8, 63.6],
-                    [177.8, 80.9],
-                    [182.9, 80.9],
-                    [170.2, 85.5],
-                    [167.6, 68.6],
-                    [175.3, 67.7],
-                    [165.1, 66.4],
-                    [185.4, 102.3],
-                    [181.6, 70.5],
-                    [180.3, 83.2]
-                ]
-            }]
-        });
+            });
+            grid9.series[0] = items[0];
+            grid9.series[1] = items[1];
+            grid9.series[2] = items[2];
+            grid9.series[3] = items[3];
+            grid9.series[4] = items[4];
+            grid9.series[5] = items[5];
+            grid9.series[6] = items[6];
+            grid9.series[7] = items[7];
+            grid9.series[8] = items[8];
+            grid9.series[9] = items[9];
+            grid9.series[10] = items[10];
+            grid9.series[11] = items[11];
+            grid9.series[12] = items[12];
+            grid9.series[13] = items[13];
+            grid9.series[14] = items[14];
+            grid9.series[15] = items[15];
+            grid9.series[16] = items[16];
+            grid9.series[17] = items[17];
+            grid9.series[18] = items[18];
+            grid9.series[19] = items[19];
+            grid9.series[20] = items[20];
+            grid9.series[21] = items[21];
+            grid9.series[22] = items[22];
+            grid9.series[23] = items[23];
+            grid9.series[24] = items[24];
+            grid9.series[25] = items[25];
+            grid9.series[26] = items[26];
+            grid9.series[27] = items[27];
+            grid9.series[28] = items[28];
+            grid9.series[29] = items[29];
+            grid9.series[30] = items[30];
+            grid9.series[31] = items[31];
+            grid9.series[32] = items[32];
+            grid9.series[33] = items[33];
+            grid9.series[34] = items[34];
+            grid9.series[35] = items[35];
+            grid9.series[36] = items[36];
+            grid9.series[37] = items[37];
+            grid9.series[38] = items[38];
+            grid9.series[39] = items[39];
+            grid9.series[40] = items[40];
+            grid9.series[41] = items[41];
+            grid9.series[42] = items[42];
+            grid9.series[43] = items[43];
+            grid9.series[44] = items[44];
+            grid9.series[45] = items[45];
+            grid9.series[46] = items[46];
+            grid9.series[47] = items[47];
+            grid9.series[48] = items[48];
+            grid9.series[49] = items[49];
+            grid9.series[50] = items[50];
+            grid9.series[51] = items[51];
+            grid9.series[52] = items[52];
+            grid9.series[53] = items[53];
+            grid9.series[54] = items[54];
+            grid9.series[55] = items[55];
+            grid9.series[56] = items[56];
+            grid9.series[57] = items[57];
+            grid9.series[58] = items[58];
+            grid9.series[59] = items[59];
+            grid9.series[60] = items[60];
+            grid9.series[61] = items[61];
+            grid9.series[62] = items[62];
+            grid9.series[63] = items[63];
+            grid9.series[64] = items[64];
+            grid9.series[65] = items[65];
+            grid9.series[66] = items[66];
+            grid9.series[67] = items[67];
+            grid9.series[68] = items[68];
+            grid9.series[69] = items[69];
+            grid9.series[70] = items[70];
+            grid9.series[71] = items[71];
+            grid9.series[72] = items[72];
+            grid9.series[73] = items[73];
+            grid9.series[74] = items[74];
+            grid9.series[75] = items[75];
+            grid9.series[76] = items[76];
+            new Highcharts.chart(grid9);
+        
+    });
     }
 //-------------------------------------------------------------------------------------------------- world ------------------------------------------//
 
@@ -1472,9 +1322,6 @@ function load_worldRecover_lineChart()
     new Highcharts.chart('grid10', grid10);
     });
 }
-    function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
     function formatDate(str) {
         var i;
         var res = [];

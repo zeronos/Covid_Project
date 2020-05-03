@@ -665,3 +665,58 @@ var worldRecover_lineChart = {
         }]
     }
 }
+var grid9 = {
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy',
+        renderTo: 'grid9',
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'จำนวนผู้ติดเชื้อ (คน)'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'จำนวนประชากรรวม (คน)'
+        }
+    },
+    legend: {
+       
+    },
+    plotOptions: {
+        scatter: {
+            marker: {
+                radius: 5,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{series.name}</b><br>',
+                pointFormat: 'จำนวนประชากร:{point.x} คน, ผู้ติดเชื้อ:{point.y} คน'
+            }
+        }
+    },
+    series: [{}],
+}

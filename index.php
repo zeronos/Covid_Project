@@ -869,6 +869,7 @@
             $.each(data, function(key, value) {
                 if(key != "lastupdate"){
                 maxIn.push(value.infect);
+                document.getElementById("demo").innerHTML=data.bangkok["population"];
                 }
             });
             items = [
@@ -891,7 +892,7 @@
                 ['th-np', data.nakhonpathom["infect"]],
                 ['th-sb', data.singburi["infect"]],
                 ['th-cn', data.chainat["infect"]],
-                ['th-bm', data.bangkok["infect"],1000],
+                ['th-bm', data.bangkok["infect"]],
                 ['th-pt', data.pathumthani["infect"]],
                 ['th-no', data.nonthaburi["infect"]],
                 ['th-sp', data.samutprakan["infect"]],
@@ -995,9 +996,13 @@
                     }
                 }],
                 tooltip: {
-                    pointFormat :'{point.name}:{point.value}',
-                    valueSuffix: ' คน',
+                headerFormat: '',
+                pointFormatter: function() {
+                    var string = '<b>'+this.name + ':<br>';
+                    string += '<span style="color:#8a1900">●</span>'+' ติดเชื้อ '+this.value+' คน'+'</b>'+'<br>';
+                    return string;
                 }
+        },
             });
         });
     }

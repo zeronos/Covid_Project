@@ -1452,21 +1452,21 @@ function load_worldRecover_lineChart()
 });
 }
     function loadGrid10() {
-        $.getJSON("DATA/phase2/tourist/ProvinceTouristNewInfectDaily.json", function(data) {
-            let json = [];
-            $.each(data.Data, function(key, val) {
-                json.push({
-                    name: key,
-                    data: val
-                });
+    $.getJSON("DATA/phase2/tourist/ProvinceTouristNewInfectDaily.json", function(data) {
+        let json = [];
+        $.each(data.Data, function(key, val) {
+            json.push({
+                name: key,
+                data: val
             });
-        grid10.xAxis.categories = formatDate(data.LabelText) ;
-        grid10.series[0] = json[0];
-        grid10.series[1] = json[1];
-        grid10.series[2] = json[2];
-        new Highcharts.chart('grid10', grid10);
         });
-    }
+    grid10.xAxis.categories = formatDate(data.LabelText) ;
+    grid10.series[0] = json[0];
+    grid10.series[1] = json[1];
+    grid10.series[2] = json[2];
+    new Highcharts.chart('grid10', grid10);
+    });
+}
     function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }

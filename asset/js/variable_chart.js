@@ -268,9 +268,9 @@ var grid7 = {
     },
 
     yAxis: {
+        type: 'logarithmic',
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
-        min: 0,
     },
 
     tooltip: {
@@ -395,7 +395,7 @@ var wolrdRegionSpiderChart = {
     yAxis: {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
-        min: 0,
+        type: 'logarithmic',
     },
 
     tooltip: {

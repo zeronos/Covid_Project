@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-4">
         <h3 class="text-white">About Us</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam facere optio eligendi.</p>
+        <p><img src="./asset/images/KU-logo2.png"width = "120" height = "130"></p>
       </div>
 
       <div class="col-md-3 ml-auto">
@@ -21,8 +21,9 @@
 
       <div class="col-md-4">
         <h3 class="text-white">Contact Us</h3>
-        <p><img src="https://img.icons8.com/color/96/000000/facebook-circled.png" />
-          <img src="https://img.icons8.com/color/96/000000/gmail.png" />
+        <a href="https://www.facebook.com/cpe.eng.kps/"><img src="https://img.icons8.com/color/96/000000/facebook-circled.png"></a>
+        <a href="mailto:cpe.kps@gmail.com"><img src="https://img.icons8.com/color/96/000000/gmail.png"></a>
+        <p>
         </p>
       </div>
 

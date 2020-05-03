@@ -138,7 +138,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-8"></div>
-
+<p id="demo"></p>
                 <select class="selectpicker col-sm-2" id="choine-relation-section1">
                     <option value="">1</option>
                     <option value="">2</option>
@@ -907,9 +907,9 @@
                 if (key != "lastupdate") {
                     table += '<tr>';
                     table += '<td>' + key + '</td>';
-                    table += '<td style="text-align:right">' + value.infect + '</td>';
-                    table += '<td style="text-align:right">' + value.healing + '</td>';
-                    table += '<td style="text-align:right">' + value.dead + '</td>';
+                    table += '<td style="text-align:right">' + numberWithCommas(value.infect) + '</td>';
+                    table += '<td style="text-align:right">' + numberWithCommas(value.healing) + '</td>';
+                    table += '<td style="text-align:right">' + numberWithCommas(value.dead) + '</td>';
                     table += '</tr>';
                 }
             });
@@ -950,7 +950,7 @@
                 ['th-np', data.nakhonpathom["infect"]],
                 ['th-sb', data.singburi["infect"]],
                 ['th-cn', data.chainat["infect"]],
-                ['th-bm', data.bangkok["infect"]],
+                ['th-bm', data.bangkok["infect"],1000],
                 ['th-pt', data.pathumthani["infect"]],
                 ['th-no', data.nonthaburi["infect"]],
                 ['th-sp', data.samutprakan["infect"]],
@@ -1054,6 +1054,7 @@
                     }
                 }],
                 tooltip: {
+                    pointFormat :'{point.name}:{point.value}',
                     valueSuffix: ' คน',
                 }
             });
@@ -1457,7 +1458,6 @@ function load_worldRecover_lineChart()
     })
     worldRecover_lineChart.xAxis.categories = data.date
     worldRecover_lineChart.series = items
-    
     new Highcharts.chart('worldRecover_lineChart',worldRecover_lineChart);
 });
 }
@@ -1470,14 +1470,30 @@ function load_worldRecover_lineChart()
                     data: val
                 });
             });
-        grid10.xAxis.categories = data.LabelText ;
+        grid10.xAxis.categories = formatDate(data.LabelText) ;
         grid10.series[0] = json[0];
         grid10.series[1] = json[1];
         grid10.series[2] = json[2];
         new Highcharts.chart('grid10', grid10);
-
         });
     }
-
-
+    function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    function formatDate(str) {
+        var i;
+        var res = [];
+        var items = [];
+        var month = ["ม.ค","ก.พ","มี.ค","เม.ย","พ.ค","มิ.ย","ก.ค","ส.ค","ก.ย","ต.ค","พ.ย","ธ.ค"];
+        for (i = 0; i < str.length; i++){
+            res = str[i].split("/");
+            if(res[1][0]=="0"){
+                items.push(res[0]+" "+month[res[1][1]-1]);
+            }
+            else{
+                items.push(res[0]+" "+month[res[1]-1]);
+            }
+        }
+        return items;
+    }
 </script>

@@ -2,7 +2,6 @@
 function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
-
 var grid1 = {
     title: {
         text: 'กราฟสะสม',
@@ -398,7 +397,7 @@ var wolrdRegionSpiderChart = {
 
     tooltip: {
         shared: true,
-        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>',
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:.0f} คน</b><br/>',
     },
 
     legend: {
@@ -453,20 +452,9 @@ var worldRegion_barChart = {
             overflow: 'justify'
         }
     },
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        x: -40,
-        y: 80,
-        floating: true,
-        borderWidth: 1,
-        backgroundColor:
-            Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
-        shadow: true
-    },
+    
     tooltip: {
-        valueSuffix: 'คน'
+        pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
     },
     plotOptions: {
         bar: {
@@ -494,14 +482,16 @@ var worldRegion_lineChart = {
 
     yAxis: {
         title: {
-            text: 'Number of Employees'
+            text: 'จำนวนผู้ติดเชื้อสะสม (คน)'
         }
     },
 
     xAxis: {
-        accessibility: {
-            rangeDescription: 'Range: 2010 to 2017'
-        }
+        
+    },
+    tooltip: {
+        shared: true,
+        pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
     },
 
     legend: {
@@ -510,31 +500,8 @@ var worldRegion_lineChart = {
         verticalAlign: 'middle'
     },
 
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
-            },
-            pointStart: 2010
-        }
-    },
-
-    series: [{
-        name: 'Installation',
-        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-    }, {
-        name: 'Manufacturing',
-        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-    }, {
-        name: 'Sales & Distribution',
-        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-    }, {
-        name: 'Project Development',
-        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-    }, {
-        name: 'Other',
-        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-    }],
+    
+    series: [],
 
     responsive: {
         rules: [{
@@ -551,7 +518,7 @@ var worldRegion_lineChart = {
         }]
     }
 }
-
+//-----------------------------------------------------------------------------------------------------------------------------------//
 var worldDead_lineChart = {
 
     title: {
@@ -560,6 +527,11 @@ var worldDead_lineChart = {
 
     subtitle: {
 
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: 'ทวีป {series.name}: <b>{point.y:.0f} คน</b><br/>',
     },
 
     yAxis: {
@@ -604,17 +576,18 @@ var worldNewInfect_lineChart = {
     subtitle: {
 
     },
-
+    tooltip: {
+        shared: true,
+        pointFormat: 'ทวีป {series.name}: <b>{point.y:.0f} คน</b><br/>',
+    },
     yAxis: {
         title: {
-            text: 'Number of Employees'
+            text: 'จำนวน (คน)'
         }
     },
 
     xAxis: {
-        accessibility: {
-            rangeDescription: 'Range: 2010 to 2017'
-        }
+       
     },
 
     legend: {
@@ -623,31 +596,8 @@ var worldNewInfect_lineChart = {
         verticalAlign: 'middle'
     },
 
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
-            },
-            pointStart: 2010
-        }
-    },
-
-    series: [{
-        name: 'Installation',
-        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-    }, {
-        name: 'Manufacturing',
-        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-    }, {
-        name: 'Sales & Distribution',
-        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-    }, {
-        name: 'Project Development',
-        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-    }, {
-        name: 'Other',
-        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-    }],
+  
+    series: [],
 
     responsive: {
         rules: [{
@@ -673,6 +623,10 @@ var worldRecover_lineChart = {
     subtitle: {
 
     },
+    tooltip: {
+        shared: true,
+        pointFormat: 'ทวีป {series.name}: <b>{point.y:.0f} คน</b><br/>',
+    },
 
     yAxis: {
         title: {
@@ -681,7 +635,7 @@ var worldRecover_lineChart = {
     },
 
     xAxis: {
-
+       
     },
 
     legend: {
@@ -690,31 +644,8 @@ var worldRecover_lineChart = {
         verticalAlign: 'middle'
     },
 
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
-            },
-            pointStart: 2010
-        }
-    },
-
-    series: [{
-        name: 'Installation',
-        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-    }, {
-        name: 'Manufacturing',
-        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-    }, {
-        name: 'Sales & Distribution',
-        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-    }, {
-        name: 'Project Development',
-        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-    }, {
-        name: 'Other',
-        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-    }],
+  
+    series: [],
 
     responsive: {
         rules: [{

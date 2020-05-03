@@ -1053,7 +1053,7 @@
             "Date":"04/05/2020",
             "NewConfirmed":102,
             "NewRecovered":62,
-            " NewHospitalized":37,
+            "NewHospitalized":37,
             "NewDeaths":3,
             "Confirmed":2169,
             "Recovered":674,

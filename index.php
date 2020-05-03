@@ -173,64 +173,13 @@
             </div>
             <div class="grid-container3">
                 <div class="row" data-aos="fade-up">
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <div id="world_map" style="width: 100%;height: 100%;"></div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <div class="table-responsive">
                             <table id="world_table" class="table table-bordered table-striped table-hover table-data" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>ประเทศ</th>
-                                        <th>เสียชีวิต</th>
-                                        <th>กลับบ้าน</th>
-                                        <th>รักษา</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>กก</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                    </tr>
-                                </tbody>
+                                
                             </table>
                         </div>
                     </div>
@@ -307,14 +256,6 @@
 
         $('#choine-relation-section1').parent().attr('style', 'padding-left: 4rem;')
         $('#choine-relation-section2').parent().attr('style', 'padding-right: 4rem;')
-
-        $('#world_table').DataTable({
-            "scrollY": "300px",
-            "scrollCollapse": true,
-            "paging": false,
-            "searching": false
-        });
-
     });
 
     $('#phase2_select').change(function() {
@@ -1228,26 +1169,50 @@
             }]
         });
     }
+//-------------------------------------------------------------------------------------------------- world ------------------------------------------//
 
     function load_World_map() {
 
 $.getJSON('./DATA/world/รายงานโควิดแต่ละประเทศ.json', function(data) {
-
-    //console.log(data.india);
 
     var items = [];
     $.each(data, function(key, val) {
         if (key != 'lastupdate') {
             items.push({
                 name: key,
-                infect: val.infect,
-                dead: val.dead,
-                recovered: val.recovered,
-                critical: val.critical,
-                code: val.code
+                value: val.infect,
+                dead: formatNumber(val.dead),
+                recovered: formatNumber(val.recovered),
+                critical: formatNumber(val.critical),
+                code: val.code.toUpperCase(),
             })
         }
     })
+    let table = '<thead>\n' + '<tr>\n' + '<th>ประเทศ</th>\n' + '<th>ติดเชื้อ</th>\n' + '<th>เสียชีวิต</th>\n' + '<th>หาย</th>\n' +'<th>รักษา</th>\n'+ '</tr>\n' + ' </thead>\n';
+            table += '<tbody>\n'
+            $.each(data, function(key, value) {
+                if (key != "lastupdate") {
+                    table += '<tr>';
+                    table += '<td>' + key + '</td>';
+                    table += '<td style="text-align:right">' + formatNumber(value.infect) + '</td>';
+                    table += '<td style="text-align:right">' + formatNumber(value.dead) + '</td>';
+                    table += '<td style="text-align:right">' + formatNumber(value.recovered) + '</td>';
+                    table += '<td style="text-align:right">' + formatNumber(value.critical) + '</td>';
+                    table += '</tr>';
+                }
+            });
+            table += '</tbody>'
+            $('#world_table').append(table);
+
+            $("#world_table").DataTable({
+                "dom": 'rtip',
+                "scrollY": "300px",
+                "scrollX": "300px",
+                "scrollCollapse": true,
+                "paging": false,
+                "searching": false
+            });
+
     //console.log(items);
     $('#world_map').highcharts('Map', {
         title: {
@@ -1259,33 +1224,35 @@ $.getJSON('./DATA/world/รายงานโควิดแต่ละปร�
         },
         colorAxis: {
             min: 1,
-            max: 100000,
-            type: 'logarithmic'
+            max: 1000000,
+            minColor: '#ffece8',
+            maxColor: '#8a1900',
+        },
+        tooltip: {
+            headerFormat: '',
+            pointFormatter: function() {
+                var string = '<b>'+this.name + ':<br>';
+                string += '<span style="color:#8a1900">●</span>'+' ติดเชื้อ '+this.value+' คน'+'</b>'+'<br>';
+                string += '<span style="color:#e1e1db">●</span>'+' ตาย '+this.dead+' คน'+'</b>'+'<br>';
+                string += '<span style="color:#02fd45">●</span>'+' หาย '+this.recovered+' คน'+'</b>'+'<br>';
+                string += '<span style="color:#feff7a">●</span>'+' รักษา '+this.critical+' คน'+'</b>'+'<br>';
+                return string;
+            }
         },
         series: [{
             data: items,
-
+            joinBy: ['iso-a2', 'code'],
             mapData: Highcharts.maps['custom/world'],
             states: {
                 hover: {
-                    color: '#ffff59'
+                    color: '#b7c1f2'
                 }
             },
             dataLabels: {
-                enabled: true,
+                enabled: false,
                 format: '{point.name}'
             },
-            tooltip: {
-                formatter: function() {
-                    var string = 'ประเทศ' + '<b>' + this.key + '</b>' + '<br>';
-                    string += 'เสียชีวิต' + point.dead + " คน" + '<br>';
-                    string += 'หาย' + point.recovered + " คน" + '<br>';
-                    string += 'รักษา' + point.critical + " คน" + '<br>';
-                    string += 'ติดเชื้อ' + point.infect + " คน";
-
-                    return string;
-                }
-            }
+            
         }]
     });
 });
@@ -1321,7 +1288,7 @@ $.getJSON('./DATA/world/globalAll.json', function(data) {
             text: "ข้อมูลวันที่ " + data.Last_Update
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.y} คน</b>'
+            pointFormat: '{series.name}: <b>{point.y:.0f} คน</b>'
         },
         plotOptions: {
             pie: {
@@ -1351,7 +1318,7 @@ $.getJSON('./DATA/world/รวมเลขทุกประเทศเป็�
         if (key != "Last Update" && key != "Unit" && key != "Toltal") {
             items.push({
                 name: val.name,
-                data:[val.confirm,val.dead,val.recovered,val.well],
+                data:[Math.log(val.confirm),Math.log(val.dead),Math.log(val.recovered),Math.log(val.well)],
                 pointPlacement: 'on'
             });
         }
@@ -1401,9 +1368,21 @@ $.getJSON('./DATA/world/โควิดทวีป.json', function(data) {
 
 function load_world_lineChart()
 {
+$.getJSON('./DATA/world/totalcaseโควิดทวีป.json', function(data){
 
-$.getJSON('./DATA/world/โควิดทวีป.json', function(data){
-    
+    console.log(data)
+    items = [];
+    $.each(data, function(key, value){
+        if(key != "lastupdate" && key != "date")
+        items.push({
+            name: key,
+            data: value
+        })
+    })
+    //console.log(items)
+    worldRegion_lineChart.xAxis.categories = data.date
+    worldRegion_lineChart.series = items
+    worldRegion_lineChart.subtitle.text = "ข้อมูลวันที่ "+data.lastupdate
     new Highcharts.chart('world_lineChart',worldRegion_lineChart);
 });
 
@@ -1422,8 +1401,11 @@ function load_worldDaed_lineChart()
         })
     })
     //console.log(items)
+
+    worldDead_lineChart.tooltip.Format = "วันที่"+data.date
     worldDead_lineChart.xAxis.categories = data.date
     worldDead_lineChart.series = items
+    worldDead_lineChart.subtitle.text = "ข้อมูลวันที่ "+data.LastUpDate
     
     new Highcharts.chart('worldDaed_lineChart',worldDead_lineChart);
 });
@@ -1441,6 +1423,7 @@ function load_worldNewInfect_lineChart()
     })
     worldNewInfect_lineChart.xAxis.categories = data.date
     worldNewInfect_lineChart.series = items
+    worldNewInfect_lineChart.subtitle.text = "ข้อมูลวันที่ "+data.LastUpDate
 
     new Highcharts.chart('worldNewInfect_lineChart',worldNewInfect_lineChart);
 });
@@ -1457,6 +1440,7 @@ function load_worldRecover_lineChart()
     })
     worldRecover_lineChart.xAxis.categories = data.date
     worldRecover_lineChart.series = items
+    worldRecover_lineChart.subtitle.text = "ข้อมูลวันที่ "+data.LastUpDate
     
     new Highcharts.chart('worldRecover_lineChart',worldRecover_lineChart);
 });

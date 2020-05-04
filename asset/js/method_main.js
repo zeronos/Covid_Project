@@ -613,7 +613,7 @@ function load_World_map() {
             '<thead>\n' +
             '<tr>\n' +
             '<th>ประเทศ</th>\n' +
-            '<th>ติดเชื้อ</th>\n' +
+            '<th id="infect">ติดเชื้อ</th>\n' +
             '<th>เสียชีวิต</th>\n' +
             '<th>หาย</th>\n' +
             '<th>รักษา</th>\n' +
@@ -688,6 +688,10 @@ function load_World_map() {
             }, ],
         });
     });
+
+    $( "#infect" ).click(function() {
+        alert( "Handler for .click() called." );
+      });
 }
 
 function load_worldAll_pieChart() {

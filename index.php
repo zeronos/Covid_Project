@@ -271,11 +271,41 @@
             <div class="grid-container3">
                 <div class="row" data-aos="fade-up">
                     <div class="col-md-6">
-                        <div id="world_map" style="width: 100%;height: 100%;"></div>
+                        <ul class="nav nav-tabs" id="worldMapTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link TABworld" data-toggle="tab" href="#infect" type="infect" status="0" role="tab" aria-controls="infect" aria-selected="false">ติดเชื้อ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link TABworld" data-toggle="tab" href="#dead" type="dead" status="0" role="tab" aria-controls="dead" aria-selected="false">เสียชีวิต</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link TABworld" data-toggle="tab" href="#well" type="well" status="0" role="tab" aria-controls="well" aria-selected="false">รักษาหาย</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link TABworld" data-toggle="tab" href="#hospital" type="hospital" status="0" role="tab" aria-controls="hospital" aria-selected="false">อยู่ระหว่างการรักษา</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent" style="margin-top:10px;">
+                            <div id="world_map" style="width: 100%;height: 100%;"></div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="table-responsive">
                             <table id="world_table" class="table table-bordered table-striped table-hover table-data" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>ทวีป</th>
+                                        <th>ภูมิภาค</th>
+                                        <th>ประเทศ</th>
+                                        <th>ติดเชื้อ</th>
+                                        <th>เสียชีวิต</th>
+                                        <th>รักษาหาย</th>
+                                        <th>อยู่ระหว่างการรักษา</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="fetchworld">
+
+                                </tbody>
 
                             </table>
                         </div>
@@ -283,11 +313,16 @@
                 </div>
                 <br>
                 <div class="row" data-aos="fade-up">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div id="worldAll_pieChart" style="height: 280px;"></div>
                     </div>
+                </div>
+                <div class="row" data-aos="fade-up">
                     <div class="col-md-6">
                         <div id="worldRegion_spiderChart" style="width: 100%;height: 100%;"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="worldSubRegion_spiderChart" style="width: 100%;height: 100%;"></div>
                     </div>
                 </div>
                 <div class="row" data-aos="fade-up">
@@ -344,16 +379,17 @@
     document.getElementById("chart4_1").addEventListener("load", loadChart4_1());
 
 
-    document.getElementById("world_map").addEventListener("load", load_World_map());
+    document.getElementById("world_map").addEventListener("load", load_World_map("infect"));
     document.getElementById("worldAll_pieChart").addEventListener("load", load_worldAll_pieChart());
     document.getElementById("worldRegion_spiderChart").addEventListener("load", load_worldRegion_spiderChart());
+    document.getElementById("worldSubRegion_spiderChart").addEventListener("load", load_worldSubRegion_spiderChart());
     document.getElementById("world_barChart").addEventListener("load", load_world_barChart());
     document.getElementById("world_lineChart").addEventListener("load", load_world_lineChart());
 
     document.getElementById("worldDaed_lineChart").addEventListener("load", load_worldDaed_lineChart());
     document.getElementById("worldNewInfect_lineChart").addEventListener("load", load_worldNewInfect_lineChart());
     document.getElementById("worldRecover_lineChart").addEventListener("load", load_worldRecover_lineChart());
-
+    document.getElementById("world_table").addEventListener("load", load_world_table());
 
     $(document).ready(function() {
         $('#choine-relation-section1').parent().attr('style', 'padding-left: 4rem;')
@@ -408,6 +444,18 @@
                 loadChart2_7(type + "_chart2_7", type, file7)
             }
 
+        });
+
+        $('.TABworld').click(function() {
+            let type = $(this).attr("type");
+            if (type == 'infect')
+                load_World_map("infect")
+            else if (type == 'dead')
+                load_World_map("dead")
+            else if (type == 'well')
+                load_World_map("well")
+            else if (type == 'hospital')
+                load_World_map("hospital")
         });
     });
 </script>

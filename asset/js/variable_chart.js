@@ -562,7 +562,7 @@ var wolrdRegionSpiderChart = {
         description: 'A spiderweb chart compares the allocated budget against actual spending within an organization. The spider chart has six spokes. Each spoke represents one of the 6 departments within the organization: sales, marketing, development, customer support, information technology and administration. The chart is interactive, and each data point is displayed upon hovering. The chart clearly shows that 4 of the 6 departments have overspent their budget with Marketing responsible for the greatest overspend of $20,000. The allocated budget and actual spending data points for each department are as follows: Sales. Budget equals $43,000; spending equals $50,000. Marketing. Budget equals $19,000; spending equals $39,000. Development. Budget equals $60,000; spending equals $42,000. Customer support. Budget equals $35,000; spending equals $31,000. Information technology. Budget equals $17,000; spending equals $26,000. Administration. Budget equals $10,000; spending equals $14,000.',
     },
     title: {
-        text: 'กราฟทวีป',
+        text: 'จำนวนผู้ติดเชื้อแยกตามทวีปและผลการรักษา',
         x: -80,
     },
     subtitle: {
@@ -574,7 +574,7 @@ var wolrdRegionSpiderChart = {
     },
 
     xAxis: {
-        categories: ['ติดเชื้อ', 'หาย', 'ตาย', 'รักษา'],
+        categories:['จำนวนติดเชื้อ', 'จำนวนผู้รักษาหาย', 'จำนวนผู้เสียชีวิต', 'จำนวนคนไข้อยู่ระหว่างรักษา'],
         tickmarkPlacement: 'on',
         lineWidth: 0,
     },
@@ -623,7 +623,7 @@ var worldRegion_barChart = {
         renderTo: 'world_barChart',
     },
     title: {
-        text: 'ติดเชื้อสะสมแต่ละทวีป',
+        text: 'จำนวนผู้ติดเชื้อสะสมในแต่ละทวีป',
     },
     subtitle: {},
     xAxis: {
@@ -660,7 +660,7 @@ var worldRegion_barChart = {
 
 var worldRegion_lineChart = {
     title: {
-        text: 'กราฟทวีปติดเชื้อสะสมรายวัน',
+        text: 'จำนวนผู้ติดเชื้อสะสมรายวันแยกตามทวีป',
     },
 
     subtitle: {},
@@ -704,7 +704,7 @@ var worldRegion_lineChart = {
 //-----------------------------------------------------------------------------------------------------------------------------------//
 var worldDead_lineChart = {
     title: {
-        text: 'กราฟเสียชีวิตรายวัน',
+        text: 'จำนวนผู้เสียชีวิตรายวันแยกตามทวีป',
     },
 
     subtitle: {},
@@ -748,7 +748,7 @@ var worldDead_lineChart = {
 
 var worldNewInfect_lineChart = {
     title: {
-        text: 'กราฟติดเชื้อใหม่รายวัน',
+        text: 'จำนวนผู้ติดเชื้อใหม่รายวันแยกตามทวีป',
     },
 
     subtitle: {},
@@ -790,7 +790,7 @@ var worldNewInfect_lineChart = {
 
 var worldRecover_lineChart = {
     title: {
-        text: 'กราฟรักษารายวัน',
+        text: 'จำนวนผู้อยู่ระหว่างการักษารายวันแยกตามทวีป',
     },
 
     subtitle: {},
@@ -830,6 +830,73 @@ var worldRecover_lineChart = {
         }, ],
     },
 };
+
+var wolrdSubRegionSpiderChart = {
+    chart: {
+        polar: true,
+        type: 'line',
+        renderTo: 'worldSubRegion_spiderChart',
+    },
+
+    accessibility: {
+        description: 'A spiderweb chart compares the allocated budget against actual spending within an organization. The spider chart has six spokes. Each spoke represents one of the 6 departments within the organization: sales, marketing, development, customer support, information technology and administration. The chart is interactive, and each data point is displayed upon hovering. The chart clearly shows that 4 of the 6 departments have overspent their budget with Marketing responsible for the greatest overspend of $20,000. The allocated budget and actual spending data points for each department are as follows: Sales. Budget equals $43,000; spending equals $50,000. Marketing. Budget equals $19,000; spending equals $39,000. Development. Budget equals $60,000; spending equals $42,000. Customer support. Budget equals $35,000; spending equals $31,000. Information technology. Budget equals $17,000; spending equals $26,000. Administration. Budget equals $10,000; spending equals $14,000.',
+    },
+    title: {
+        text: 'จำนวนผู้ติดเชื้อแยกตามภูมิภาคและผลการรักษา',
+        x: -80,
+    },
+    subtitle: {
+        text: '',
+    },
+
+    pane: {
+        size: '80%',
+    },
+
+    xAxis: {
+        categories: ['จำนวนติดเชื้อ', 'จำนวนผู้รักษาหาย', 'จำนวนผู้เสียชีวิต', 'จำนวนคนไข้อยู่ระหว่างรักษา'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0,
+    },
+
+    yAxis: {
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        min: 0,
+    },
+
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:.0f} คน</b><br/>',
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle',
+        layout: 'vertical',
+    },
+
+    series: [{}],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500,
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    layout: 'horizontal',
+                },
+                pane: {
+                    size: '70%',
+                },
+            },
+        }, ],
+    },
+};
+
 
 
 

@@ -1,8 +1,7 @@
-
-function formatNumber(num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-}
-var grid1 = {
+var chart1_1 = {
+    chart: {
+        renderTo: 'chart1_1',
+    },
     title: {
         text: 'กราฟสะสม',
     },
@@ -35,7 +34,7 @@ var grid1 = {
                     verticalAlign: 'bottom',
                 },
             },
-        },],
+        }, ],
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
@@ -46,7 +45,10 @@ var grid1 = {
     },
 };
 
-var grid2 = {
+var chart1_2 = {
+    chart: {
+        renderTo: 'chart1_2',
+    },
     title: {
         text: 'กราฟจำนวน',
     },
@@ -82,17 +84,84 @@ var grid2 = {
                     verticalAlign: 'bottom',
                 },
             },
-        },],
+        }, ],
     },
 };
 
-var grid3 = {
+var chart2_1 = {
     chart: {
-        type: 'column',
-        renderTo: 'grid3',
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie',
     },
     title: {
-        text: 'Efficiency Optimization by Branch',
+        text: 'จำนวนผู้ติดเชื้อ',
+    },
+    tooltip: {
+        pointFormat: '{series.name}:<b>{point.y}</b>',
+        valueSuffix: ' คน',
+    },
+    accessibility: {
+        point: {
+            valueSuffix: 'คน',
+        },
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false,
+            },
+            showInLegend: true,
+        },
+    },
+    series: [{
+        name: 'จำนวน',
+    }, ],
+};
+
+var chart2_2 = {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie',
+    },
+    title: {
+        text: 'จำนวนผู้เสียชีวิต',
+    },
+    tooltip: {
+        pointFormat: '{series.name}:<b>{point.y}</b>',
+        valueSuffix: ' คน',
+    },
+    accessibility: {
+        point: {
+            valueSuffix: 'คน',
+        },
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: false,
+            },
+            showInLegend: true,
+        },
+    },
+    series: [{
+        name: 'จำนวน',
+    }, ],
+};
+
+var chart2_3 = {
+    chart: {
+        type: 'column',
+    },
+    title: {
+        text: 'กราฟผู้ติดเชื้อและผู้เสียชีวิต',
     },
     xAxis: {},
     yAxis: [{
@@ -100,7 +169,7 @@ var grid3 = {
         title: {
             text: 'จำนวนคน',
         },
-    },],
+    }, ],
     legend: {
         shadow: false,
     },
@@ -117,143 +186,17 @@ var grid3 = {
     series: [{}, {}],
 };
 
-var grid4 = {
-    chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie',
-        renderTo: 'grid4',
-    },
-    title: {
-        text: 'จำนวนผู้ติดเชื้อ',
-    },
-    tooltip: {
-        pointFormat: '{series.name}:<b>{point.y}</b>',
-        valueSuffix: ' คน',
-    },
-    accessibility: {
-        point: {
-            valueSuffix: 'คน',
-        },
-    },
-    plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-                enabled: false,
-            },
-            showInLegend: true,
-        },
-    },
-    series: [{
-        name: 'จำนวน',
-    },],
-};
-
-var grid5 = {
-    chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie',
-        renderTo: 'grid5',
-    },
-    title: {
-        text: 'จำนวนผู้ติดเชื้อ',
-    },
-    tooltip: {
-        pointFormat: '{series.name}:<b>{point.y}</b>',
-        valueSuffix: ' คน',
-    },
-    accessibility: {
-        point: {
-            valueSuffix: 'คน',
-        },
-    },
-    plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-                enabled: false,
-            },
-            showInLegend: true,
-        },
-    },
-    series: [{
-        name: 'จำนวน',
-    },],
-};
-
-var grid6 = {
-    chart: {
-        renderTo: 'grid6',
-    },
-    title: {
-        text: '',
-    },
-
-    subtitle: {
-        text: 'Source: thesolarfoundation.com',
-    },
-
-    yAxis: {
-        title: {
-            text: 'Number of Employees',
-        },
-    },
-
-    xAxis: {
-        categories: {},
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle',
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false,
-            },
-            pointStart: 0,
-        },
-    },
-
-    series: [{}],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500,
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom',
-                },
-            },
-        },],
-    },
-};
-
-var grid7 = {
+var chart2_4 = {
     chart: {
         polar: true,
         type: 'line',
-        renderTo: 'grid7',
     },
 
     accessibility: {
         description: 'A spiderweb chart compares the allocated budget against actual spending within an organization. The spider chart has six spokes. Each spoke represents one of the 6 departments within the organization: sales, marketing, development, customer support, information technology and administration. The chart is interactive, and each data point is displayed upon hovering. The chart clearly shows that 4 of the 6 departments have overspent their budget with Marketing responsible for the greatest overspend of $20,000. The allocated budget and actual spending data points for each department are as follows: Sales. Budget equals $43,000; spending equals $50,000. Marketing. Budget equals $19,000; spending equals $39,000. Development. Budget equals $60,000; spending equals $42,000. Customer support. Budget equals $35,000; spending equals $31,000. Information technology. Budget equals $17,000; spending equals $26,000. Administration. Budget equals $10,000; spending equals $14,000.',
     },
     title: {
-        text: 'spending',
+        text: 'ภาพรวม',
         x: -80,
     },
 
@@ -301,16 +244,176 @@ var grid7 = {
                     size: '70%',
                 },
             },
-        },],
+        }, ],
     },
 };
-var grid10 = {
+
+var chart2_5 = {
+    title: {
+        text: 'ตาย',
+    },
+
+    subtitle: {
+        text: '',
+    },
+
+    yAxis: {
+        title: {
+            text: '',
+        },
+    },
+
+    xAxis: {
+        categories: {},
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false,
+            },
+            pointStart: 0,
+        },
+    },
+
+    series: [{}],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500,
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                },
+            },
+        }, ],
+    },
+};
+
+var chart2_6 = {
+    title: {
+        text: 'ติดเชื้อใหม่',
+    },
+
+    subtitle: {
+        text: '',
+    },
+
+    yAxis: {
+        title: {
+            text: '',
+        },
+    },
+
+    xAxis: {
+        categories: {},
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false,
+            },
+            pointStart: 0,
+        },
+    },
+
+    series: [{}],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500,
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                },
+            },
+        }, ],
+    },
+};
+
+var chart2_7 = {
+    title: {
+        text: 'รักษา',
+    },
+
+    subtitle: {
+        text: '',
+    },
+
+    yAxis: {
+        title: {
+            text: '',
+        },
+    },
+
+    xAxis: {
+        categories: {},
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false,
+            },
+            pointStart: 0,
+        },
+    },
+
+    series: [{}],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500,
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                },
+            },
+        }, ],
+    },
+};
+
+var chart3_2 = {
+    chart: {
+        renderTo: 'chart3_2',
+    },
     title: {
         text: 'ติดเชื้อแยกตามประเภทจังหวัด',
     },
 
     subtitle: {
-        text: 'Source: thesolarfoundation.com',
+        text: '',
     },
 
     yAxis: {
@@ -323,7 +426,7 @@ var grid10 = {
         categories: {},
         title: {
             text: 'วันที่',
-        }
+        },
     },
 
     legend: {
@@ -360,9 +463,65 @@ var grid10 = {
                     verticalAlign: 'bottom',
                 },
             },
-        },],
+        }, ],
     },
 };
+
+var chart4_1 = {
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy',
+        renderTo: 'chart4_1',
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'จำนวนผู้ติดเชื้อ (คน)'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'จำนวนประชากรรวม (คน)'
+        }
+    },
+    legend: {
+
+    },
+    plotOptions: {
+        scatter: {
+            marker: {
+                radius: 5,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{series.name}</b><br>',
+                pointFormat: 'จำนวนประชากร:{point.x} คน, ผู้ติดเชื้อ:{point.y} คน'
+            }
+        }
+    },
+    series: [{}],
+}
 
 var wolrdRegionSpiderChart = {
     chart: {
@@ -378,8 +537,8 @@ var wolrdRegionSpiderChart = {
         text: 'กราฟทวีป',
         x: -80,
     },
-    subtitle:{
-        text: ''
+    subtitle: {
+        text: '',
     },
 
     pane: {
@@ -387,7 +546,7 @@ var wolrdRegionSpiderChart = {
     },
 
     xAxis: {
-        categories: ['ติดเชื้อ', 'หาย', 'ตาย', "รักษา"],
+        categories: ['ติดเชื้อ', 'หาย', 'ตาย', 'รักษา'],
         tickmarkPlacement: 'on',
         lineWidth: 0,
     },
@@ -395,7 +554,7 @@ var wolrdRegionSpiderChart = {
     yAxis: {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
-        type: 'logarithmic',
+        min: 0,
     },
 
     tooltip: {
@@ -426,25 +585,23 @@ var wolrdRegionSpiderChart = {
                     size: '70%',
                 },
             },
-        },],
+        }, ],
     },
-}
+};
 
 var worldRegion_barChart = {
     chart: {
         type: 'column',
-        renderTo: 'world_barChart'
+        renderTo: 'world_barChart',
     },
     title: {
-        text: 'ติดเชื้อสะสมแต่ละทวีป'
+        text: 'ติดเชื้อสะสมแต่ละทวีป',
     },
-    subtitle: {
-
-    },
+    subtitle: {},
     xAxis: {
         title: {
-            text: 'ทวีป'
-        }
+            text: 'ทวีป',
+        },
     },
     yAxis: {
         min: 0,
@@ -452,46 +609,41 @@ var worldRegion_barChart = {
             text: 'จำนวนผู้ติดเชื้อ',
         },
         labels: {
-            overflow: 'justify'
-        }
+            overflow: 'justify',
+        },
     },
-    
+
     tooltip: {
         pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
     },
     plotOptions: {
         bar: {
             dataLabels: {
-                enabled: true
-            }
-        }
+                enabled: true,
+            },
+        },
     },
 
     credits: {
-        enabled: false
+        enabled: false,
     },
-    series: []
-}
+    series: [],
+};
 
 var worldRegion_lineChart = {
-
     title: {
-        text: 'กราฟทวีปติดเชื้อสะสมรายวัน'
+        text: 'กราฟทวีปติดเชื้อสะสมรายวัน',
     },
 
-    subtitle: {
-
-    },
+    subtitle: {},
 
     yAxis: {
         title: {
-            text: 'จำนวนผู้ติดเชื้อสะสม (คน)'
-        }
+            text: 'จำนวนผู้ติดเชื้อสะสม (คน)',
+        },
     },
 
-    xAxis: {
-        
-    },
+    xAxis: {},
     tooltip: {
         shared: true,
         pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
@@ -500,37 +652,34 @@ var worldRegion_lineChart = {
     legend: {
         layout: 'vertical',
         align: 'right',
-        verticalAlign: 'middle'
+        verticalAlign: 'middle',
     },
 
-    
     series: [],
 
     responsive: {
         rules: [{
             condition: {
-                maxWidth: 500
+                maxWidth: 500,
             },
             chartOptions: {
                 legend: {
                     layout: 'horizontal',
                     align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            }
-        }]
-    }
-}
+                    verticalAlign: 'bottom',
+                },
+            },
+        }, ],
+    },
+};
+
 //-----------------------------------------------------------------------------------------------------------------------------------//
 var worldDead_lineChart = {
-
     title: {
-        text: 'กราฟเสียชีวิตรายวัน'
+        text: 'กราฟเสียชีวิตรายวัน',
     },
 
-    subtitle: {
-
-    },
+    subtitle: {},
 
     tooltip: {
         shared: true,
@@ -539,184 +688,156 @@ var worldDead_lineChart = {
 
     yAxis: {
         title: {
-            text: 'จำนวน (คน)'
-        }
-    },
-
-    xAxis: {
-
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-    series: [],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            }
-        }]
-    }
-}
-var worldNewInfect_lineChart = {
-
-    title: {
-        text: 'กราฟติดเชื้อใหม่รายวัน'
-    },
-
-    subtitle: {
-
-    },
-    tooltip: {
-        shared: true,
-        pointFormat: 'ทวีป {series.name}: <b>{point.y:.0f} คน</b><br/>',
-    },
-    yAxis: {
-        title: {
-            text: 'จำนวน (คน)'
-        }
-    },
-
-    xAxis: {
-       
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-  
-    series: [],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            }
-        }]
-    }
-}
-var worldRecover_lineChart = {
-
-    title: {
-        text: 'กราฟรักษารายวัน'
-    },
-
-    subtitle: {
-
-    },
-    tooltip: {
-        shared: true,
-        pointFormat: 'ทวีป {series.name}: <b>{point.y:.0f} คน</b><br/>',
-    },
-
-    yAxis: {
-        title: {
-            text: 'จำนวน (คน)'
-        }
-    },
-
-    xAxis: {
-       
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-  
-    series: [],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'
-                }
-            }
-        }]
-    }
-}
-var grid9 = {
-    chart: {
-        type: 'scatter',
-        zoomType: 'xy',
-        renderTo: 'grid9',
-    },
-    title: {
-        text: ''
-    },
-    subtitle: {
-        text: ''
-    },
-    xAxis: {
-        title: {
-            enabled: true,
-            text: 'จำนวนผู้ติดเชื้อ (คน)'
+            text: 'จำนวน (คน)',
         },
-        startOnTick: true,
-        endOnTick: true,
-        showLastLabel: true
+    },
+
+    xAxis: {},
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+    },
+
+    series: [],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500,
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                },
+            },
+        }, ],
+    },
+};
+
+var worldNewInfect_lineChart = {
+    title: {
+        text: 'กราฟติดเชื้อใหม่รายวัน',
+    },
+
+    subtitle: {},
+    tooltip: {
+        shared: true,
+        pointFormat: 'ทวีป {series.name}: <b>{point.y:.0f} คน</b><br/>',
     },
     yAxis: {
         title: {
-            text: 'จำนวนประชากรรวม (คน)'
-        }
+            text: 'จำนวน (คน)',
+        },
     },
+
+    xAxis: {},
+
     legend: {
-       
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
     },
-    plotOptions: {
-        scatter: {
-            marker: {
-                radius: 5,
-                states: {
-                    hover: {
-                        enabled: true,
-                        lineColor: 'rgb(100,100,100)'
-                    }
-                }
+
+    series: [],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500,
             },
-            states: {
-                hover: {
-                    marker: {
-                        enabled: false
-                    }
-                }
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                },
             },
-            tooltip: {
-                headerFormat: '<b>{series.name}</b><br>',
-                pointFormat: 'จำนวนประชากร:{point.x} คน, ผู้ติดเชื้อ:{point.y} คน'
-            }
-        }
+        }, ],
     },
-    series: [{}],
-}
+};
+
+var worldRecover_lineChart = {
+    title: {
+        text: 'กราฟรักษารายวัน',
+    },
+
+    subtitle: {},
+    tooltip: {
+        shared: true,
+        pointFormat: 'ทวีป {series.name}: <b>{point.y:.0f} คน</b><br/>',
+    },
+
+    yAxis: {
+        title: {
+            text: 'จำนวน (คน)',
+        },
+    },
+
+    xAxis: {},
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+    },
+
+    series: [],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500,
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                },
+            },
+        }, ],
+    },
+};
+
+
+
+// var chart3_1 = {
+//     chart: {
+//         map: 'countries/th/th-all',
+//         renderTo: 'chart2_7',
+//     },
+
+//     title: {
+//         text: 'Highmaps basic demo',
+//     },
+
+//     subtitle: {
+//         text: '',
+//     },
+
+//     mapNavigation: {
+//         enabled: true,
+//         buttonOptions: {
+//             verticalAlign: 'bottom',
+//         },
+//     },
+
+//     colorAxis: {
+//         min: 0,
+//         max: Math.max.apply(Math, maxIn),
+//         stops: [
+//             [0, '#F1EEF6'],
+//             [0.5, '#900037'],
+//             [1, '#500007'],
+//         ],
+//     },
+//     series: [{}],
+//     tooltip: {
+//         pointFormat: '{point.name}:{point.value}',
+//         valueSuffix: ' คน',
+//     },
+// };

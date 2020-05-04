@@ -24,12 +24,12 @@
 
     <!-- Datable CSS -->
     <link href="./asset/css/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
-    <link href="./asset/css/datatables/style-exportDatable.css" rel="stylesheet" type="text/css">
+    <!-- <link href="./asset/css/datatables/style-exportDatable.css" rel="stylesheet" type="text/css"> -->
 
     <!-- Bootstap-Select CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
-    
+
 
     <style>
         .grid-container {
@@ -65,6 +65,17 @@
             padding-bottom: 1rem;
         }
 
+        .grid-container4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 2rem;
+            padding: 2rem;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
         .start-grid-container {
             grid-row-start: 1;
             grid-row-end: 3;
@@ -72,6 +83,49 @@
 
         .grid-item {
             width: 100%;
+            height: 100%;
+        }
+
+        .remove-paddingLR {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        .setTab {
+            width: 120px;
+            text-align: center;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 

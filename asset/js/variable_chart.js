@@ -154,6 +154,16 @@ var chart2_2 = {
     series: [{
         name: 'จำนวน',
     }, ],
+
+    lang: {
+        noData: "ไม่พบข้อมูล"
+    },
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#303030'
+        }
+    }
 };
 
 var chart2_3 = {
@@ -298,6 +308,15 @@ var chart2_5 = {
             },
         }, ],
     },
+    lang: {
+        noData: "ไม่พบข้อมูล"
+    },
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#303030'
+        }
+    }
 };
 
 var chart2_6 = {
@@ -402,6 +421,15 @@ var chart2_7 = {
             },
         }, ],
     },
+    lang: {
+        noData: "ไม่พบข้อมูล"
+    },
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#303030'
+        }
+    }
 };
 
 var chart3_2 = {

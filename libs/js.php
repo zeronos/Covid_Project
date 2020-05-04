@@ -36,7 +36,7 @@
 <!-- <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script> -->
 <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
 <script src="https://code.highcharts.com/maps/modules/data.js"></script>
-
+<script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
 
 <!-- Bootstap-Select JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>

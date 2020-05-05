@@ -11,6 +11,18 @@
 		animation: pulse 2s infinite;
 	}
 
+	.blobChart {
+		background: red;
+		border-radius: 50%;
+		margin-top: 1px;
+		height: 9px;
+		width: 9px;
+		
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+		transform: scale(1);
+		animation: pulse 2s infinite;
+	}
+
 	@keyframes pulse {
 		0% {
 			transform: scale(0.95);
@@ -46,7 +58,7 @@
 						<li>
 							<div class="blob"></div>
 						</li>
-						<li><a style = "color: black;">อัปเดตล่าสุด 2/05/63</a></li>
+						<li><a style = "color: black;"><p id="upToDate">อัปเดตล่าสุด 4/05/63</p><a></li>
 					</ul>
 				</nav>
 				<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>

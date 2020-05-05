@@ -2,6 +2,11 @@ function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 }
 
+function UpdateDate(date)
+{
+    document.getElementById('upToDate').innerHTML = "ข้อมูล"
+}
+
 function formatDate(str) {
     var i;
     var res = [];
@@ -1082,10 +1087,10 @@ function loadChart4_1() {
 //-------------------------------------------------------------------------------------------------- world ------------------------------------------//
 
 function load_world_table() {
-    $.getJSON('./DATA/world/info/countryAll.json', function(data) {
+    $.getJSON('./DATA/world/info/InfoAllCountry.json', function(data) {
         let table = ''
         $.each(data, function(key, value) {
-            if (key != 'LastUpdate' && key != 'country' && key != 'URL' && key != 'ทั่วโลก') {
+            if (key != 'LastUpdate' && key != 'ทั่วโลก' && key != 'NA') {
                 table += '<tr>';
                 table += '<td>' + value.region + '</td>';
                 table += '<td>' + value.subregion + '</td>';
@@ -1111,7 +1116,7 @@ function load_world_table() {
 }
 
 function load_World_map(type) {
-    $.getJSON('./DATA/world/info/countryAll.json', function(data) {
+    $.getJSON('./DATA/world/info/InfoAllCountry.json', function(data) {
         var items = [];
         var text = ''
         var cmax, cmin = ''
@@ -1119,7 +1124,7 @@ function load_World_map(type) {
         //console.log(data);
         if (type == 'infect') {
             $.each(data, function(key, val) {
-                if (key != 'LastUpdate' && key != 'country' && key != 'URL' && key != 'ทั่วโลก') {
+                if (key != 'LastUpdate' && key != 'ทั่วโลก' && key != 'NA') {
                     items.push({
                         name: key,
                         value: val['ติดเชื้อสะสม'],
@@ -1193,10 +1198,12 @@ function load_World_map(type) {
         //console.log(items);
         $('#world_map').highcharts('Map', {
             title: {
-                text: "จำนวนผู้" + text + "ทั่วโลก"
+                text: "จำนวนผู้" + text + "ทั่วโลก",
+                
             },
             subtitle: {
-                text: "ข้อมูลวันที่ " + data.LastUpdate
+                text: "<div class=row>\n"+"<div class=col-md-0>\n"+"<div class='blob'></div>"+"</div>\n"+"<div class='col-md-1'>\n"+"ข้อมูลวันที่ "+ data.LastUpdate+"</div>\n"+"</div>",
+                useHTML:true
             },
             mapNavigation: {
                 enabled: true,
@@ -1245,17 +1252,17 @@ function load_World_map(type) {
 }
 
 function load_worldAll_pieChart() {
-    $.getJSON('./DATA/world/globalAll.json', function(data) {
+    $.getJSON('./DATA/world/info/InfoAllCountry.json', function(data) {
         let items = [];
         items.push({
             name: 'เสียชีวิต',
-            y: data.Dead.sum,
+            y: data.ทั่วโลก.ตายสะสม,
         }, {
             name: 'รักษาหาย',
-            y: data.recover.sum,
+            y: data.ทั่วโลก.หายสะสม,
         }, {
-            name: 'ติดเชื้อ',
-            y: data.infect.sum,
+            name: 'กำลังรักษา',
+            y: data.ทั่วโลก.กำลังรักษา,
         });
         //console.log(items)
 
@@ -1271,7 +1278,8 @@ function load_worldAll_pieChart() {
                 text: 'สัดส่วนผู้ติดเชื้อ รักษาหาย และเสียชีวิต ทั่วโลก',
             },
             subtitle: {
-                text: 'ข้อมูลวันที่ ' + data.Last_Update,
+                text: "<div class=row>\n"+"<div class=col-md-0>\n"+"<div class='blob'></div>"+"</div>\n"+"<div class='col-md-1'>\n"+"ข้อมูลวันที่ "+ data.LastUpdate+"</div>\n"+"</div>",
+                useHTML:true
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.y:.0f} คน</b>',
@@ -1432,14 +1440,15 @@ function load_worldSubRegion_spiderChart() {
                 });
             }
         });
-        wolrdSubRegionSpiderChart.subtitle.text = "ข้อมูลวันที่ " + data.LastUpdate
+       
             //console.log(items);
 
         for (var i = 0; i < items.length; i++) {
             wolrdSubRegionSpiderChart.series[i] = items[i];
         }
 
-
+        wolrdSubRegionSpiderChart.subtitle.text = "<div class=row>\n"+"<div class=col-md-0>\n"+"<div class='blob'></div>"+"</div>\n"+"<div class='col-md-1'>\n"+"ข้อมูลวันที่ "+ data.LastUpdate+"</div>\n"+"</div>"
+        
         new Highcharts.chart(wolrdSubRegionSpiderChart);
     });
 

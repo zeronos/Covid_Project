@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-md-4">
         <h3 class="text-white">About Us</h3>
-        <p><img src="./asset/images/KU-logo2.png"width = "120" height = "130"></p>
+        <p><img src="./asset/images/logo01.png"></p>
       </div>
 
       <div class="col-md-3 ml-auto">

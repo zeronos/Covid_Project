@@ -20,16 +20,11 @@
     <link rel="stylesheet" href="./asset/css/jquery.mb.YTPlayer.min.css" media="all">
     <link rel="stylesheet" href="./asset/css/style.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./asset/css/maxcdn-bootstrap.min.css">
 
     <!-- Datable CSS -->
     <link href="./asset/css/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
     <!-- <link href="./asset/css/datatables/style-exportDatable.css" rel="stylesheet" type="text/css"> -->
-
-    <!-- Bootstap-Select CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
-
-
 
     <style>
         .grid-container {
@@ -45,7 +40,7 @@
 
         .grid-container2 {
             display: grid;
-            grid-template-columns: 4fr 2fr;
+            grid-template-columns: 3fr 3fr;
             grid-gap: 2rem;
             padding: 2rem;
             padding-left: 5rem;
@@ -92,6 +87,11 @@
         }
 
         .setTab {
+            width: 120px;
+            text-align: center;
+        }
+
+        .setTab2 {
             width: 120px;
             text-align: center;
         }

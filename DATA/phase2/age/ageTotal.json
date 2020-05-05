@@ -1,10 +1,10 @@
 {
-    "Last_Update": "19/04/2020",
-        "total" : {
-            "sum" : "2765",
-            "dead" : "47",
-            "recover" : "2718"
-        }
-        
-        
+    "Lastupdate": "19/04/2020",
+    "total": {
+        "sum": "2765",
+        "dead": "47",
+        "recover": "2718"
+    }
+
+
 }

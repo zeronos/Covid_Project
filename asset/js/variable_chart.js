@@ -1,9 +1,10 @@
 var chart1_1 = {
     chart: {
         renderTo: 'chart1_1',
+        zoomType: 'xy',
     },
     title: {
-        text: 'กราฟสะสม',
+        text: 'การติดเชื้อสะสมรายวัน',
     },
     yAxis: {
         title: {
@@ -21,7 +22,7 @@ var chart1_1 = {
         align: 'right',
         verticalAlign: 'middle',
     },
-    series: [{}, {}, {}, {}],
+    series: [{}, {}, {}],
     responsive: {
         rules: [{
             condition: {
@@ -48,9 +49,10 @@ var chart1_1 = {
 var chart1_2 = {
     chart: {
         renderTo: 'chart1_2',
+        zoomType: 'xy',
     },
     title: {
-        text: 'กราฟจำนวน',
+        text: 'การติดเชื้อรายวัน',
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
@@ -94,9 +96,10 @@ var chart2_1 = {
         plotBorderWidth: null,
         plotShadow: false,
         type: 'pie',
+        zoomType: 'xy',
     },
     title: {
-        text: 'จำนวนผู้ติดเชื้อ',
+        text: 'สัดส่วนผู้ติดเชื้อ',
     },
     tooltip: {
         pointFormat: '{series.name}:<b>{point.y}</b>',
@@ -128,9 +131,10 @@ var chart2_2 = {
         plotBorderWidth: null,
         plotShadow: false,
         type: 'pie',
+        zoomType: 'xy',
     },
     title: {
-        text: 'จำนวนผู้เสียชีวิต',
+        text: 'สัดส่วนผู้เสียชีวิต',
     },
     tooltip: {
         pointFormat: '{series.name}:<b>{point.y}</b>',
@@ -154,24 +158,15 @@ var chart2_2 = {
     series: [{
         name: 'จำนวน',
     }, ],
-
-    lang: {
-        noData: "ไม่พบข้อมูล"
-    },
-    noData: {
-        style: {
-            fontSize: '15px',
-            color: '#303030'
-        }
-    }
 };
 
 var chart2_3 = {
     chart: {
         type: 'column',
+        zoomType: 'xy',
     },
     title: {
-        text: 'กราฟผู้ติดเชื้อและผู้เสียชีวิต',
+        text: 'จำนวนผู้ติดเชื้อและผู้เสียชีวิต',
     },
     xAxis: {},
     yAxis: [{
@@ -200,13 +195,14 @@ var chart2_4 = {
     chart: {
         polar: true,
         type: 'line',
+        zoomType: 'xy',
     },
 
     accessibility: {
         description: 'A spiderweb chart compares the allocated budget against actual spending within an organization. The spider chart has six spokes. Each spoke represents one of the 6 departments within the organization: sales, marketing, development, customer support, information technology and administration. The chart is interactive, and each data point is displayed upon hovering. The chart clearly shows that 4 of the 6 departments have overspent their budget with Marketing responsible for the greatest overspend of $20,000. The allocated budget and actual spending data points for each department are as follows: Sales. Budget equals $43,000; spending equals $50,000. Marketing. Budget equals $19,000; spending equals $39,000. Development. Budget equals $60,000; spending equals $42,000. Customer support. Budget equals $35,000; spending equals $31,000. Information technology. Budget equals $17,000; spending equals $26,000. Administration. Budget equals $10,000; spending equals $14,000.',
     },
     title: {
-        text: 'ภาพรวม',
+        text: 'จำนวนผู้ติดเชื้อและผลการักษารวม',
         x: -80,
     },
 
@@ -259,8 +255,11 @@ var chart2_4 = {
 };
 
 var chart2_5 = {
+    chart: {
+        zoomType: 'xy',
+    },
     title: {
-        text: 'ตาย',
+        text: 'จำนวนผู้เสียชีวิตรายวัน',
     },
 
     subtitle: {
@@ -308,136 +307,70 @@ var chart2_5 = {
             },
         }, ],
     },
-    lang: {
-        noData: "ไม่พบข้อมูล"
-    },
-    noData: {
-        style: {
-            fontSize: '15px',
-            color: '#303030'
-        }
-    }
 };
 
 var chart2_6 = {
-    title: {
-        text: 'ติดเชื้อใหม่',
-    },
-
-    subtitle: {
-        text: '',
-    },
-
-    yAxis: {
-        title: {
-            text: '',
-        },
-    },
-
-    xAxis: {
-        categories: {},
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle',
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false,
-            },
-            pointStart: 0,
-        },
-    },
-
-    series: [{}],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500,
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom',
-                },
-            },
-        }, ],
-    },
-};
-
-var chart2_7 = {
-    title: {
-        text: 'รักษา',
-    },
-
-    subtitle: {
-        text: '',
-    },
-
-    yAxis: {
-        title: {
-            text: '',
-        },
-    },
-
-    xAxis: {
-        categories: {},
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle',
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false,
-            },
-            pointStart: 0,
-        },
-    },
-
-    series: [{}],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500,
-            },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom',
-                },
-            },
-        }, ],
-    },
-    lang: {
-        noData: "ไม่พบข้อมูล"
-    },
-    noData: {
-        style: {
-            fontSize: '15px',
-            color: '#303030'
-        }
-    }
-};
-
-var chart3_2 = {
     chart: {
-        renderTo: 'chart3_2',
+        zoomType: 'xy',
     },
     title: {
-        text: 'ติดเชื้อแยกตามประเภทจังหวัด',
+        text: 'จำนวนผู้ติดเชื้อรายวัน',
+    },
+
+    subtitle: {
+        text: '',
+    },
+
+    yAxis: {
+        title: {
+            text: '',
+        },
+    },
+
+    xAxis: {
+        categories: {},
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false,
+            },
+            pointStart: 0,
+        },
+    },
+
+    series: [{}],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500,
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                },
+            },
+        }, ],
+    },
+};
+
+var chart3_5 = {
+    chart: {
+        renderTo: 'chart3_5',
+        zoomType: 'xy',
+    },
+    title: {
+        text: 'จำนวนผู้ติดเชื้อรายวันแยกตามเมืองท่องเที่ยวหลัก/รอง',
     },
 
     subtitle: {
@@ -508,6 +441,11 @@ var chart4_1 = {
         text: ''
     },
     xAxis: {
+        tickInterval: 1,
+        type: 'logarithmic',
+        accessibility: {
+            rangeDescription: 'Range: 1 to 10'
+        },
         title: {
             enabled: true,
             text: 'จำนวนผู้ติดเชื้อ (คน)'
@@ -517,6 +455,11 @@ var chart4_1 = {
         showLastLabel: true
     },
     yAxis: {
+        type: 'logarithmic',
+        minorTickInterval: 0.1,
+        accessibility: {
+            rangeDescription: 'Range: 0.1 to 1000'
+        },
         title: {
             text: 'จำนวนประชากรรวม (คน)'
         }
@@ -898,41 +841,3 @@ var wolrdSubRegionSpiderChart = {
 };
 
 
-
-
-// var chart3_1 = {
-//     chart: {
-//         map: 'countries/th/th-all',
-//         renderTo: 'chart2_7',
-//     },
-
-//     title: {
-//         text: 'Highmaps basic demo',
-//     },
-
-//     subtitle: {
-//         text: '',
-//     },
-
-//     mapNavigation: {
-//         enabled: true,
-//         buttonOptions: {
-//             verticalAlign: 'bottom',
-//         },
-//     },
-
-//     colorAxis: {
-//         min: 0,
-//         max: Math.max.apply(Math, maxIn),
-//         stops: [
-//             [0, '#F1EEF6'],
-//             [0.5, '#900037'],
-//             [1, '#500007'],
-//         ],
-//     },
-//     series: [{}],
-//     tooltip: {
-//         pointFormat: '{point.name}:{point.value}',
-//         valueSuffix: ' คน',
-//     },
-// };

@@ -19,7 +19,7 @@ function formatDate(str) {
 }
 
 function loadCard() {
-    $.getJSON('./DATA/phase2/age/age.json', function (data) {
+    $.getJSON('./DATA/phase2/age/age.json', function(data) {
         document.getElementById('text1').innerHTML =
             'ติดเชื้อสะสม' + '<br>' + formatNumber(data.Toltal['ติดเชื้อ']) + ' คน';
         document.getElementById('text2').innerHTML = 'เสียชีวิต' + '<br>' + formatNumber(data.Toltal['ตาย']) + ' คน';
@@ -29,36 +29,30 @@ function loadCard() {
 }
 
 function loadChart1_1() {
-    $.getJSON('DATA/phase1/ผู้ติดเชื้อสะสมในแต่ละวัน.json', function (data) {
+    $.getJSON('DATA/phase1/ผู้ติดเชื้อสะสมในแต่ละวัน.json', function(data) {
         //console.log(data.Data[100].Confirmed);
         let infectFreq = [];
         let deathFreq = [];
         let hospitalFreq = [];
-        let wellFreq = [];
         //console.log(data.Data[110].Recovered)
         for (let i = 0; i < data.Data.length; i++) {
             infectFreq[i] = data.Data[i].Confirmed;
             deathFreq[i] = data.Data[i].Deaths;
             hospitalFreq[i] = data.Data[i].Hospitalized;
-            wellFreq[i] = data.Data[i].Recovered;
         }
         //console.log(wellFreq);
         let DATA = [{
-            name: 'ติดเชื้อ',
-            data: infectFreq,
-        },
-        {
-            name: 'ตาย',
-            data: deathFreq,
-        },
-        {
-            name: 'รักษา',
-            data: hospitalFreq,
-        },
-        {
-            name: 'หาย',
-            data: wellFreq,
-        },
+                name: 'ติดเชื้อสะสม',
+                data: infectFreq,
+            },
+            {
+                name: 'ตายสะสม',
+                data: deathFreq,
+            },
+            {
+                name: 'รักษาหายสะสม',
+                data: hospitalFreq,
+            },
         ];
 
         chart1_1.series = DATA;
@@ -71,7 +65,7 @@ function loadChart1_1() {
 }
 
 function loadChart1_2() {
-    $.getJSON('DATA/phase1/ผู้ติดเชื้อสะสมในแต่ละวัน.json', function (data) {
+    $.getJSON('DATA/phase1/ผู้ติดเชื้อสะสมในแต่ละวัน.json', function(data) {
         //console.log(data.Data[100].NewConfirmed);
         let infect = [];
         let death = [];
@@ -86,21 +80,21 @@ function loadChart1_2() {
         }
         //console.log(hospital);
         let DATA = [{
-            name: 'ติดเชื้อ',
-            data: infect,
-        },
-        {
-            name: 'ตาย',
-            data: death,
-        },
-        {
-            name: 'รักษา',
-            data: hospital,
-        },
-        {
-            name: 'หาย',
-            data: well,
-        },
+                name: 'ติดเชื้อ',
+                data: infect,
+            },
+            {
+                name: 'ตาย',
+                data: death,
+            },
+            {
+                name: 'อยู่ระหว่างการรักษา',
+                data: hospital,
+            },
+            {
+                name: 'หาย',
+                data: well,
+            },
         ];
 
         chart1_2.series = DATA;
@@ -113,10 +107,14 @@ function loadChart1_2() {
 }
 
 function loadChart2_1(id, folder, file) {
-    $.getJSON(`./DATA/phase2/${folder}/${file}`, function (data) {
-        //console.log(data.update);
+    $.getJSON(`./DATA/phase2/${folder}/${file}`, function(data) {
         let json = [];
-        //ต้องดูว่าแต่ละกราฟใช้ format ไหน
+        let title = 'สัดส่วนผู้ติดเชื้อแยกตาม';
+        if (folder == 'age') title += 'ช่วงอายุ';
+        else if (folder == 'gender') title += 'เพศ';
+        else if (folder == 'career') title += 'อาชีพ';
+        else if (folder == 'risk') title += 'กลุ่มเสี่ยง';
+        else title += 'ภูมิภาค';
 
         if (folder == 'career') {
             for (var i = 0; i < data.data.length; i++) {
@@ -125,80 +123,88 @@ function loadChart2_1(id, folder, file) {
                     y: data.data[i]['ติดเชื้อ'],
                 });
             }
-            chart2_1.series[0].data = json;
-            chart2_1.subtitle = {
-                text: 'ข้อมูลวันที่ ' + data.update,
-            };
         } else {
-            $.each(data, function (key, val) {
-                if (key != 'Last Update' && key != 'Unit' && key != 'Toltal') {
+            $.each(data, function(key, val) {
+                if (key != 'Lastupdate' && key != 'Unit' && key != 'Toltal') {
                     json.push({
                         name: key,
                         y: val['ติดเชื้อ'],
                     });
                 }
             });
-            chart2_1.series[0].data = json;
-            chart2_1.subtitle = {
-                text: 'ข้อมูลวันที่ ' + data.Last_Update,
-            };
         }
+
+        chart2_1.series[0].data = json;
+        chart2_1.title = {
+            text: title,
+        };
+        chart2_1.subtitle = {
+            text: 'ข้อมูลวันที่ ' + data.Lastupdate,
+        };
 
         new Highcharts.chart(id, chart2_1);
     });
 }
 
 function loadChart2_2(id, folder, file) {
-    $.getJSON(`./DATA/phase2/${folder}/${file}`, function (data) {
-        //console.log(data.update);
+    $.getJSON(`./DATA/phase2/${folder}/${file}`, function(data) {
         let json = [];
-        //ต้องดูว่าแต่ละกราฟใช้ format ไหน
+        let title = 'สัดส่วนผู้เสียชีวิตแยกตาม';
+        if (folder == 'age') title += 'ช่วงอายุ';
+        else if (folder == 'gender') title += 'เพศ';
+        else if (folder == 'career') title += 'อาชีพ';
+        else if (folder == 'risk') title += 'กลุ่มเสี่ยง';
+        else title += 'ภูมิภาค';
 
         if (folder == 'career') {
             for (var i = 0; i < data.data.length; i++) {
                 json.push({
                     name: data.data[i]['ชื่อ'],
-                    y: data.data[i]['ตาย']
+                    y: data.data[i]['ตาย'],
                 });
             }
-
-            chart2_2.series[0].data = json;
-            chart2_2.subtitle = {
-                text: 'ข้อมูลวันที่ ' + data.update,
-            };
         } else {
-            $.each(data, function (key, val) {
-                if (key != 'Last Update' && key != 'Unit' && key != 'Toltal') {
+            $.each(data, function(key, val) {
+                if (key != 'Lastupdate' && key != 'Unit' && key != 'Toltal') {
                     json.push({
                         name: key,
                         y: val['ตาย'],
                     });
                 }
             });
-            chart2_2.series[0].data = json;
-            chart2_2.subtitle = {
-                text: 'ข้อมูลวันที่ ' + data.Last_Update,
-            };
         }
+
+        chart2_2.series[0].data = json;
+        chart2_2.title = {
+            text: title,
+        };
+        chart2_2.subtitle = {
+            text: 'ข้อมูลวันที่ ' + data.Lastupdate,
+        };
 
         new Highcharts.chart(id, chart2_2);
     });
 }
 
 function loadChart2_3(id, folder, file) {
-    $.getJSON(`./DATA/phase2/${folder}/${file}`, function (data) {
+    $.getJSON(`./DATA/phase2/${folder}/${file}`, function(data) {
         let json = [];
         let infect = [];
         let dead = [];
-        $.each(data, function (key, val) {
-            if (key != 'Last Update' && key != 'Unit' && key != 'Toltal') {
+        let title = 'จำนวนผู้ติดเชื้อและผู้เสียชีวิตแยกตาม';
+        if (folder == 'age') title += 'ช่วงอายุ';
+        else if (folder == 'gender') title += 'เพศ';
+        else if (folder == 'career') title += 'อาชีพ';
+        else if (folder == 'risk') title += 'กลุ่มเสี่ยง';
+        else title += 'ภูมิภาค';
+
+        $.each(data, function(key, val) {
+            if (key != 'Lastupdate' && key != 'Unit' && key != 'Toltal') {
                 json.push(key);
                 infect.push(val['ติดเชื้อ']);
                 dead.push(val['ตาย']);
             }
         });
-        //console.log(dead)
-
         if (Array.isArray(dead) && Array.isArray(infect) && Array.isArray(json)) {
             chart2_3.series[0].data = infect;
             chart2_3.series[0].name = 'ติดเชื้อ';
@@ -212,19 +218,29 @@ function loadChart2_3(id, folder, file) {
             chart2_3.series[1].pointPlacement = -0.2;
             chart2_3.xAxis.categories = json;
         }
+        chart2_3.title = {
+            text: title,
+        };
+        chart2_3.subtitle = {
+            text: 'ข้อมูลวันที่ ' + data.Lastupdate,
+        };
         new Highcharts.chart(id, chart2_3);
     });
 }
 
 function loadChart2_4(id, folder, file) {
-    $.getJSON(`./DATA/phase2/${folder}/${file}`, function (data) {
-        //console.log(data.update);
+    $.getJSON(`./DATA/phase2/${folder}/${file}`, function(data) {
         let json = [];
-        //ต้องดูว่าแต่ละกราฟใช้ format ไหน
-
+        let title = 'จำนวนผู้ติดเชื้อแยกตาม';
+        if (folder == 'age') title += 'ช่วงอายุ';
+        else if (folder == 'gender') title += 'เพศ';
+        else if (folder == 'career') title += 'อาชีพ';
+        else if (folder == 'risk') title += 'กลุ่มเสี่ยง';
+        else title += 'ภูมิภาค';
+        title += 'และผลการรักษารวม';
         if (folder == 'career') {
-            $.each(data, function (key, val) {
-                if (key != 'Last Update' && key != 'Unit' && key != 'Toltal') {
+            $.each(data, function(key, val) {
+                if (key != 'Lastupdate' && key != 'Unit' && key != 'Toltal') {
                     json.push({
                         name: val['ชื่อ'],
                         data: [val['ติดเชื้อ'], 0, 0],
@@ -233,8 +249,8 @@ function loadChart2_4(id, folder, file) {
                 }
             });
         } else if (folder == 'risk') {
-            $.each(data, function (key, val) {
-                if (key != 'Last Update' && key != 'Unit' && key != 'Toltal') {
+            $.each(data, function(key, val) {
+                if (key != 'Lastupdate' && key != 'Unit' && key != 'Toltal') {
                     json.push({
                         name: key,
                         data: [val['ติดเชื้อ'], val['ตาย'], 0],
@@ -243,11 +259,17 @@ function loadChart2_4(id, folder, file) {
                 }
             });
         } else {
-            $.each(data, function (key, val) {
-                if (key != 'Last Update' && key != 'Unit' && key != 'Toltal') {
+            $.each(data, function(key, val) {
+                if (key != 'Lastupdate' && key != 'Unit' && key != 'Toltal') {
+                    let data1 = val['ติดเชื้อ'];
+                    let data2 = val['หาย'];
+                    let data3 = val['ตาย'];
+                    if (val['ติดเชื้อ'] == null) data1 = 0;
+                    if (val['หาย'] == null) data2 = 0;
+                    if (val['ตาย'] == null) data3 = 0;
                     json.push({
                         name: key,
-                        data: [val['ติดเชื้อ'], val['หาย'], val['ตาย']],
+                        data: [data1, data2, data3],
                         pointPlacement: 'on',
                     });
                 }
@@ -286,27 +308,41 @@ function loadChart2_4(id, folder, file) {
             }
         }
 
+        chart2_4.title = {
+            text: title,
+        };
+        chart2_4.subtitle = {
+            text: 'ข้อมูลวันที่ ' + data.Lastupdate,
+        };
+
         new Highcharts.chart(id, chart2_4);
     });
 }
 
 function loadChart2_5(id, folder, file) {
+    let title = 'จำนวนผู้เสียชีวิตรายวันแยกตาม';
+    if (folder == 'age') title += 'ช่วงอายุ';
+    else if (folder == 'gender') title += 'เพศ';
+    else if (folder == 'career') title += 'อาชีพ';
+    else if (folder == 'risk') title += 'กลุ่มเสี่ยง';
+    else title += 'ภูมิภาค';
+    chart2_5.title = {
+        text: title,
+    };
     if (file != '')
-        $.getJSON(`./DATA/phase2/${folder}/${file}`, function (data) {
-            //console.log(data.update);
+        $.getJSON(`./DATA/phase2/${folder}/${file}`, function(data) {
             let json = [];
             let i = 0;
-            //ต้องดูว่าแต่ละกราฟใช้ format ไหน
 
             if (folder == 'age' || folder == 'career') {
-                $.each(data.Data, function (key, val) {
+                $.each(data.Data, function(key, val) {
                     json.push({
                         name: key,
                         data: val,
                     });
                 });
             } else if (folder == 'risk' || folder == 'gender') {
-                $.each(data.Data, function (key, val) {
+                $.each(data.Data, function(key, val) {
                     json.push({
                         name: key,
                         data: val['Death'],
@@ -351,27 +387,39 @@ function loadChart2_5(id, folder, file) {
                 chart2_5.xAxis.categories = data.LabelText;
             }
 
+            chart2_5.subtitle = {
+                text: 'ข้อมูลวันที่ ' + data.Lastupdate,
+            };
             new Highcharts.chart(id, chart2_5);
         });
     else new Highcharts.chart(id, chart2_5);
 }
 
 function loadChart2_6(id, folder, file) {
+    let title = 'จำนวนผู้ติดเชื้อรายวันแยกตาม';
+    if (folder == 'age') title += 'ช่วงอายุ';
+    else if (folder == 'gender') title += 'เพศ';
+    else if (folder == 'career') title += 'อาชีพ';
+    else if (folder == 'risk') title += 'กลุ่มเสี่ยง';
+    else title += 'ภูมิภาค';
+    chart2_6.title = {
+        text: title,
+    };
     if (file != '')
-        $.getJSON(`./DATA/phase2/${folder}/${file}`, function (data) {
+        $.getJSON(`./DATA/phase2/${folder}/${file}`, function(data) {
             //console.log(data.update);
             let json = [];
             let i = 0;
             //ต้องดูว่าแต่ละกราฟใช้ format ไหน
             if (folder == 'gender') {
-                $.each(data.Data, function (key, val) {
+                $.each(data.Data, function(key, val) {
                     json.push({
                         name: key,
                         data: val['NewInfect'],
                     });
                 });
             } else {
-                $.each(data.Data, function (key, val) {
+                $.each(data.Data, function(key, val) {
                     json.push({
                         name: key,
                         data: val,
@@ -431,169 +479,600 @@ function loadChart2_6(id, folder, file) {
                 chart2_6.xAxis.categories = data.LabelText;
             }
 
+            chart2_6.subtitle = {
+                text: 'ข้อมูลวันที่ ' + data.Lastupdate,
+            };
             new Highcharts.chart(id, chart2_6);
         });
     else new Highcharts.chart(id, chart2_6);
 }
 
-function loadChart2_7(id, folder, file) {
-    if (file != '')
-        $.getJSON(`./DATA/phase2/${folder}/${file}`, function (data) {
-            //console.log(data.update);
-            let json = [];
-            let i = 0;
-            //ต้องดูว่าแต่ละกราฟใช้ format ไหน
-            $.each(data.Data, function (key, val) {
-                json.push({
-                    name: key,
-                    data: val.NewInfect,
-                });
-            });
-            chart2_7.series[0] = json[0];
-            chart2_7.series[1] = json[1];
-            chart2_7.series[2] = json[2];
-            chart2_7.xAxis.categories = data.LabelText;
-            new Highcharts.chart(id, chart2_7);
-        });
-    else new Highcharts.chart(id, chart2_7);
+function check(data) {
+    let check = {
+        '0': ['เชียงราย', 'เชียงใหม่', 'น่าน', 'พะเยา', 'แพร่', 'แม่ฮ่องสอน', 'ลำปาง', 'ลำพูน', 'อุตรดิตถ์'],
+        '1': [
+            'กาฬสินธุ์',
+            'ขอนแก่น',
+            'ชัยภูมิ',
+            'นครพนม',
+            'นครราชสีมา',
+            'บึงกาฬ',
+            'บุรีรัมย์',
+            'มหาสารคาม',
+            'มุกดาหาร',
+            'ยโสธร',
+            'ร้อยเอ็ด',
+            'เลย',
+            'สกลนคร',
+            'สุรินทร์',
+            'ศรีสะเกษ',
+            'หนองคาย',
+            'หนองบัวลำภู',
+            'อุดรธานี',
+            'อุบลราชธานี',
+            'อำนาจเจริญ',
+        ],
+        '2': [
+            'กรุงเทพมหานคร',
+            'กำแพงเพชร',
+            'ชัยนาท',
+            'นครนายก',
+            'นครปฐม',
+            'นครสวรรค์',
+            'นนทบุรี',
+            'ปทุมธานี',
+            'พระนครศรีอยุธยา',
+            'พิจิตร',
+            'พิษณุโลก',
+            'เพชรบูรณ์',
+            'ลพบุรี',
+            'สมุทรปราการ',
+            'สมุทรสงคราม',
+            'สมุทรสาคร',
+            'สิงห์บุรี',
+            'สุโขทัย',
+            'สุพรรณบุรี',
+            'สระบุรี',
+            'อ่างทอง',
+            'อุทัยธานี',
+        ],
+        '3': ['จันทบุรี', 'ฉะเชิงเทรา', 'ชลบุรี', 'ตราด', 'ปราจีนบุรี', 'ระยอง', 'สระแก้ว'],
+        '4': ['กาญจนบุรี', 'ตาก', 'ประจวบคีรีขันธ์', 'เพชรบุรี', 'ราชบุรี'],
+        '5': [
+            'กระบี่',
+            'ชุมพร',
+            'ตรัง',
+            'นครศรีธรรมราช',
+            'นราธิวาส',
+            'ปัตตานี',
+            'พังงา',
+            'พัทลุง',
+            'ภูเก็ต',
+            'ระนอง',
+            'สตูล',
+            'สงขลา',
+            'สุราษฎร์ธานี',
+            'ยะลา',
+        ],
+    };
+
+    for (i = 0; i < 6; i++)
+        for (j = 0; j < 6; j++) {
+            if (check[i][j] == data) return i;
+        }
+    return 0;
 }
 
-function loadChart3_1() {
-    $.getJSON('DATA/phase3/th.json', function (data) {
-        let maxIn = [];
-        let items = [];
+function loadDatatable3_1() {
+    $.getJSON('DATA/phase2/tourist/touristProvince.json', function(data) {
         let table = '';
+        let zone = ['เหนือ', 'ตะวันออกเฉียงเหนือ', 'กลาง', 'ตะวันออก', 'ตะวันตก', 'ใต้'];
+        let main = [];
+        let second = [];
 
-        $.each(data, function (key, value) {
-            if (key != 'lastupdate') {
-                table += `<tr>
-                        <td>${key}</td>
-                        <td style="text-align:right">${formatNumber(value.infect)}</td>
-                        <td style="text-align:right">${formatNumber(value.healing)}</td>
-                        <td style="text-align:right">${formatNumber(value.dead)}</td>
-                    </tr>`;
+        $.each(data, function(key, value) {
+            if (key != 'Lastupdate' && key != 'Unit' && key != 'Toltal') {
+                if (key != 'จังหวัดท่องเที่ยวรอง') {
+                    $.each(value, function(key2, value2) {
+                        if (key2 != 0)
+                            $.each(value2, function(key3, value3) {
+                                main.push({
+                                    zone: zone[check(key3)],
+                                    key: key.substring(7),
+                                    province: key3,
+                                    infect: value3['ติดเชื้อ'],
+                                    recover: value3['หาย'],
+                                    dead: value3['ตาย'],
+                                });
+                            });
+                    });
+                } else {
+                    $.each(value, function(key2, value2) {
+                        if (key2 != 0)
+                            $.each(value2, function(key3, value3) {
+                                second.push({
+                                    zone: zone[check(key3)],
+                                    key: key.substring(7),
+                                    province: key3,
+                                    infect: value3['ติดเชื้อ'],
+                                    recover: value3['หาย'],
+                                    dead: value3['ตาย'],
+                                });
+                            });
+                    });
+                }
             }
+        });
+
+        $.each(main, function(key, value) {
+            table += `<tr>
+                         <td style="text-align:center">${value.zone}</td>
+                         <td style="text-align:center">${value.key}</td>
+                         <td>${value.province}</td>
+                         <td style="text-align:right">${formatNumber(value.infect)}</td>
+                         <td style="text-align:right">${formatNumber(value.recover)}</td>
+                         <td style="text-align:right">${formatNumber(value.dead)}</td>
+                     </tr>`;
+        });
+
+        $.each(second, function(key, value) {
+            table += `<tr>
+                         <td style="text-align:center">${value.zone}</td>
+                         <td style="text-align:center">${value.key}</td>
+                         <td>${value.province}</td>
+                         <td style="text-align:right">${formatNumber(value.infect)}</td>
+                         <td style="text-align:right">${formatNumber(value.recover)}</td>
+                         <td style="text-align:right">${formatNumber(value.dead)}</td>
+                     </tr>`;
         });
 
         $('#fetchDataTable3_1').html(table);
         $('#datatable3_1').DataTable({
             dom: '<"row"<"col"><"col"f>>' + '<"row"<"col"tr>>' + '<"row"<"col"i><"col"p>>',
             pageLength: 11,
+            columnDefs: [
+                { width: "100%", targets: 1 }
+            ]
         });
+    });
+}
 
-        $.each(data, function (key, value) {
+function loadChart3_1() {
+    $.getJSON('DATA/phase3/th.json', function(data) {
+        let maxIn = [];
+        let items = [];
+
+        $.each(data, function(key, value) {
             if (key != 'lastupdate') {
-                maxIn.push(value.infect);
+                maxIn.push(value.healing);
                 items.push({
                     name: key,
-                    value: value.infect,
+                    value: value.healing,
                     dead: value.dead,
-                    recovered: value.healing,
+                    infect: value.infect,
                     critical: value.cure,
-                    "hc-key": value.code
-                })
+                    'hc-key': value.code,
+                });
             }
         });
 
-        //console.log(items)
-
         Highcharts.mapChart('chart3_1', {
             chart: {
-                map: 'countries/th/th-all'
+                map: 'countries/th/th-all',
             },
 
             title: {
-                text: 'ผู้ติดเชื้อในประเทศไทยแยกตามจังหวัด'
+                text: 'จำนวนผู้รักษาหายในประเทศไทยแยกตามจังหวัด',
             },
 
             subtitle: {
-                text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/th/th-all.js">Thailand</a>'
+                text: 'ข้อมูลวันที่ ' + data.lastupdate,
             },
 
             mapNavigation: {
                 enabled: true,
                 buttonOptions: {
-                    verticalAlign: 'bottom'
-                }
+                    verticalAlign: 'bottom',
+                },
             },
 
             colorAxis: {
                 min: 0,
                 max: Math.max.apply(Math, maxIn),
                 stops: [
-                    [0, '#F1EEF6'],
-                    [0.5, '#900037'],
-                    [1, '#500007']
+                    [0, '#ffffff'],
+                    [0.5, '#b8ffb5'],
+                    [1, '#069900'],
                 ],
             },
             series: [{
                 data: items,
                 states: {
                     hover: {
-                        color: '#ffff59'
-                    }
+                        color: '#ffff59',
+                    },
                 },
                 dataLabels: {
                     enabled: true,
-                    format: '{point.name}'
-                }
-            }],
+                    format: '{point.name}',
+                },
+            }, ],
             tooltip: {
                 headerFormat: '',
-                pointFormatter: function () {
+                pointFormatter: function() {
                     var string = '<b>' + this.name + ':<br>';
-                    string += '<span style="color:#8a1900">●</span>' + ' ติดเชื้อ ' + formatNumber(this.value) + ' คน' + '</b>' + '<br>';
-                    string += '<span style="color:#e1e1db">●</span>' + ' ตาย ' + formatNumber(this.dead) + ' คน' + '</b>' + '<br>';
-                    string += '<span style="color:#02fd45">●</span>' + ' หาย ' + formatNumber(this.recovered) + ' คน' + '</b>' + '<br>';
-                    string += '<span style="color:#feff7a">●</span>' + ' รักษา ' + formatNumber(this.critical) + ' คน' + '</b>' + '<br>';
+                    string +=
+                        '<span style="color:#02fd45">●</span>' +
+                        ' รักษาหาย ' +
+                        formatNumber(this.value) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#8a1900">●</span>' +
+                        ' ติดเชื้อ ' +
+                        formatNumber(this.infect) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#feff7a">●</span>' +
+                        ' อยู่ระหว่างการรักษา ' +
+                        formatNumber(this.critical) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#e1e1db">●</span>' +
+                        ' เสียชีวิต ' +
+                        formatNumber(this.dead) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
                     return string;
-                }
+                },
             },
         });
     });
 }
 
 function loadChart3_2() {
-    $.getJSON('DATA/phase2/tourist/ProvinceTouristNewInfectDaily.json', function (data) {
+    $.getJSON('DATA/phase3/th.json', function(data) {
+        let maxIn = [];
+        let items = [];
+
+        $.each(data, function(key, value) {
+            if (key != 'lastupdate') {
+                maxIn.push(value.dead);
+                items.push({
+                    name: key,
+                    value: value.dead,
+                    healing: value.healing,
+                    critical: value.cure,
+                    infect: value.infect,
+                    'hc-key': value.code,
+                });
+            }
+        });
+
+        Highcharts.mapChart('chart3_2', {
+            chart: {
+                map: 'countries/th/th-all',
+            },
+
+            title: {
+                text: 'จำนวนผู้เสียชีวิตในประเทศไทยแยกตามจังหวัด',
+            },
+
+            subtitle: {
+                text: 'ข้อมูลวันที่ ' + data.lastupdate,
+            },
+
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom',
+                },
+            },
+
+            colorAxis: {
+                min: 0,
+                max: Math.max.apply(Math, maxIn),
+                stops: [
+                    [0, '#ffffff'],
+                    [0.5, '#ccbebe'],
+                    [1, '#332e2e'],
+                ],
+            },
+            series: [{
+                data: items,
+                states: {
+                    hover: {
+                        color: '#ffff59',
+                    },
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                },
+            }, ],
+            tooltip: {
+                headerFormat: '',
+                pointFormatter: function() {
+                    var string = '<b>' + this.name + ':<br>';
+                    string +=
+                        '<span style="color:#e1e1db">●</span>' +
+                        ' เสียชีวิต ' +
+                        formatNumber(this.value) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#8a1900">●</span>' +
+                        ' ติดเชื้อ ' +
+                        formatNumber(this.infect) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#feff7a">●</span>' +
+                        ' อยู่ระหว่างการรักษา ' +
+                        formatNumber(this.critical) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#02fd45">●</span>' +
+                        ' รักษาหาย ' +
+                        formatNumber(this.healing) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    return string;
+                },
+            },
+        });
+    });
+}
+
+function loadChart3_3() {
+    $.getJSON('DATA/phase3/th.json', function(data) {
+        let maxIn = [];
+        let items = [];
+
+        $.each(data, function(key, value) {
+            if (key != 'lastupdate') {
+                maxIn.push(value.cure);
+                items.push({
+                    name: key,
+                    value: value.cure,
+                    healing: value.healing,
+                    infect: value.infect,
+                    dead: value.dead,
+                    'hc-key': value.code,
+                });
+            }
+        });
+
+        Highcharts.mapChart('chart3_3', {
+            chart: {
+                map: 'countries/th/th-all',
+            },
+
+            title: {
+                text: 'จำนวนผู้อยู่ระหว่างการรักษาในประเทศไทยแยกตามจังหวัด',
+            },
+
+            subtitle: {
+                text: 'ข้อมูลวันที่ ' + data.lastupdate,
+            },
+
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom',
+                },
+            },
+
+            colorAxis: {
+                min: 0,
+                max: Math.max.apply(Math, maxIn),
+                stops: [
+                    [0, '#ffffff'],
+                    [0.5, '#faeb64'],
+                    [1, '#a1920a'],
+                ],
+            },
+            series: [{
+                data: items,
+                states: {
+                    hover: {
+                        color: '#ffff59',
+                    },
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                },
+            }, ],
+            tooltip: {
+                headerFormat: '',
+                pointFormatter: function() {
+                    var string = '<b>' + this.name + ':<br>';
+                    string +=
+                        '<span style="color:#feff7a">●</span>' +
+                        ' อยู่ระหว่างการรักษา ' +
+                        formatNumber(this.value) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#8a1900">●</span>' +
+                        ' ติดเชื้อ ' +
+                        formatNumber(this.infect) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#e1e1db">●</span>' +
+                        ' เสียชีวิต ' +
+                        formatNumber(this.dead) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#02fd45">●</span>' +
+                        ' รักษาหาย ' +
+                        formatNumber(this.healing) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    return string;
+                },
+            },
+        });
+    });
+}
+
+function loadChart3_4() {
+    $.getJSON('DATA/phase3/th.json', function(data) {
+        let maxIn = [];
+        let items = [];
+
+        $.each(data, function(key, value) {
+            if (key != 'lastupdate') {
+                maxIn.push(value.infect);
+                items.push({
+                    name: key,
+                    value: value.infect,
+                    healing: value.healing,
+                    cure: value.cure,
+                    dead: value.dead,
+                    'hc-key': value.code,
+                });
+            }
+        });
+
+        Highcharts.mapChart('chart3_4', {
+            chart: {
+                map: 'countries/th/th-all',
+            },
+
+            title: {
+                text: 'จำนวนผู้ติดเชื้อในประเทศไทยแยกตามจังหวัด',
+            },
+
+            subtitle: {
+                text: 'ข้อมูลวันที่ ' + data.lastupdate,
+            },
+
+            mapNavigation: {
+                enabled: true,
+                buttonOptions: {
+                    verticalAlign: 'bottom',
+                },
+            },
+
+            colorAxis: {
+                min: 0,
+                max: Math.max.apply(Math, maxIn),
+                stops: [
+                    [0, '#ffffff'],
+                    [0.5, '#d62b39'],
+                    [1, '#94000c'],
+                ],
+            },
+            series: [{
+                data: items,
+                states: {
+                    hover: {
+                        color: '#ffff59',
+                    },
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                },
+            }, ],
+            tooltip: {
+                headerFormat: '',
+                pointFormatter: function() {
+                    var string = '<b>' + this.name + ':<br>';
+                    string +=
+                        '<span style="color:#8a1900">●</span>' +
+                        ' ติดเชื้อ ' +
+                        formatNumber(this.value) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#feff7a">●</span>' +
+                        ' อยู่ระหว่างการรักษา ' +
+                        formatNumber(this.cure) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#e1e1db">●</span>' +
+                        ' เสียชีวิต ' +
+                        formatNumber(this.dead) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#02fd45">●</span>' +
+                        ' รักษาหาย ' +
+                        formatNumber(this.healing) +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    return string;
+                },
+            },
+        });
+    });
+}
+
+function loadChart3_5() {
+    $.getJSON('DATA/phase2/tourist/ProvinceTouristNewInfectDaily.json', function(data) {
         let json = [];
-        $.each(data.Data, function (key, val) {
+        $.each(data.Data, function(key, val) {
             json.push({
                 name: key,
                 data: val,
             });
         });
-        chart3_2.xAxis.categories = formatDate(data.LabelText);
-        chart3_2.series[0] = json[0];
-        chart3_2.series[1] = json[1];
-        chart3_2.series[2] = json[2];
-        new Highcharts.chart(chart3_2);
+        chart3_5.xAxis.categories = formatDate(data.LabelText);
+        chart3_5.series[0] = json[0];
+        chart3_5.series[1] = json[1];
+        chart3_5.series[2] = json[2];
+        chart3_5.subtitle = {
+            text: 'ข้อมูลวันที่ ' + data.Lastupdate,
+        };
+        new Highcharts.chart(chart3_5);
     });
 }
 
 function loadChart4_1() {
-
-    $.getJSON("DATA/phase3/th.json", function (data) {
+    $.getJSON('DATA/phase3/th.json', function(data) {
         let items = [];
-        $.each(data, function (key, value) {
-            if (key != "lastupdate") {
+        $.each(data, function(key, value) {
+            if (key != 'lastupdate') {
                 items.push({
                     name: key,
                     data: [
                         [value.population, value.infect]
-                    ]
-                })
+                    ],
+                });
             }
         });
-        for (i = 0; i < 77; i++)
-            chart4_1.series[i] = items[i];
+        for (i = 0; i < 77; i++) chart4_1.series[i] = items[i];
         new Highcharts.chart(chart4_1);
-
     });
-
 }
 
 //-------------------------------------------------------------------------------------------------- world ------------------------------------------//
-//------------------------------------------------------------------------------------------------------------------------------------------------------------------///
+
 function load_world_table() {
     $.getJSON('./DATA/world/info/countryAll.json', function (data) {
         let table = ''

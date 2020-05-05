@@ -11,29 +11,31 @@
         <div class="intro-section" id="home-section" style="background-color: #ccc;">
             <div class="container">
                 <div id="card" class="row align-items-center" style="padding-top: 13%;">
-                    <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
-                        <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
-                        <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่ 19 เมษายน 2563</p>
-                    </div>
-                    <div class="card bg-danger text-white" style="width: 100%;height: 200px;font-size:50px;">
-                        <div class="card-body text-center">
-                            <p class="card-text" id="text1"></p>
+                    <div>
+                        <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+                            <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
+                            <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่ 19 เมษายน 2563</p>
                         </div>
-                    </div>
-                    <div class="card-columns text-white" style="width: 100%;font-size:30px;">
-                        <div class="card bg-warning" style="height: 200px">
+                        <div class="card bg-danger text-white" style="width: 100%;height: 200px;font-size:50px;">
                             <div class="card-body text-center">
-                                <p class="card-text" id="text2" style="margin-top: 10%"></p>
+                                <p class="card-text" id="text1"></p>
                             </div>
                         </div>
-                        <div class="card bg-success">
-                            <div class="card-body text-center" style="height: 200px">
-                                <p class="card-text" id="text3" style="margin-top: 10%"></p>
+                        <div class="card-columns text-white" style="width: 100%;font-size:30px;margin-top:10px">
+                            <div class="card bg-warning" style="height: 200px">
+                                <div class="card-body text-center">
+                                    <p class="card-text" id="text2" style="margin-top: 10%"></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card bg-primary">
-                            <div class="card-body text-center" style="height: 200px">
-                                <p class="card-text" id="text4" style="margin-top: 10%"></p>
+                            <div class="card bg-success">
+                                <div class="card-body text-center" style="height: 200px">
+                                    <p class="card-text" id="text3" style="margin-top: 10%"></p>
+                                </div>
+                            </div>
+                            <div class="card bg-primary">
+                                <div class="card-body text-center" style="height: 200px">
+                                    <p class="card-text" id="text4" style="margin-top: 10%"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,9 +90,9 @@
                     <li class="nav-item">
                         <a class="nav-link setTab" data-toggle="tab" href="#risk" type="risk" status="0" role="tab" aria-controls="risk" aria-selected="false">กลุ่มเสี่ยง</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link setTab" data-toggle="tab" href="#career" type="career" status="0" role="tab" aria-controls="career" aria-selected="false">อาชีพ</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link setTab" data-toggle="tab" href="#region" type="region" status="0" role="tab" aria-controls="region" aria-selected="false">ภูมิภาค</a>
                     </li>
@@ -143,7 +145,7 @@
                         </div>
                     </div>
 
-                    <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
+                    <!-- <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">
                         <div class="grid-container remove-paddingLR">
                             <div class="grid-item" id="career_chart2_1"></div>
                             <div class="grid-item" id="career_chart2_2"></div>
@@ -156,7 +158,7 @@
                             <div class="grid-item" id="career_chart2_5"></div>
                             <div class="grid-item" id="career_chart2_6"></div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="tab-pane fade" id="region" role="tabpanel" aria-labelledby="region-tab">
                         <div class="grid-container remove-paddingLR">
@@ -232,6 +234,7 @@
                             <th>ติดเชื้อ</th>
                             <th>รักษาหาย</th>
                             <th>เสียชีวิต</th>
+                            <th>กำลังรักษา</th>
                         </tr>
                     </thead>
                     <tbody id="fetchDataTable3_1">
@@ -280,10 +283,10 @@
             </div>
             <div class="grid-container3">
                 <div class="row" data-aos="fade-up">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <ul class="nav nav-tabs" id="worldMapTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link TABworld" data-toggle="tab" href="#infect" type="infect" status="0" role="tab" aria-controls="infect" aria-selected="false">ติดเชื้อ</a>
+                                <a class="nav-link TABworld active" data-toggle="tab" href="#infect" type="infect" status="0" role="tab" aria-controls="infect" aria-selected="false">ติดเชื้อ</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link TABworld" data-toggle="tab" href="#dead" type="dead" status="0" role="tab" aria-controls="dead" aria-selected="false">เสียชีวิต</a>
@@ -299,7 +302,7 @@
                             <div id="world_map" style="width: 100%;height: 100%;"></div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <div class="table-responsive">
                             <table id="world_table" class="table table-bordered table-striped table-hover table-data" style="width:100%">
                                 <thead>
@@ -324,7 +327,7 @@
                 <br>
                 <div class="row" data-aos="fade-up">
                     <div class="col-md-12">
-                        <div id="worldAll_pieChart" style="height: 280px;"></div>
+                        <div id="worldAll_pieChart" style="height: 100%;width:100%"></div>
                     </div>
                 </div>
                 <div class="row" data-aos="fade-up">
@@ -368,16 +371,6 @@
 </html>
 
 <script>
-    // document.getElementById("world_map").addEventListener("load", load_World_map());
-    // document.getElementById("worldAll_pieChart").addEventListener("load", load_worldAll_pieChart());
-    // document.getElementById("worldRegion_spiderChart").addEventListener("load", load_worldRegion_spiderChart());
-    // document.getElementById("world_barChart").addEventListener("load", load_world_barChart());
-    // document.getElementById("world_lineChart").addEventListener("load", load_world_lineChart());
-
-    // document.getElementById("worldDaed_lineChart").addEventListener("load", load_worldDaed_lineChart());
-    // document.getElementById("worldNewInfect_lineChart").addEventListener("load", load_worldNewInfect_lineChart());
-    // document.getElementById("worldRecover_lineChart").addEventListener("load", load_worldRecover_lineChart());
-
     $(document).ready(function() {
         document.getElementById("card").addEventListener("load", loadCard());
         document.getElementById("chart1_1").addEventListener("load", loadChart1_1());
@@ -411,7 +404,7 @@
         document.getElementById("worldRecover_lineChart").addEventListener("load", load_worldRecover_lineChart());
         document.getElementById("world_table").addEventListener("load", load_world_table());
 
-        
+
         $('.TABworld').click(function() {
             let type = $(this).attr("type");
             if (type == 'infect')
@@ -424,55 +417,54 @@
                 load_World_map("hospital")
         });
 
-    });
-
-    $(".setTab").on('click', function() {
-        let type = $(this).attr("type");
-        let sta = $(this).attr("status");
-        let file5 = "";
-        let file6 = "";
+        $(".setTab").on('click', function() {
+            let type = $(this).attr("type");
+            let sta = $(this).attr("status");
+            let file5 = "";
+            let file6 = "";
 
 
-        if (type == "age")
-            file5 = "ageDeathDaily.json";
-        else if (type == "gender")
-            file5 = "GenderDeathDaily.json";
-        else if (type == "career")
-            file5 = "jobDeathDaily.json";
-        else if (type == "risk")
-            file5 = "riskDeathDaily.json";
+            if (type == "age")
+                file5 = "ageDeathDaily.json";
+            else if (type == "gender")
+                file5 = "GenderDeathDaily.json";
+            else if (type == "career")
+                file5 = "jobDeathDaily.json";
+            else if (type == "risk")
+                file5 = "riskDeathDaily.json";
 
-        if (type == "age")
-            file6 = "ageInfectedDaily.json";
-        else if (type == "gender")
-            file6 = "GenderNewInfectDaily.json";
-        else if (type == "career")
-            file6 = "jobNewInfectDaily.json";
-        else if (type == "risk")
-            file6 = "riskInfectDaily.json";
-        else
-            file6 = "RegionNewInfect.json";
+            if (type == "age")
+                file6 = "ageInfectedDaily.json";
+            else if (type == "gender")
+                file6 = "GenderNewInfectDaily.json";
+            else if (type == "career")
+                file6 = "jobNewInfectDaily.json";
+            else if (type == "risk")
+                file6 = "riskInfectDaily.json";
+            else
+                file6 = "RegionNewInfect.json";
 
-        if (sta == "0") {
-            //console.log(type)
-            $(this).attr("status", "1");
-            chart2_1.series = [{
-                name: 'จำนวน',
-            }, ];
-            chart2_2.series = [{
-                name: 'จำนวน',
-            }, ];
-            chart2_3.series = [{}, {}];
-            chart2_4.series = [{}];
-            chart2_5.series = [{}];
-            chart2_6.series = [{}];
-            loadChart2_1(type + "_chart2_1", type, type + ".json")
-            loadChart2_2(type + "_chart2_2", type, type + ".json")
-            loadChart2_3(type + "_chart2_3", type, type + ".json")
-            loadChart2_4(type + "_chart2_4", type, type + ".json")
-            loadChart2_5(type + "_chart2_5", type, file5)
-            loadChart2_6(type + "_chart2_6", type, file6)
-        }
+            if (sta == "0") {
+                //console.log(type)
+                $(this).attr("status", "1");
+                chart2_1.series = [{
+                    name: 'จำนวน',
+                }, ];
+                chart2_2.series = [{
+                    name: 'จำนวน',
+                }, ];
+                chart2_3.series = [{}, {}];
+                chart2_4.series = [{}];
+                chart2_5.series = [{}];
+                chart2_6.series = [{}];
+                loadChart2_1(type + "_chart2_1", type, type + ".json")
+                loadChart2_2(type + "_chart2_2", type, type + ".json")
+                loadChart2_3(type + "_chart2_3", type, type + ".json")
+                loadChart2_4(type + "_chart2_4", type, type + ".json")
+                loadChart2_5(type + "_chart2_5", type, file5)
+                loadChart2_6(type + "_chart2_6", type, file6)
+            }
 
+        });
     });
 </script>

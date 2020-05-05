@@ -41,12 +41,12 @@
 						<li><a href="#all-section" class="nav-link"style = "color: black;">ภาพรวม</a></li>
 						<li><a href="#group-section" class="nav-link"style = "color: black;">แยกตามกลุ่ม</a></li>
 						<li><a href="#area-section" class="nav-link"style = "color: black;">แยกตามพื้นที่</a></li>
-						<li><a href="#relation-section" class="nav-link"style = "color: black;">ความสัมพันธ์</a></li>
+						<li><a href="#relation-section" class="nav-link"style = "color: black;">แยกตามความสัมพันธ์</a></li>
 						<li><a href="#world-section" class="nav-link"style = "color: black;">ทั่วโลก</a></li>
 						<li>
 							<div class="blob"></div>
 						</li>
-						<li><a style = "color: black;">อัปเดตล่าสุด 26/04/63</a></li>
+						<li><a style = "color: black;">อัปเดตล่าสุด 2/05/63</a></li>
 					</ul>
 				</nav>
 				<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>

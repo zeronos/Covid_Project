@@ -4,7 +4,7 @@ var chart1_1 = {
         zoomType: 'xy',
     },
     title: {
-        text: 'การติดเชื้อสะสมรายวัน',
+        text: 'จำนวนผู้ติดเชื้อสะสมรายวัน',
     },
     yAxis: {
         title: {
@@ -52,10 +52,11 @@ var chart1_2 = {
         zoomType: 'xy',
     },
     title: {
-        text: 'การติดเชื้อรายวัน',
+        text: 'จำนวนผู้ติดเชื้อรายวัน',
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
+        shared: true
     },
     yAxis: {
         title: {
@@ -499,6 +500,7 @@ var wolrdRegionSpiderChart = {
         polar: true,
         type: 'line',
         renderTo: 'worldRegion_spiderChart',
+        zoomType: 'xy',
     },
 
     accessibility: {
@@ -517,7 +519,7 @@ var wolrdRegionSpiderChart = {
     },
 
     xAxis: {
-        categories:['จำนวนติดเชื้อ', 'จำนวนผู้รักษาหาย', 'จำนวนผู้เสียชีวิต', 'จำนวนคนไข้อยู่ระหว่างรักษา'],
+        categories: ['จำนวนติดเชื้อ', 'จำนวนผู้รักษาหาย', 'จำนวนผู้เสียชีวิต', 'จำนวนคนไข้อยู่ระหว่างรักษา'],
         tickmarkPlacement: 'on',
         lineWidth: 0,
     },
@@ -564,6 +566,7 @@ var worldRegion_barChart = {
     chart: {
         type: 'column',
         renderTo: 'world_barChart',
+        zoomType: 'xy',
     },
     title: {
         text: 'จำนวนผู้ติดเชื้อสะสมในแต่ละทวีป',
@@ -602,6 +605,9 @@ var worldRegion_barChart = {
 };
 
 var worldRegion_lineChart = {
+    chart:{
+        zoomType: 'xy',
+    },
     title: {
         text: 'จำนวนผู้ติดเชื้อสะสมรายวันแยกตามทวีป',
     },
@@ -646,6 +652,9 @@ var worldRegion_lineChart = {
 
 //-----------------------------------------------------------------------------------------------------------------------------------//
 var worldDead_lineChart = {
+    chart:{
+        zoomType: 'xy',
+    },
     title: {
         text: 'จำนวนผู้เสียชีวิตรายวันแยกตามทวีป',
     },
@@ -690,6 +699,9 @@ var worldDead_lineChart = {
 };
 
 var worldNewInfect_lineChart = {
+    chart:{
+        zoomType: 'xy',
+    },
     title: {
         text: 'จำนวนผู้ติดเชื้อใหม่รายวันแยกตามทวีป',
     },
@@ -732,6 +744,9 @@ var worldNewInfect_lineChart = {
 };
 
 var worldRecover_lineChart = {
+    chart:{
+        zoomType: 'xy',
+    },
     title: {
         text: 'จำนวนผู้อยู่ระหว่างการักษารายวันแยกตามทวีป',
     },
@@ -779,6 +794,7 @@ var wolrdSubRegionSpiderChart = {
         polar: true,
         type: 'line',
         renderTo: 'worldSubRegion_spiderChart',
+        zoomType: 'xy',
     },
 
     accessibility: {
@@ -839,5 +855,3 @@ var wolrdSubRegionSpiderChart = {
         }, ],
     },
 };
-
-

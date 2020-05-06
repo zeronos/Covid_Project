@@ -2,11 +2,6 @@ function formatNumber(num) {
     return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 }
 
-function UpdateDate(date)
-{
-    document.getElementById('upToDate').innerHTML = "ข้อมูล"
-}
-
 function formatDate(str) {
     var i;
     var res = [];
@@ -23,12 +18,20 @@ function formatDate(str) {
     return items;
 }
 
+function log10(n) {
+    return Math.log(n) / Math.log(10);
+}
+
+
+
 function loadCard() {
     $.getJSON('./DATA/phase2/age/age.json', function(data) {
-        document.getElementById('text1').innerHTML = 'ติดเชื้อสะสม' + '<br>' + formatNumber(data.Toltal['ติดเชื้อ']) + ' คน';
+        document.getElementById('text1').innerHTML =
+            'ติดเชื้อสะสม' + '<br>' + formatNumber(data.Toltal['ติดเชื้อ']) + ' คน';
         document.getElementById('text2').innerHTML = 'เสียชีวิต' + '<br>' + formatNumber(data.Toltal['ตาย']) + ' คน';
         document.getElementById('text3').innerHTML = 'รักษาหาย' + '<br>' + formatNumber(data.Toltal['หาย']) + ' คน';
-        document.getElementById('text4').innerHTML = 'อยู่ระหว่างการรักษา' + '<br>' + formatNumber(data.Toltal['รักษา']) + ' คน';
+        document.getElementById('text4').innerHTML =
+            'อยู่ระหว่างการรักษา' + '<br>' + formatNumber(data.Toltal['รักษา']) + ' คน';
     });
 }
 
@@ -111,23 +114,49 @@ function loadChart1_2() {
 }
 
 function loadChart2_1(id, folder, file) {
-    $.getJSON(`./DATA/phase2/${folder}/${file}`, function(data) {
+    let type = 0;
+    let path = '../DWFinalProject/DWProjectCountry/';
+    if (folder == 'risk') {
+        path = './DATA/phase2/' + folder + '/';
+        type = 1;
+    }
+
+    $.getJSON(path + file, function(data) {
+        let text = ` <div class=row>
+                        <div class=col-md-0>
+                            <div class='blob'>
+                            </div>
+                        </div>
+                        <div class='col-md-1'>
+                            ข้อมูลวันที่ ${data['LastUpDate']}
+                        </div>
+                    </div>`;
         let json = [];
         let title = 'สัดส่วนผู้ติดเชื้อแยกตาม';
-        if (folder == 'age') title += 'ช่วงอายุ';
-        else if (folder == 'gender') title += 'เพศ';
-        else if (folder == 'career') title += 'อาชีพ';
-        else if (folder == 'risk') title += 'กลุ่มเสี่ยง';
-        else title += 'ภูมิภาค';
+        let title2 = '';
+        if (folder == 'age') title2 = 'ช่วงอายุ';
+        else if (folder == 'gender') title2 = 'เพศ';
+        else if (folder == 'risk') title2 = 'กลุ่มเสี่ยง';
+        else title2 = 'ภูมิภาค';
 
-        if (folder == 'career') {
-            for (var i = 0; i < data.data.length; i++) {
-                json.push({
-                    name: data.data[i]['ชื่อ'],
-                    y: data.data[i]['ติดเชื้อ'],
-                });
-            }
-        } else {
+        if (type == 0)
+            $.each(data, function(key, val) {
+                if (key == 'Data') {
+                    $.each(val, function(key2, val2) {
+                        let sum = 0;
+                        let name = key2;
+                        if (key2 == 'NA') name = 'ไม่ระบุ' + title2;
+                        $.each(val2, function(key3, val3) {
+                            sum += val3;
+                        });
+                        json.push({
+                            name: name,
+                            y: sum,
+                        });
+                    });
+                }
+            });
+        else {
             $.each(data, function(key, val) {
                 if (key != 'Lastupdate' && key != 'Unit' && key != 'Toltal') {
                     json.push({
@@ -136,17 +165,25 @@ function loadChart2_1(id, folder, file) {
                     });
                 }
             });
+            text = data['Lastupdate'];
         }
 
         chart2_1.series[0].data = json;
         chart2_1.title = {
-            text: title,
+            text: title + title2,
         };
         chart2_1.subtitle = {
-            text: 'ข้อมูลวันที่ ' + data.Lastupdate,
+            text: text,
+            useHTML: true,
         };
 
-        new Highcharts.chart(id, chart2_1);
+        if (Array.isArray(json) && json[0].y != null) new Highcharts.chart(id, chart2_1);
+        else {
+            chart2_1.subtitle = {
+                text: 'ไม่มีข้อมูล',
+            };
+            new Highcharts.chart(id, chart2_1).showNoData('ไม่มีข้อมูล');
+        }
     });
 }
 
@@ -186,45 +223,59 @@ function loadChart2_2(id, folder, file) {
             text: 'ข้อมูลวันที่ ' + data.Lastupdate,
         };
 
-        new Highcharts.chart(id, chart2_2);
+        if (Array.isArray(json) && json[0].y != null) new Highcharts.chart(id, chart2_2);
+        else {
+            chart2_2.subtitle = {
+                text: 'ไม่มีข้อมูล',
+            };
+            chart2_2.series[0].data = [];
+            new Highcharts.chart(id, chart2_2).showNoData('ไม่มีข้อมูล');
+        }
     });
 }
 
 function loadChart2_3(id, folder, file) {
     $.getJSON(`./DATA/phase2/${folder}/${file}`, function(data) {
-        let json = [];
+        let json = [];;
         let infect = [];
         let dead = [];
         let title = 'จำนวนผู้ติดเชื้อและผู้เสียชีวิตแยกตาม';
-        if (folder == 'age') title += 'ช่วงอายุ';
-        else if (folder == 'gender') title += 'เพศ';
-        else if (folder == 'career') title += 'อาชีพ';
-        else if (folder == 'risk') title += 'กลุ่มเสี่ยง';
-        else title += 'ภูมิภาค';
+        let title2 = '';
+        if (folder == 'age') title2 = 'ช่วงอายุ';
+        else if (folder == 'gender') title2 = 'เพศ';
+        else if (folder == 'career') title2 = 'อาชีพ';
+        else if (folder == 'risk') title2 = 'กลุ่มเสี่ยง';
+        else title2 = 'ภูมิภาค';
 
         $.each(data, function(key, val) {
             if (key != 'Lastupdate' && key != 'Unit' && key != 'Toltal') {
                 json.push(key);
-                infect.push(val['ติดเชื้อ']);
-                dead.push(val['ตาย']);
+                infect.push(log10(val['ติดเชื้อ']));
+                dead.push(log10(val['ตาย']));
             }
         });
         if (Array.isArray(dead) && Array.isArray(infect) && Array.isArray(json)) {
             chart2_3.series[0].data = infect;
-            chart2_3.series[0].name = 'ติดเชื้อ';
+            chart2_3.series[0].name = 'ผู้ติดเชื้อ';
             chart2_3.series[0].color = 'rgba(165,170,217,1)';
             chart2_3.series[0].pointPadding = 0.1;
             chart2_3.series[0].pointPlacement = -0.2;
             chart2_3.series[1].data = dead;
-            chart2_3.series[1].name = 'ตาย';
+            chart2_3.series[1].name = 'ผู้เสียชีวิต';
             chart2_3.series[1].color = 'rgba(248,161,63,1)';
             chart2_3.series[1].pointPadding = 0.2;
             chart2_3.series[1].pointPlacement = -0.2;
             chart2_3.xAxis.categories = json;
         }
         chart2_3.title = {
-            text: title,
+            text: title + title2,
         };
+        chart2_3.tooltip = {
+            formatter: function() {
+                return '<b>' + this.series.name + ':<br>' + `<span style="color:${this.color}">●</span>` +
+                    title2 + ' ' + this.x + ' ' + Math.round(Math.pow(10, this.y)) + ' คน' + '</b>' + '<br>';
+            }
+        }
         chart2_3.subtitle = {
             text: 'ข้อมูลวันที่ ' + data.Lastupdate,
         };
@@ -319,6 +370,8 @@ function loadChart2_4(id, folder, file) {
             text: 'ข้อมูลวันที่ ' + data.Lastupdate,
         };
 
+        
+
         new Highcharts.chart(id, chart2_4);
     });
 }
@@ -397,101 +450,119 @@ function loadChart2_5(id, folder, file) {
             chart2_5.subtitle = {
                 text: 'ข้อมูลวันที่ ' + data.Lastupdate,
             };
-            new Highcharts.chart(id, chart2_5);
+            if (Array.isArray(json) && json[0].data != null) new Highcharts.chart(id, chart2_5);
+            else {
+                chart2_5.subtitle = {
+                    text: 'ไม่มีข้อมูล',
+                };
+                new Highcharts.chart(id, chart2_5).showNoData('ไม่มีข้อมูล');
+            }
         });
-    else new Highcharts.chart(id, chart2_5);
+    else {
+        chart2_5.subtitle = {
+            text: 'ไม่มีข้อมูล',
+        };
+        new Highcharts.chart(id, chart2_5).showNoData('ไม่มีข้อมูล');
+    }
 }
 
 function loadChart2_6(id, folder, file) {
-    let title = 'จำนวนผู้ติดเชื้อรายวันแยกตาม';
-    if (folder == 'age') title += 'ช่วงอายุ';
-    else if (folder == 'gender') title += 'เพศ';
-    else if (folder == 'career') title += 'อาชีพ';
-    else if (folder == 'risk') title += 'กลุ่มเสี่ยง';
-    else title += 'ภูมิภาค';
-    chart2_6.title = {
-        text: title,
-    };
-    if (file != '')
-        $.getJSON(`./DATA/phase2/${folder}/${file}`, function(data) {
-            //console.log(data.update);
-            let json = [];
-            let i = 0;
-            //ต้องดูว่าแต่ละกราฟใช้ format ไหน
-            if (folder == 'gender') {
-                $.each(data.Data, function(key, val) {
-                    json.push({
-                        name: key,
-                        data: val['NewInfect'],
-                    });
-                });
-            } else {
-                $.each(data.Data, function(key, val) {
-                    json.push({
-                        name: key,
-                        data: val,
-                    });
-                });
-            }
+    let type = 0;
+    let path = '../DWFinalProject/DWProjectCountry/';
+    if (folder == 'risk') {
+        path = './DATA/phase2/' + folder + '/';
+        type = 1;
+    }
 
-            if (folder == 'age') {
-                chart2_6.series[0] = json[0];
-                chart2_6.series[1] = json[1];
-                chart2_6.series[2] = json[2];
-                chart2_6.series[3] = json[3];
-                chart2_6.series[4] = json[4];
-                chart2_6.series[5] = json[5];
-                chart2_6.series[6] = json[6];
-                chart2_6.series[7] = json[7];
-                chart2_6.series[8] = json[8];
-                chart2_6.series[9] = json[9];
-                chart2_6.xAxis.categories = formatDate(data.LabelText);
-            } else if (folder == 'gender') {
-                chart2_6.series[0] = json[0];
-                chart2_6.series[1] = json[1];
-                chart2_6.series[2] = json[2];
-                chart2_6.xAxis.categories = formatDate(data.LabelText);
-            } else if (folder == 'risk') {
-                chart2_6.series[0] = json[0];
-                chart2_6.series[1] = json[1];
-                chart2_6.series[2] = json[2];
-                chart2_6.series[3] = json[3];
-                chart2_6.series[4] = json[4];
-                chart2_6.series[5] = json[5];
-                chart2_6.series[6] = json[6];
-                chart2_6.series[7] = json[7];
-                chart2_6.series[8] = json[8];
-                chart2_6.series[9] = json[9];
-                chart2_6.series[10] = json[10];
-                chart2_6.series[11] = json[11];
-                chart2_6.xAxis.categories = formatDate(data.LabelText);
-            } else if (folder == 'career') {
-                chart2_6.series[0] = json[0];
-                chart2_6.series[1] = json[1];
-                chart2_6.series[2] = json[2];
-                chart2_6.series[3] = json[3];
-                chart2_6.series[4] = json[4];
-                chart2_6.series[5] = json[5];
-                chart2_6.series[6] = json[6];
-                chart2_6.series[7] = json[7];
-                chart2_6.xAxis.categories = formatDate(data.LabelText);
-            } else {
-                chart2_6.series[0] = json[0];
-                chart2_6.series[1] = json[1];
-                chart2_6.series[2] = json[2];
-                chart2_6.series[3] = json[3];
-                chart2_6.series[4] = json[4];
-                chart2_6.series[5] = json[5];
-                chart2_6.series[6] = json[6];
-                chart2_6.xAxis.categories = formatDate(data.LabelText);
-            }
+    $.getJSON(path + file, function(data) {
+        let text = ` <div class=row>
+                        <div class=col-md-0>
+                            <div class='blob'>
+                            </div>
+                        </div>
+                        <div class='col-md-1'>
+                            ข้อมูลวันที่ ${data['LastUpDate']}
+                        </div>
+                    </div>`;
+        let title = 'จำนวนผู้ติดเชื้อรายวันแยกตาม';
+        let title2 = '';
+        if (folder == 'age') title2 = 'ช่วงอายุ';
+        else if (folder == 'gender') title2 = 'เพศ';
+        else if (folder == 'risk') title2 = 'กลุ่มเสี่ยง';
+        else title2 = 'ภูมิภาค';
+        chart2_6.title = {
+            text: title + title2,
+        };
 
-            chart2_6.subtitle = {
-                text: 'ข้อมูลวันที่ ' + data.Lastupdate,
-            };
-            new Highcharts.chart(id, chart2_6);
+        let json = [];
+
+        $.each(data.Data, function(key, val) {
+            let name = key;
+            if (key == 'NA') name = 'ไม่ระบุ' + title2;
+            json.push({
+                name: name,
+                data: val,
+            });
         });
-    else new Highcharts.chart(id, chart2_6);
+        if (type == 1) text = data['Lastupdate'];
+
+        if (folder == 'age') {
+            chart2_6.series[0] = json[0];
+            chart2_6.series[1] = json[1];
+            chart2_6.series[2] = json[2];
+            chart2_6.series[3] = json[3];
+            chart2_6.series[4] = json[4];
+            chart2_6.series[5] = json[5];
+            chart2_6.series[6] = json[6];
+            chart2_6.series[7] = json[7];
+            chart2_6.series[8] = json[8];
+            chart2_6.series[9] = json[9];
+            chart2_6.series[10] = json[10];
+            chart2_6.series[11] = json[11];
+            chart2_6.xAxis.categories = formatDate(data.LabelText);
+        } else if (folder == 'gender') {
+            chart2_6.series[0] = json[0];
+            chart2_6.series[1] = json[1];
+            chart2_6.series[2] = json[2];
+            chart2_6.xAxis.categories = formatDate(data.LabelText);
+        } else if (folder == 'risk') {
+            chart2_6.series[0] = json[0];
+            chart2_6.series[1] = json[1];
+            chart2_6.series[2] = json[2];
+            chart2_6.series[3] = json[3];
+            chart2_6.series[4] = json[4];
+            chart2_6.series[5] = json[5];
+            chart2_6.series[6] = json[6];
+            chart2_6.series[7] = json[7];
+            chart2_6.series[8] = json[8];
+            chart2_6.series[9] = json[9];
+            chart2_6.series[10] = json[10];
+            chart2_6.series[11] = json[11];
+            chart2_6.xAxis.categories = formatDate(data.LabelText);
+        } else {
+            chart2_6.series[0] = json[0];
+            chart2_6.series[1] = json[1];
+            chart2_6.series[2] = json[2];
+            chart2_6.series[3] = json[3];
+            chart2_6.series[4] = json[4];
+            chart2_6.series[5] = json[5];
+            chart2_6.series[6] = json[6];
+            chart2_6.xAxis.categories = formatDate(data.LabelText);
+        }
+
+        chart2_6.subtitle = {
+            text: text,
+            useHTML: true,
+        };
+
+        if (Array.isArray(json) && json[0].data != null) new Highcharts.chart(id, chart2_6);
+        else {
+            chart2_6.subtitle = {
+                text: 'ไม่มีข้อมูล',
+            };
+            new Highcharts.chart(id, chart2_6).showNoData('ไม่มีข้อมูล');
+        }
+    });
 }
 
 function check(data) {
@@ -640,8 +711,8 @@ function loadDatatable3_1() {
         $('#fetchDataTable3_1').html(table);
         $('#datatable3_1').DataTable({
             dom: '<"row"<"col"><"col"f>>' + '<"row"<"col"tr>>' + '<"row"<"col"i><"col"p>>',
-            scrollY: "600px",
-            "paging": false
+            scrollY: '600px',
+            paging: false,
         });
     });
 }
@@ -1043,11 +1114,22 @@ function loadChart3_4() {
 }
 
 function loadChart3_5() {
-    $.getJSON('DATA/phase2/tourist/ProvinceTouristNewInfectDaily.json', function(data) {
+    $.getJSON('../DWFinalProject/DWProjectCountry/ProvinceTouristNewInfect.json', function(data) {
+        let text = ` <div class=row>
+                        <div class=col-md-0>
+                            <div class='blob'>
+                            </div>
+                        </div>
+                        <div class='col-md-1'>
+                            ข้อมูลวันที่ ${data['LastUpDate']}
+                        </div>
+                    </div>`;
         let json = [];
         $.each(data.Data, function(key, val) {
+            let name = key;
+            if (key == 'NA') name = 'ไม่ระบุ';
             json.push({
-                name: key,
+                name: name,
                 data: val,
             });
         });
@@ -1056,9 +1138,16 @@ function loadChart3_5() {
         chart3_5.series[1] = json[1];
         chart3_5.series[2] = json[2];
         chart3_5.subtitle = {
-            text: 'ข้อมูลวันที่ ' + data.Lastupdate,
+            text: text,
+            useHTML: true,
         };
-        new Highcharts.chart(chart3_5);
+        if (Array.isArray(json) && json[0].data != null) new Highcharts.chart(chart3_5);
+        else {
+            chart3_5.subtitle = {
+                text: 'ไม่มีข้อมูล',
+            };
+            new Highcharts.chart(chart3_5).showNoData('ไม่มีข้อมูล');
+        }
     });
 }
 
@@ -1075,8 +1164,7 @@ function loadChart4_1() {
                 });
             }
         });
-        for (i = 0; i < 77; i++)
-            chart4_1.series[i] = items[i];
+        for (i = 0; i < 77; i++) chart4_1.series[i] = items[i];
         chart4_1.subtitle = {
             text: 'ข้อมูลวันที่ ' + data.lastupdate,
         };
@@ -1085,12 +1173,12 @@ function loadChart4_1() {
 }
 
 //-------------------------------------------------------------------------------------------------- world ------------------------------------------//
-
+let path = '../DWFinalProject/DWProjectWorld/';
 function load_world_table() {
-    $.getJSON('./DATA/world/info/InfoAllCountry.json', function(data) {
-        let table = ''
+    $.getJSON( path +'InfoAllCountry.json', function(data) {
+        let table = '';
         $.each(data, function(key, value) {
-            if (key != 'LastUpdate' && key != 'ทั่วโลก' && key != 'NA') {
+            if (key != 'LastUpdate' && key != 'country' && key != 'URL' && key != 'ทั่วโลก') {
                 table += '<tr>';
                 table += '<td>' + value.region + '</td>';
                 table += '<td>' + value.subregion + '</td>';
@@ -1109,22 +1197,22 @@ function load_world_table() {
         $('#world_table').DataTable({
             dom: '<"row"<"col"><"col"f>>' + '<"row"<"col"tr>>' + '<"row"<"col"i><"col"p>>',
             pageLength: 11,
-            scrollY: "400px",
-            "paging": false
+            scrollY: '400px',
+            paging: false,
         });
     });
 }
 
 function load_World_map(type) {
-    $.getJSON('./DATA/world/info/InfoAllCountry.json', function(data) {
+    let path = '../DWFinalProject/DWProjectWorld/';
+    $.getJSON( path +'InfoAllCountry.json', function(data) {
         var items = [];
-        var text = ''
-        var cmax, cmin = ''
-
-        //console.log(data);
+        var text = '';
+        var cmax,
+            cmin = '';
         if (type == 'infect') {
             $.each(data, function(key, val) {
-                if (key != 'LastUpdate' && key != 'ทั่วโลก' && key != 'NA') {
+                if (key != 'LastUpdate' && key != 'country' && key != 'URL' && key != 'ทั่วโลก') {
                     items.push({
                         name: key,
                         value: val['ติดเชื้อสะสม'],
@@ -1136,9 +1224,9 @@ function load_World_map(type) {
                     });
                 }
             });
-            text = 'ติดเชื้อ'
-            cmax = '#e6156f'
-            cmin = '#fabbd6'
+            text = 'ติดเชื้อ';
+            cmax = '#e6156f';
+            cmin = '#fabbd6';
         } else if (type == 'dead') {
             $.each(data, function(key, val) {
                 if (key != 'LastUpdate' && key != 'country' && key != 'URL' && key != 'ทั่วโลก') {
@@ -1153,9 +1241,9 @@ function load_World_map(type) {
                     });
                 }
             });
-            text = 'เสียชีวิต'
-            cmin = '#f5c6ca'
-            cmax = '#d61122'
+            text = 'เสียชีวิต';
+            cmin = '#f5c6ca';
+            cmax = '#d61122';
         } else if (type == 'well') {
             $.each(data, function(key, val) {
                 if (key != 'LastUpdate' && key != 'country' && key != 'URL' && key != 'ทั่วโลก') {
@@ -1170,9 +1258,9 @@ function load_World_map(type) {
                     });
                 }
             });
-            text = 'รักษาหาย'
-            cmax = '#37bd1c'
-            cmin = '#b8f0ad'
+            text = 'รักษาหาย';
+            cmax = '#37bd1c';
+            cmin = '#b8f0ad';
         } else if (type == 'hospital') {
             $.each(data, function(key, val) {
                 if (key != 'LastUpdate' && key != 'country' && key != 'URL' && key != 'ทั่วโลก') {
@@ -1187,23 +1275,29 @@ function load_World_map(type) {
                     });
                 }
             });
-            text = 'อยู่ระหว่างการรักษา'
-            cmax = '#e7f216'
-            cmin = '#eff2ac'
+            text = 'อยู่ระหว่างการรักษา';
+            cmax = '#e7f216';
+            cmin = '#eff2ac';
         }
+        Highcharts.mapChart('world_map', {
+            chart: {
+                map: 'custom/world',
+            },
 
-        //console.log(items);
-
-
-        //console.log(items);
-        $('#world_map').highcharts('Map', {
             title: {
-                text: "จำนวนผู้" + text + "ทั่วโลก",
-                
+                text: 'จำนวนผู้' + text + 'ทั่วโลก',
             },
             subtitle: {
-                text: "<div class=row>\n"+"<div class=col-md-0>\n"+"<div class='blob'></div>"+"</div>\n"+"<div class='col-md-1'>\n"+"ข้อมูลวันที่ "+ data.LastUpdate+"</div>\n"+"</div>",
-                useHTML:true
+                text: '<div class=row>\n' +
+                    '<div class=col-md-0>\n' +
+                    "<div class='blob'></div>" +
+                    '</div>\n' +
+                    "<div class='col-md-1'>\n" +
+                    'ข้อมูลวันที่ ' +
+                    data.LastUpdate +
+                    '</div>\n' +
+                    '</div>',
+                useHTML: true,
             },
             mapNavigation: {
                 enabled: true,
@@ -1220,12 +1314,33 @@ function load_World_map(type) {
                 pointFormatter: function() {
                     var string = '<b>' + this.name + ':<br>';
                     string +=
-                        '<span style="color:#e6156f">●</span>' + ' จำนวนผู้ติดเชื้อ ' + this.value + ' คน' + '</b>' + '<br>';
-                    string += '<span style="color:#d61122">●</span>' + ' จำนวนผู้เสีชีวิต ' + this.dead + ' คน' + '</b>' + '<br>';
+                        '<span style="color:#e6156f">●</span>' +
+                        ' จำนวนผู้ติดเชื้อ ' +
+                        this.value +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
                     string +=
-                        '<span style="color:#37bd1c">●</span>' + ' จำนวนผู้รักษาหาย ' + this.recovered + ' คน' + '</b>' + '<br>';
+                        '<span style="color:#d61122">●</span>' +
+                        ' จำนวนผู้เสีชีวิต ' +
+                        this.dead +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
                     string +=
-                        '<span style="color:#e7f216">●</span>' + ' จำนวนผู้ที่อยู่ระหว่างรักษา ' + this.critical + ' คน' + '</b>' + '<br>';
+                        '<span style="color:#37bd1c">●</span>' +
+                        ' จำนวนผู้รักษาหาย ' +
+                        this.recovered +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
+                    string +=
+                        '<span style="color:#e7f216">●</span>' +
+                        ' จำนวนผู้ที่อยู่ระหว่างรักษา ' +
+                        this.critical +
+                        ' คน' +
+                        '</b>' +
+                        '<br>';
                     return string;
                 },
             },
@@ -1246,8 +1361,8 @@ function load_World_map(type) {
         });
     });
 
-    $(".th #infect").click(function() {
-        alert("Handler for .click() called.");
+    $('.th #infect').click(function() {
+        alert('Handler for .click() called.');
     });
 }
 
@@ -1256,13 +1371,13 @@ function load_worldAll_pieChart() {
         let items = [];
         items.push({
             name: 'เสียชีวิต',
-            y: data.ทั่วโลก.ตายสะสม,
+            y: data['ทั่วโลก']['ตายสะสม'],
         }, {
             name: 'รักษาหาย',
-            y: data.ทั่วโลก.หายสะสม,
+            y: data['ทั่วโลก']['หายสะสม'],
         }, {
             name: 'กำลังรักษา',
-            y: data.ทั่วโลก.กำลังรักษา,
+            y: data['ทั่วโลก']['กำลังรักษา'],
         });
         //console.log(items)
 
@@ -1275,11 +1390,19 @@ function load_worldAll_pieChart() {
                 type: 'pie',
             },
             title: {
-                text: 'สัดส่วนผู้ติดเชื้อ รักษาหาย และเสียชีวิต ทั่วโลก',
+                text: 'สัดส่วนผู้เสียชีวิต รักษาหาย และกำลังรักษา ทั่วโลก',
             },
             subtitle: {
-                text: "<div class=row>\n"+"<div class=col-md-0>\n"+"<div class='blob'></div>"+"</div>\n"+"<div class='col-md-1'>\n"+"ข้อมูลวันที่ "+ data.LastUpdate+"</div>\n"+"</div>",
-                useHTML:true
+                text: '<div class=row>\n' +
+                    '<div class=col-md-0>\n' +
+                    "<div class='blob'></div>" +
+                    '</div>\n' +
+                    "<div class='col-md-1'>\n" +
+                    'ข้อมูลวันที่ ' +
+                    data.LastUpdate +
+                    '</div>\n' +
+                    '</div>',
+                useHTML: true,
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.y:.0f} คน</b>',
@@ -1310,18 +1433,23 @@ function load_worldRegion_spiderChart() {
             if (key != 'Last Update' && key != 'Unit' && key != 'Toltal') {
                 items.push({
                     name: val.name,
-                    data: [Math.log(val.confirm), Math.log(val.dead), Math.log(val.recovered), Math.log(val.well)],
+                    data: [log10(val.well), log10(val.dead), log10(val.recovered), log10(val.confirm)],
                     pointPlacement: 'on',
                 });
             }
         });
-        wolrdRegionSpiderChart.subtitle.text = "ข้อมูลวันที่ " + data.lastupdate
-            //console.log(items);
+        wolrdRegionSpiderChart.subtitle.text = 'ข้อมูลวันที่ ' + data.lastupdate;
+        //console.log(items);
 
         for (var i = 0; i < items.length; i++) {
             wolrdRegionSpiderChart.series[i] = items[i];
         }
-
+        wolrdRegionSpiderChart.tooltip = {
+            formatter: function() {
+                return '<b>' + this.key + ':<br>' + `<span style="color:${this.color}">●</span>` +
+                    this.series.name + ' ' + Math.round(Math.pow(10, this.y)) + ' คน' + '</b>' + '<br>';
+            }
+        }
         new Highcharts.chart(wolrdRegionSpiderChart);
     });
 }
@@ -1337,7 +1465,7 @@ function load_world_barChart() {
                 $.each(value, function(key, value) {
                     $.each(value, function(key, value) {
                         xaxis.push(key);
-                        items.push(value.totalcases);
+                        items.push(log10(value.totalcases));
                     });
                 });
             }
@@ -1349,6 +1477,14 @@ function load_world_barChart() {
             data: items,
         };
         worldRegion_barChart.subtitle.text = 'ข้อมูลวันที่ ' + data.lastupdate;
+
+        worldRegion_barChart.tooltip = {
+            // pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
+            formatter: function() {
+                return '<b>' + this.key + ':<br>' + `<span style="color:${this.color}">●</span>` +
+                    this.series.name + ' ' + Math.round(Math.pow(10, this.y)) + ' คน' + '</b>' + '<br>';
+            }
+        }
         new Highcharts.chart(worldRegion_barChart);
     });
 }
@@ -1428,28 +1564,44 @@ function load_worldRecover_lineChart() {
 }
 
 function load_worldSubRegion_spiderChart() {
-    $.getJSON('./DATA/world/info/InfoAllRegion.json', function(data) {
+    $.getJSON(path+'InfoAllRegion.json', function(data) {
         //console.log(data.key);
         var items = [];
         $.each(data, function(key, val) {
             if (key != 'LastUpdate' && key != 'ทั่วโลก') {
                 items.push({
                     name: key,
-                    data: [Math.log(val['ติดเชื้อ']), Math.log(val['ตายสะสม']), Math.log(val['กำลังรักษา']), Math.log(val['หายสะสม'])],
+                    data: [
+                        Math.log(val['หายสะสม']),
+                        Math.log(val['ตายสะสม']),
+                        Math.log(val['กำลังรักษา']),
+                        Math.log(val['ติดเชื้อ']),
+                    ],
                     pointPlacement: 'on',
                 });
             }
         });
-       
-            //console.log(items);
+        wolrdSubRegionSpiderChart.subtitle.text =
+            '<div class=row>\n' +
+            '<div class=col-md-0>\n' +
+            "<div class='blob'></div>" +
+            '</div>\n' +
+            "<div class='col-md-1'>\n" +
+            'ข้อมูลวันที่ ' +
+            data.LastUpdate +
+            '</div>\n' +
+            '</div>';
+        //console.log(items);
 
         for (var i = 0; i < items.length; i++) {
             wolrdSubRegionSpiderChart.series[i] = items[i];
         }
-
-        wolrdSubRegionSpiderChart.subtitle.text = "<div class=row>\n"+"<div class=col-md-0>\n"+"<div class='blob'></div>"+"</div>\n"+"<div class='col-md-1'>\n"+"ข้อมูลวันที่ "+ data.LastUpdate+"</div>\n"+"</div>"
-        
+        wolrdSubRegionSpiderChart.tooltip = {
+            formatter: function() {
+                return '<b>' + this.key + ':<br>' + `<span style="color:${this.color}">●</span>` +
+                    this.series.name + ' ' + Math.round(Math.pow(10, this.y)) + ' คน' + '</b>' + '<br>';
+            }
+        }
         new Highcharts.chart(wolrdSubRegionSpiderChart);
     });
-
 }

@@ -5,16 +5,15 @@
     <title>รายงานสถานการณ์โควิด-19</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- All Templete CSS -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="../asset/fonts/icomoon/style.css"> -->
     <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
     <link rel="stylesheet" href="./asset/css/jquery-ui.css">
     <link rel="stylesheet" href="./asset/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./asset/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./asset/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./asset/css/jquery.fancybox.min.css">
-    <!-- <link rel="stylesheet" href="./asset/css/bootstrap-datepicker.css"> -->
     <link rel="stylesheet" href="./asset/fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="./asset/css/aos.css">
     <link rel="stylesheet" href="./asset/css/jquery.mb.YTPlayer.min.css" media="all">
@@ -24,8 +23,21 @@
 
     <!-- Datable CSS -->
     <link href="./asset/css/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
-    <!-- <link href="./asset/css/datatables/style-exportDatable.css" rel="stylesheet" type="text/css"> -->
 
+    <!-- Hihg Chart All JS -->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/highcharts-more.js"></script>
+    <!-- <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/export-data.js"></script> -->
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <!-- <script src="https://code.highcharts.com/modules/accessibility.js"></script> -->
+    <script src="https://code.highcharts.com/modules/no-data-to-display.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/th/th-all.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
         .grid-container {
             display: grid;
@@ -130,3 +142,14 @@
     </style>
 
 </head>
+
+<script>
+    $(document).ready(function() {
+        let path = '../DWFinalProject/DWProjectWorld/';
+            $.getJSON(path +'InfoAllCountry.json',function(data){
+                console.log()
+                $("p#dataDate").text("อัปเดตล่าสุด "+data.LastUpdate)
+            });
+        });
+            
+</script>

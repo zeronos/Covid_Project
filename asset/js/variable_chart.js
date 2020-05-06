@@ -1,4 +1,10 @@
 var chart1_1 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         renderTo: 'chart1_1',
         zoomType: 'xy',
@@ -47,6 +53,12 @@ var chart1_1 = {
 };
 
 var chart1_2 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         renderTo: 'chart1_2',
         zoomType: 'xy',
@@ -92,6 +104,12 @@ var chart1_2 = {
 };
 
 var chart2_1 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
@@ -127,6 +145,12 @@ var chart2_1 = {
 };
 
 var chart2_2 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
@@ -162,6 +186,12 @@ var chart2_2 = {
 };
 
 var chart2_3 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         type: 'column',
         zoomType: 'xy',
@@ -193,6 +223,12 @@ var chart2_3 = {
 };
 
 var chart2_4 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         polar: true,
         type: 'line',
@@ -212,7 +248,7 @@ var chart2_4 = {
     },
 
     xAxis: {
-        categories: ['ติดเชื้อ', 'หาย', 'ตาย'],
+        categories: ['ติดเชื้อ', 'รักษาหาย', 'เสียชีวิต'],
         tickmarkPlacement: 'on',
         lineWidth: 0,
     },
@@ -225,7 +261,7 @@ var chart2_4 = {
 
     tooltip: {
         shared: true,
-        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>',
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} คน</b><br/>',
     },
 
     legend: {
@@ -256,6 +292,12 @@ var chart2_4 = {
 };
 
 var chart2_5 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         zoomType: 'xy',
     },
@@ -265,6 +307,10 @@ var chart2_5 = {
 
     subtitle: {
         text: '',
+    },
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} คน</b><br/>',
     },
 
     yAxis: {
@@ -311,6 +357,12 @@ var chart2_5 = {
 };
 
 var chart2_6 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         zoomType: 'xy',
     },
@@ -320,6 +372,10 @@ var chart2_6 = {
 
     subtitle: {
         text: '',
+    },
+    tooltip: {
+        shared: true,
+        pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f} คน</b><br/>',
     },
 
     yAxis: {
@@ -366,6 +422,12 @@ var chart2_6 = {
 };
 
 var chart3_5 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         renderTo: 'chart3_5',
         zoomType: 'xy',
@@ -430,6 +492,12 @@ var chart3_5 = {
 };
 
 var chart4_1 = {
+    noData: {
+        style: {
+            fontSize: '15px',
+            color: '#9E9E9E'
+        }
+    },
     chart: {
         type: 'scatter',
         zoomType: 'xy',
@@ -442,7 +510,7 @@ var chart4_1 = {
         text: ''
     },
     xAxis: {
-        tickInterval: 1,
+
         type: 'logarithmic',
         accessibility: {
             rangeDescription: 'Range: 1 to 10'
@@ -519,7 +587,7 @@ var wolrdRegionSpiderChart = {
     },
 
     xAxis: {
-        categories: ['จำนวนติดเชื้อ', 'จำนวนผู้รักษาหาย', 'จำนวนผู้เสียชีวิต', 'จำนวนคนไข้อยู่ระหว่างรักษา'],
+        categories: ['จำนวนผู้รักษาหาย', 'จำนวนผู้เสียชีวิต', 'จำนวนคนไข้อยู่ระหว่างรักษา', 'จำนวนผู้ติดเชื้อ'],
         tickmarkPlacement: 'on',
         lineWidth: 0,
     },
@@ -588,7 +656,7 @@ var worldRegion_barChart = {
     },
 
     tooltip: {
-        pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
+        shared: true,
     },
     plotOptions: {
         bar: {
@@ -605,7 +673,7 @@ var worldRegion_barChart = {
 };
 
 var worldRegion_lineChart = {
-    chart:{
+    chart: {
         zoomType: 'xy',
     },
     title: {
@@ -652,7 +720,7 @@ var worldRegion_lineChart = {
 
 //-----------------------------------------------------------------------------------------------------------------------------------//
 var worldDead_lineChart = {
-    chart:{
+    chart: {
         zoomType: 'xy',
     },
     title: {
@@ -699,7 +767,7 @@ var worldDead_lineChart = {
 };
 
 var worldNewInfect_lineChart = {
-    chart:{
+    chart: {
         zoomType: 'xy',
     },
     title: {
@@ -744,7 +812,7 @@ var worldNewInfect_lineChart = {
 };
 
 var worldRecover_lineChart = {
-    chart:{
+    chart: {
         zoomType: 'xy',
     },
     title: {
@@ -797,14 +865,14 @@ var wolrdSubRegionSpiderChart = {
         zoomType: 'xy',
     },
 
-    
+
     title: {
         text: 'จำนวนผู้ติดเชื้อแยกตามภูมิภาคและผลการรักษา',
         x: -80,
     },
     subtitle: {
         text: '',
-        useHTML : true
+        useHTML: true
     },
 
     pane: {
@@ -812,7 +880,7 @@ var wolrdSubRegionSpiderChart = {
     },
 
     xAxis: {
-        categories: ['จำนวนติดเชื้อ', 'จำนวนผู้รักษาหาย', 'จำนวนผู้เสียชีวิต', 'จำนวนคนไข้อยู่ระหว่างรักษา'],
+        categories: ['จำนวนผู้รักษาหาย', 'จำนวนผู้เสียชีวิต', 'จำนวนคนไข้อยู่ระหว่างรักษา', 'จำนวนผู้ติดเชื้อ'],
         tickmarkPlacement: 'on',
         lineWidth: 0,
     },

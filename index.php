@@ -376,12 +376,12 @@
         document.getElementById("chart1_1").addEventListener("load", loadChart1_1());
         document.getElementById("chart1_2").addEventListener("load", loadChart1_2());
 
-        document.getElementById("age_chart2_1").addEventListener("load", loadChart2_1("age_chart2_1", "age", "age.json"));
+        document.getElementById("age_chart2_1").addEventListener("load", loadChart2_1("age_chart2_1", "age", "AgeNewInfect.json"));
         document.getElementById("age_chart2_2").addEventListener("load", loadChart2_2("age_chart2_2", "age", "age.json"));
         document.getElementById("age_chart2_3").addEventListener("load", loadChart2_3("age_chart2_3", "age", "age.json"));
         document.getElementById("age_chart2_4").addEventListener("load", loadChart2_4("age_chart2_4", "age", "age.json"));
         document.getElementById("age_chart2_5").addEventListener("load", loadChart2_5("age_chart2_5", "age", "ageDeathDaily.json"));
-        document.getElementById("age_chart2_6").addEventListener("load", loadChart2_6("age_chart2_6", "age", "ageInfectedDaily.json"));
+        document.getElementById("age_chart2_6").addEventListener("load", loadChart2_6("age_chart2_6", "age", "AgeNewInfect.json"));
 
         document.getElementById("datatable3_1").addEventListener("load", loadDatatable3_1());
         document.getElementById("chart3_1").addEventListener("load", loadChart3_1());
@@ -420,9 +420,19 @@
         $(".setTab").on('click', function() {
             let type = $(this).attr("type");
             let sta = $(this).attr("status");
+
+            let file1 = "";
             let file5 = "";
             let file6 = "";
 
+            if (type == "age")
+                file1 = "AgeNewInfect.json";
+            else if (type == "gender")
+                file1 = "SexNewInfect.json";
+            else if (type == "risk")
+                file1 = "risk.json";
+            else if (type == "region")
+                file1 = "RegionNewInfect.json";
 
             if (type == "age")
                 file5 = "ageDeathDaily.json";
@@ -434,18 +444,16 @@
                 file5 = "riskDeathDaily.json";
 
             if (type == "age")
-                file6 = "ageInfectedDaily.json";
+                file6 = "AgeNewInfect.json";
             else if (type == "gender")
-                file6 = "GenderNewInfectDaily.json";
-            else if (type == "career")
-                file6 = "jobNewInfectDaily.json";
+                file6 = "SexNewInfect.json";
+            else if (type == "region")
+                file6 = "RegionNewInfect.json";
             else if (type == "risk")
                 file6 = "riskInfectDaily.json";
-            else
-                file6 = "RegionNewInfect.json";
+
 
             if (sta == "0") {
-                //console.log(type)
                 $(this).attr("status", "1");
                 chart2_1.series = [{
                     name: 'จำนวน',
@@ -457,14 +465,14 @@
                 chart2_4.series = [{}];
                 chart2_5.series = [{}];
                 chart2_6.series = [{}];
-                loadChart2_1(type + "_chart2_1", type, type + ".json")
+                loadChart2_1(type + "_chart2_1", type, file1)
                 loadChart2_2(type + "_chart2_2", type, type + ".json")
                 loadChart2_3(type + "_chart2_3", type, type + ".json")
                 loadChart2_4(type + "_chart2_4", type, type + ".json")
                 loadChart2_5(type + "_chart2_5", type, file5)
                 loadChart2_6(type + "_chart2_6", type, file6)
             }
-
         });
+        
     });
 </script>

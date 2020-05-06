@@ -58,7 +58,7 @@
 						<li>
 							<div class="blob"></div>
 						</li>
-						<li><a style = "color: black;"><p id="upToDate">อัปเดตล่าสุด 4/05/63</p><a></li>
+						<li><a style = "color: black;"><p id="dataDate"></p><a></li>
 					</ul>
 				</nav>
 				<a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>

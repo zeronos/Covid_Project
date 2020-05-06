@@ -56,7 +56,7 @@
 
                 if (scrollTop <= etse) {
                     if (s.currentTop !== null) {
-                        s.stickyWrapper.css('height', s.stickyElement.outerHeight() + 28);
+                        s.stickyWrapper.css('height', s.stickyElement.outerHeight() + 15);
                         s.stickyElement.css({
                             width: '',
                             position: '',

@@ -255,7 +255,7 @@
                 <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
                     <div class="col-md-8  section-heading">
                         <br><br>
-                        <h2 class="heading mb-3">ความสัมพันธ์ระหว่างจำนวนประชากรกับจำนวนผู้ติดเชื้อในแต่ละจังหวัด</h2>
+                        <h2 class="heading mb-3">ความสัมพันธ์ระหว่างจำนวนประชากร<br>และจำนวนผู้ติดเชื้อในแต่ละจังหวัด</h2>
                         <p>
                         </p>
                     </div>

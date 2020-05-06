@@ -41,7 +41,7 @@ var chart1_1 = {
                     verticalAlign: 'bottom',
                 },
             },
-        }, ],
+        },],
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.y:.0f} คน</b><br/>',
@@ -99,7 +99,7 @@ var chart1_2 = {
                     verticalAlign: 'bottom',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -141,7 +141,7 @@ var chart2_1 = {
     },
     series: [{
         name: 'จำนวน',
-    }, ],
+    },],
 };
 
 var chart2_2 = {
@@ -182,7 +182,7 @@ var chart2_2 = {
     },
     series: [{
         name: 'จำนวน',
-    }, ],
+    },],
 };
 
 var chart2_3 = {
@@ -205,7 +205,7 @@ var chart2_3 = {
         title: {
             text: 'จำนวนคน',
         },
-    }, ],
+    },],
     legend: {
         shadow: false,
     },
@@ -287,7 +287,7 @@ var chart2_4 = {
                     size: '70%',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -352,7 +352,7 @@ var chart2_5 = {
                     verticalAlign: 'bottom',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -417,7 +417,7 @@ var chart2_6 = {
                     verticalAlign: 'bottom',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -487,7 +487,7 @@ var chart3_5 = {
                     verticalAlign: 'bottom',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -512,6 +512,17 @@ var chart4_1 = {
     xAxis: {
 
         type: 'logarithmic',
+        minorTickInterval: 0.1,
+        accessibility: {
+            rangeDescription: 'Range: 0.1 to 1000'
+        },
+        title: {
+            text: 'จำนวนประชากรรวม (คน)'
+        }
+    },
+    yAxis: {
+
+        type: 'logarithmic',
         accessibility: {
             rangeDescription: 'Range: 1 to 10'
         },
@@ -522,16 +533,7 @@ var chart4_1 = {
         startOnTick: true,
         endOnTick: true,
         showLastLabel: true
-    },
-    yAxis: {
-        type: 'logarithmic',
-        minorTickInterval: 0.1,
-        accessibility: {
-            rangeDescription: 'Range: 0.1 to 1000'
-        },
-        title: {
-            text: 'จำนวนประชากรรวม (คน)'
-        }
+
     },
     legend: {
 
@@ -626,7 +628,7 @@ var wolrdRegionSpiderChart = {
                     size: '70%',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -714,7 +716,7 @@ var worldRegion_lineChart = {
                     verticalAlign: 'bottom',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -762,7 +764,7 @@ var worldDead_lineChart = {
                     verticalAlign: 'bottom',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -807,7 +809,7 @@ var worldNewInfect_lineChart = {
                     verticalAlign: 'bottom',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -853,7 +855,7 @@ var worldRecover_lineChart = {
                     verticalAlign: 'bottom',
                 },
             },
-        }, ],
+        },],
     },
 };
 
@@ -919,6 +921,6 @@ var wolrdSubRegionSpiderChart = {
                     size: '70%',
                 },
             },
-        }, ],
+        },],
     },
 };

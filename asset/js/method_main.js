@@ -1204,7 +1204,6 @@ function load_world_table() {
 }
 
 function load_World_map(type) {
-    let path = '../DWFinalProject/DWProjectWorld/';
     $.getJSON( path +'InfoAllCountry.json', function(data) {
         var items = [];
         var text = '';

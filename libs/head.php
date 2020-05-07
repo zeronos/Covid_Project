@@ -145,9 +145,9 @@
 
 <script>
     $(document).ready(function() {
-        let path = '../DWFinalProject/DWProjectWorld/';
+        let path = '../admin/DWProjectWorld/';
             $.getJSON(path +'InfoAllCountry.json',function(data){
-                console.log()
+                //console.log()
                 $("p#dataDate").text("อัปเดตล่าสุด "+data.LastUpdate)
             });
         });

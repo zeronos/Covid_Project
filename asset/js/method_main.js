@@ -36,7 +36,7 @@ function loadCard() {
 }
 
 function loadChart1_1() {
-    $.getJSON('DATA/phase1/ผู้ติดเชื้อสะสมในแต่ละวัน.json', function(data) {
+    $.getJSON('DATA/phase1/allNew_TH.json', function(data) {
         //console.log(data.Data[100].Confirmed);
         let infectFreq = [];
         let deathFreq = [];
@@ -72,7 +72,7 @@ function loadChart1_1() {
 }
 
 function loadChart1_2() {
-    $.getJSON('DATA/phase1/ผู้ติดเชื้อสะสมในแต่ละวัน.json', function(data) {
+    $.getJSON('DATA/phase1/allNew_TH.json', function(data) {
         //console.log(data.Data[100].NewConfirmed);
         let infect = [];
         let death = [];
@@ -115,7 +115,7 @@ function loadChart1_2() {
 
 function loadChart2_1(id, folder, file) {
     let type = 0;
-    let path = '../DWFinalProject/DWProjectCountry/';
+    let path = '../admin/DWProjectCountry/';
     if (folder == 'risk') {
         path = './DATA/phase2/' + folder + '/';
         type = 1;
@@ -468,7 +468,7 @@ function loadChart2_5(id, folder, file) {
 
 function loadChart2_6(id, folder, file) {
     let type = 0;
-    let path = '../DWFinalProject/DWProjectCountry/';
+    let path = '../admin/DWProjectCountry/';
     if (folder == 'risk') {
         path = './DATA/phase2/' + folder + '/';
         type = 1;
@@ -1114,7 +1114,8 @@ function loadChart3_4() {
 }
 
 function loadChart3_5() {
-    $.getJSON('../DWFinalProject/DWProjectCountry/ProvinceTouristNewInfect.json', function(data) {
+    let path = '../admin/DWProjectCountry/';
+    $.getJSON(path+'ProvinceTouristNewInfect.json', function(data) {
         let text = ` <div class=row>
                         <div class=col-md-0>
                             <div class='blob'>
@@ -1173,7 +1174,7 @@ function loadChart4_1() {
 }
 
 //-------------------------------------------------------------------------------------------------- world ------------------------------------------//
-let path = '../DWFinalProject/DWProjectWorld/';
+let path = '../admin/DWProjectWorld/';
 function load_world_table() {
     $.getJSON( path +'InfoAllCountry.json', function(data) {
         let table = '';
@@ -1366,7 +1367,7 @@ function load_World_map(type) {
 }
 
 function load_worldAll_pieChart() {
-    $.getJSON('./DATA/world/info/InfoAllCountry.json', function(data) {
+    $.getJSON(path+'InfoAllCountry.json', function(data) {
         let items = [];
         items.push({
             name: 'เสียชีวิต',
@@ -1425,7 +1426,7 @@ function load_worldAll_pieChart() {
 }
 
 function load_worldRegion_spiderChart() {
-    $.getJSON('./DATA/world/รวมเลขทุกประเทศเป็นทวีป.json', function(data) {
+    $.getJSON('./DATA/world/regionAll.json', function(data) {
         //console.log(data.continent[0].name);
         var items = [];
         $.each(data.continent, function(key, val) {
@@ -1456,7 +1457,7 @@ function load_worldRegion_spiderChart() {
 function load_world_barChart() {
     var items = [];
     var xaxis = [];
-    $.getJSON('./DATA/world/โควิดทวีป.json', function(data) {
+    $.getJSON('./DATA/world/regionCovid.json', function(data) {
         //console.log(data.lastupdate);
 
         $.each(data, function(key, value) {
@@ -1489,7 +1490,7 @@ function load_world_barChart() {
 }
 
 function load_world_lineChart() {
-    $.getJSON('./DATA/world/totalcaseโควิดทวีป.json', function(data) {
+    $.getJSON('./DATA/world/totalCaseRegionCovid.json', function(data) {
         //console.log(data);
         items = [];
         $.each(data, function(key, value) {

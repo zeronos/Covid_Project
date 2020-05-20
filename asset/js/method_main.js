@@ -22,16 +22,25 @@ function log10(n) {
     return Math.log(n) / Math.log(10);
 }
 
-
+function dateFormat(date){
+    var month = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฏาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
+    var res = [];
+    for(var i = 0; i <date.length;i++)
+        res = date.split('\/');
+    var string = res[0].toString()+' '+month[ parseInt(res[1])-1 ].toString()+' '+(parseInt(res[2])+543).toString();
+    //console.log(string);
+    return string;
+}
 
 function loadCard() {
-    $.getJSON('./DATA/phase2/age/age.json', function(data) {
+    $.getJSON('../admin/DWProjectCountry/AllCard.json', function(data) {
         document.getElementById('text1').innerHTML =
-            'ติดเชื้อสะสม' + '<br>' + formatNumber(data.Toltal['ติดเชื้อ']) + ' คน';
-        document.getElementById('text2').innerHTML = 'เสียชีวิต' + '<br>' + formatNumber(data.Toltal['ตาย']) + ' คน';
-        document.getElementById('text3').innerHTML = 'รักษาหาย' + '<br>' + formatNumber(data.Toltal['หาย']) + ' คน';
+            'ติดเชื้อสะสม' + '<br>' + formatNumber(data.ติดเชื้อสะสม) + ' คน';
+        document.getElementById('text2').innerHTML = 'เสียชีวิต' + '<br>' + formatNumber(data.เสียชีวิต) + ' คน';
+        document.getElementById('text3').innerHTML = 'รักษาหาย' + '<br>' + formatNumber(data.รักษาหาย) + ' คน';
         document.getElementById('text4').innerHTML =
-            'อยู่ระหว่างการรักษา' + '<br>' + formatNumber(data.Toltal['รักษา']) + ' คน';
+            'อยู่ระหว่างการรักษา' + '<br>' + formatNumber(data.อยู่ระหว่างการรักษา) + ' คน';
+        document.getElementById('update').innerHTML = 'ข้อมูล ณ วันที่ '+dateFormat(data.LastUpdate)
     });
 }
 

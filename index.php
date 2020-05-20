@@ -14,7 +14,7 @@
                     <div>
                         <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
                             <h1 class="mb-3">รายงานสถานการณ์ <span class="text" style="color: orange">Covid-19</span></h1>
-                            <p class="lead mx-auto desc mb-5">ข้อมูล ณ วันที่ 19 เมษายน 2563</p>
+                            <p class="lead mx-auto desc mb-5" id = "update"></p>
                         </div>
                         <div class="card bg-danger text-white" style="width: 100%;height: 200px;font-size:50px;">
                             <div class="card-body text-center">
